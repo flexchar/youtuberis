@@ -1,0 +1,48 @@
+baseurl = "https://example.com"
+languageCode = "lt-LT"
+title = "YouTube Draugas"
+copyright = "&copy; YouTube Draugas 2017"
+disqusShortname = "demo"
+disableHugoGeneratorInject = true
+
+[params]
+	sloganImageUrl = "/img/skeleton/sidenav-bg.jpg"
+	slogan = "Atrask daugiau, tapk draugu!"
+	author = "Lukas"
+	description = "YouTube pasaulio naujienos, patarimai, pagalba ir ištekliai. Dažniausiai užduodami klausimai."
+
+
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+
+[permalinks]
+	post = "/:filename/"
+	page = "/:slug/"
+	duk  = "/duk/:slug/"
+
+[blackfriday]
+	hrefTargetBlank = true
+
+
+
+menu = ["main"]
+
+
+
+[[menu.main]]
+		name = "Pagrindinis"
+		pre = ""
+		weight = 10
+		url = ""
+[[menu.main]]
+		name = "Kontaktai"
+		pre = "phone"
+		weight = 12
+		#identifier = "about"
+		url = "apie"
+[[menu.main]]
+		name = "Dažniausiai užduodami klausimai"
+		pre = "book"
+		weight = 14
+		url = "/duk/"

@@ -1,0 +1,49 @@
+	<md-sidenav
+		class="md-sidenav-left"
+		md-component-id="left"
+		md-whiteframe="6">
+		<!--md-is-locked-open="$mdMedia('gt-md')"-->
+		
+		<md-toolbar layout-padding ng-controller="LeftSideNav as sidenav"
+			style="min-height: 250px; background-image: url('{{ .Site.Params.SloganImageUrl }}'); background-position: center center; background-size: cover;">
+			<md-button class="md-icon-button" aria-label="Uždaryti" ng-click="sidenav.close()">
+				<md-icon>close</md-icon>
+			</md-button>
+					
+				<span flex></span>
+			<h3 style="margin-bottom: 0">
+				<span>{{ .Site.Title }}</span>
+			</h3>
+			<small>{{ .Site.Params.Slogan }}</small>
+		</md-toolbar>
+
+		<md-content>
+			{{ $currentPage := . }}
+			<md-list>
+				{{ range .Site.Menus.main }}
+				<md-menu-item{{ if $currentPage.IsMenuCurrent "main" . }}{{ if ne .URL "/"}} style="background-color: rgba(158, 158, 158, 0.35);"{{end}}{{end -}}>
+					<md-button ng-href="{{ .URL | relURL}}">
+						{{- if .Pre -}}
+							<md-icon>
+								{{ .Pre }}
+							</md-icon>							
+						{{- end -}}
+						{{- .Name -}}					
+					</md-button>
+				</md-menu-item> 
+				{{ end }}
+
+			    <md-subheader style="margin-top: 10px; background-color: #fff;">Kategorijos</md-subheader>
+			    <md-divider></md-divider>
+
+				{{ range $name, $items := .Site.Taxonomies.categories }}
+				<md-menu-item>
+					<md-button href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">
+					{{ title $name }} ({{ len $items }})  
+					</md-button>
+				</md-menu-item>
+				{{ end }}
+			</md-list>
+		</md-content>
+
+	</md-sidenav>

@@ -1,0 +1,14 @@
+	<meta charset="utf-8">
+	<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
+	<meta name="description" content="{{ if eq .IsHome false }} | {{ .Summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">  
+	<meta name="author" content="{{ .Site.Params.Author }}">	<!-- responsiveness -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	<!-- CSS -->
+	{{- if in (print .Site.BaseURL) ":1313" -}}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	{{- else -}}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	{{- end -}}
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}styles.css">	<!-- favicons -->
+	<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">-->

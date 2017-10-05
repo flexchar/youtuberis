@@ -1,0 +1,44 @@
+{{ partial "header" . }}
+
+	<md-content layout="row" layout-align="center start" flex>
+		<div layout="column" flex layout-wrap class="layout-max-width">
+
+			<h1>{{ .Title }}</h1>
+			<md-divider></md-divider>
+			{{ .Content }}
+
+			<div class="border-top">
+	    		{{- range .Params.tags -}}
+	    		<a href="{{ "/tags" | absURL }}{{ . | relURL }}" style="background-color: rgba(0, 0, 0, 0.03); border-radius: 20px;">{{ . }}</a>
+	    		{{- end -}}
+	    	</div>	
+
+			{{ partial "widgets/disqus.html" . }}
+
+		
+			    <!--<md-card layout="column" flex layout-padding layout-wrap>    	
+			    	<md-card-content>
+			    		<h1>{{ .Title }}</h1>
+			    		<md-divider></md-divider>
+			    		<p>
+			    			{{ .Content }}
+			    		</p>
+			    	</md-card-content>
+			    	<md-chips>
+			    		{{- range .Params.tags -}}
+			    	  	<md-chip>{{.}}</md-chip>
+			    		{{- end -}}
+			    	</md-chips>
+			    	
+			    	<div class="border-top">
+			    		{{- range .Params.tags -}}
+			    		<a href="{{ "/tags" | absURL }}{{ . | relURL }}" style="background-color: rgba(0, 0, 0, 0.03); border-radius: 20px;">{{ . }}</a>
+			    		{{- end -}}
+			    	</div>
+					{{ partial "widgets/disqus.html" . }}
+			    </md-card>-->
+
+		</div>	
+	</md-content>
+
+{{ partial "footer" . }}
