@@ -1,4 +1,10 @@
 let mix = require('laravel-mix');
+//Assets for image compression
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
+
 
 /*
  |--------------------------------------------------------------------------
@@ -11,9 +17,35 @@ let mix = require('laravel-mix');
  |
  */
 
+//Handle images
+mix.webpackConfig({
+    plugins: [
+        new CopyWebpackPlugin([{
+            from: 'src/images',
+            to: 'img',
+        }]),
+		new ImageminPlugin({
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            plugins: [
+                imageminMozjpeg({
+                    quality: 60,
+                }),
+                imageminPngquant({quality: '60-80'})
+            ]
+        })
+    ]
+});
+
+
+//Process JS and SASS
 mix.js('src/js/script.js', 'static/scripts.js')
-	.sass('src/scss/app.scss', 'static/styles.css')
-	.setPublicPath('static');
+	.sass('src/scss/app.scss', 'static/styles.css');
+
+
+//Set dest path
+mix.setPublicPath('static');
+
+
 
 // Full API
 // mix.js(src, output);

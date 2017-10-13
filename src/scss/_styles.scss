@@ -1,3 +1,44 @@
+::selection {
+	// color: $blue;
+	// background: $grey-lightest;
+	background: $blue;
+	color: $white;
+}
+
+// Smooth scroll for site
+body {
+	scroll-behavior: smooth;
+}
+
+// Add Hashtags for h2 linky headers
+.content > h2 > a::before {
+	content: "#";
+	margin-left: -1em;
+	position: absolute;
+	color: $orange;
+}
+@media (max-width: $desktop) {
+	.content > h2 > a::before {
+		margin-left: -18.5px;
+	}
+}
+
+.content > h2 > a {
+	color: $grey-darker;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }

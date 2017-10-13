@@ -1,10 +1,10 @@
 +++
-title               = "Name your post here"
-date				= ""
+title 				= "{{ replace .TranslationBaseName "-" " " | title }}"
+date 				= "{{ .Date }}"
 
 url					= ""
 slug                = ""
-disqus_identifier   = "GET-RANDOM -Maximum 9999999999999999"
+disqus_identifier   = "{{ now.Unix }}"
 
 categories          = ["cat1", "cat2"]
 tags      	        = ["x", "y"]

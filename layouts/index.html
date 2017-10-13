@@ -1,4 +1,9 @@
-{{ partial "header" . }}    
+{{ define "content" }}  
+<br>
+<br>
+<br>
+
+      
 <md-content layout-margin layout="column" flex>
 	<div layout="row" layout-wrap>	
 		{{ range where .Data.Pages "Section" "in" (slice "post" "duk") }}
@@ -40,4 +45,4 @@
 	</div>
 </md-content>
 
-{{ partial "footer" . }}
+{{ end }}

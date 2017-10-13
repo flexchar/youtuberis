@@ -17,32 +17,33 @@ disableHugoGeneratorInject = true
 	tag = "tags"
 
 [permalinks]
-	post = "/:filename/"
-	page = "/:slug/"
+	post = "/:slug/"
+	# page = "/:slug/"
 	duk  = "/duk/:slug/"
 
 [blackfriday]
+	plainIDAnchors = true
 	hrefTargetBlank = true
-
-
+	angledQuotes = false
+	latexDashes = true
+	extensions = ['github_flavored_markdown']
 
 menu = ["main"]
 
-
-
 [[menu.main]]
-		name = "Pagrindinis"
-		pre = ""
+		name = "Resources"
+		pre = "book"
 		weight = 10
-		url = ""
+		url = "#"
+
 [[menu.main]]
-		name = "Kontaktai"
-		pre = "phone"
-		weight = 12
-		#identifier = "about"
-		url = "apie"
-[[menu.main]]
-		name = "Dažniausiai užduodami klausimai"
+		name = "Placeholder"
 		pre = "book"
 		weight = 14
-		url = "/duk/"
+		url = "#"
+
+[[menu.main]]
+		name = "LandingPage"
+		pre = "book"
+		weight = 16
+		url = "#"

@@ -1,17 +1,19 @@
 +++
 date = "2017-06-06T13:21:15+03:00"
 title = "Optimizuok kanalą su TubeBuddy"
+subtitle = "Atrask kaip patobulinti esamą situaciją vos keliais klavišų paspaudimais"
 categories = ["patarimai"]
-comments = true
+comments = false
 tags = ["tubebuddy", "uždarbis", "analizė", "optimizavimas"]
 url = ""
 draft = false
-slug = ""
+slug = "Optimizuok kanala su TubeBuddy"
 disqus_identifier = "8041438451115956"
 
 +++
-An h1 header
-============
+
+# An h1 header
+
 
 Paragraphs are separated by a blank line.
 
@@ -37,8 +39,7 @@ Unicode is supported. ☺
 
 
 
-An h2 header
-------------
+## An h2 header
 
 Here's a numbered list:
 
@@ -88,7 +89,7 @@ Now a nested list:
  2. Boil some water.
 
  3. Dump everything in the pot and follow
-    this algorithm:
+    thsis algorithm:
 
         find wooden spoon
         uncover pot
@@ -111,30 +112,47 @@ doc](#an-h2-header). Here's a footnote [^1].
 
 Tables can look like this:
 
-size  material      color
-----  ------------  ------------
-9     leather       brown
-10    hemp canvas   natural
-11    glass         transparent
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 Table: Shoes, their sizes, and what they're made of
 
 (The above is the caption for the table.) Pandoc also supports
 multi-line tables:
 
---------  -----------------------
-keyword   text
---------  -----------------------
-red       Sunsets, apples, and
-          other red or reddish
-          things.
+keyword  | text                    
+-------- | :-----------------------
+red      | Sunsets, apples, and    
+         | other red or reddish    
+         | things.                 
+         |                         
+green    | Leaves, grass, frogs    
+         | and other things it's   
+         | not easy being.         
 
-green     Leaves, grass, frogs
-          and other things it's
-          not easy being.
---------  -----------------------
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
 A horizontal rule follows.
+
 
 ***
 

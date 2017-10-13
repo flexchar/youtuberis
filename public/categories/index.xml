@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on YouTube Draugas</title>
+    <link>http://192.168.0.78:8080/categories/</link>
+    <description>Recent content in Categories on YouTube Draugas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>lt-LT</language>
+    <copyright>&amp;copy; YouTube Draugas 2017</copyright>
+    <lastBuildDate>Tue, 06 Jun 2017 16:14:25 +0300</lastBuildDate>
+    
+	<atom:link href="http://192.168.0.78:8080/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cat1</title>
+      <link>http://192.168.0.78:8080/categories/cat1/</link>
+      <pubDate>Tue, 06 Jun 2017 16:14:25 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/categories/cat1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cat2</title>
+      <link>http://192.168.0.78:8080/categories/cat2/</link>
+      <pubDate>Tue, 06 Jun 2017 16:14:25 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/categories/cat2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Duk</title>
+      <link>http://192.168.0.78:8080/categories/duk/</link>
+      <pubDate>Sun, 02 Apr 2017 15:28:10 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/categories/duk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Naujienos</title>
+      <link>http://192.168.0.78:8080/categories/naujienos/</link>
+      <pubDate>Mon, 27 Mar 2017 16:09:59 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/categories/naujienos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Patarimai</title>
+      <link>http://192.168.0.78:8080/categories/patarimai/</link>
+      <pubDate>Tue, 06 Jun 2017 13:21:15 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/categories/patarimai/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

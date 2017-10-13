@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ partial "_header" . }}
+
+		<link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}styles.css">
+
+		<!-- favicon should be here  -->
+	</head>
+	<body>		
+		<div id="app">
+
+			{{ partial "_nav" . }}
+
+			<!-- <section class="asection"> -->
+				{{ block "content" . }}
+				{{ end }}
+			<!-- </section> -->
+			{{ partial "_footer" . }}
+		</div>
+		{{ block "unscope" . }}{{ end }}
+		<script type="text/javascript" src="{{ .Site.BaseURL }}scripts.js"></script>
+	</body>
+</html>

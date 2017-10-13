@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cat1 on YouTube Draugas</title>
+    <link>http://192.168.0.78:8080/categories/cat1/</link>
+    <description>Recent content in Cat1 on YouTube Draugas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>lt-LT</language>
+    <copyright>&amp;copy; YouTube Draugas 2017</copyright>
+    <lastBuildDate>Tue, 06 Jun 2017 16:14:25 +0300</lastBuildDate>
+    
+	<atom:link href="http://192.168.0.78:8080/categories/cat1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Checkbox list</title>
+      <link>http://192.168.0.78:8080/checkbox-list/</link>
+      <pubDate>Tue, 06 Jun 2017 16:14:25 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/checkbox-list/</guid>
+      <description> Solar System Exploration, 1950s – 1960s Mercury Venus Earth (Orbit/Moon) Mars Jupiter Saturn Uranus Neptune Comet Haley  </description>
+    </item>
+    
+    <item>
+      <title>Name your post here iiii</title>
+      <link>http://192.168.0.78:8080/name-your-post-here-iiii/</link>
+      <pubDate>Tue, 06 Jun 2017 16:14:07 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/name-your-post-here-iiii/</guid>
+      <description> Удачный эксперимент с треками? 😋 📷 Ph: @andrey.yudin 🚲 #треки #авто #urban #длиннаявыдержка #longexposure #russiaphoto #canon #travephotography #instagood #canon_photos #instatravel #landscapephotography #justgoshoot #фотографсамара #самара #fineart #фотограф #красныйяр #самолет #ил2 #покатушка #samyang16mm #samyang
+A post shared by Андрей Юдин (@andrey.yudin) on Oct 7, 2017 at 8:59am PDT
+  </description>
+    </item>
+    
+  </channel>
+</rss>

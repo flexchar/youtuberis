@@ -10,7 +10,7 @@ comments = true
 title = "YouTube atnaujino reklamos politika: pagalba kūrėjams ir reklamuotojams"
 
 disqus_identifier = "1656260868809789"
-slug = ""
+slug = "YouTube atnaujino reklamos politika pagalba kurejams ir reklamuotojams"
 url = ""
 +++
 

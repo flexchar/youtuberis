@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on YouTube Draugas</title>
+    <link>http://192.168.0.78:8080/tags/</link>
+    <description>Recent content in Tags on YouTube Draugas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>lt-LT</language>
+    <copyright>&amp;copy; YouTube Draugas 2017</copyright>
+    <lastBuildDate>Tue, 06 Jun 2017 13:21:15 +0300</lastBuildDate>
+    
+	<atom:link href="http://192.168.0.78:8080/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Analizė</title>
+      <link>http://192.168.0.78:8080/tags/analiz%C4%97/</link>
+      <pubDate>Tue, 06 Jun 2017 13:21:15 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/analiz%C4%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monetizacija</title>
+      <link>http://192.168.0.78:8080/tags/monetizacija/</link>
+      <pubDate>Sun, 02 Apr 2017 15:28:10 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/monetizacija/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Negatyvas</title>
+      <link>http://192.168.0.78:8080/tags/negatyvas/</link>
+      <pubDate>Mon, 27 Mar 2017 16:09:59 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/negatyvas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nepykanta</title>
+      <link>http://192.168.0.78:8080/tags/nepykanta/</link>
+      <pubDate>Mon, 27 Mar 2017 16:09:59 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/nepykanta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimizavimas</title>
+      <link>http://192.168.0.78:8080/tags/optimizavimas/</link>
+      <pubDate>Tue, 06 Jun 2017 13:21:15 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/optimizavimas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Politika</title>
+      <link>http://192.168.0.78:8080/tags/politika/</link>
+      <pubDate>Mon, 27 Mar 2017 16:09:59 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/politika/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reklama</title>
+      <link>http://192.168.0.78:8080/tags/reklama/</link>
+      <pubDate>Mon, 27 Mar 2017 16:09:59 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/reklama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tubebuddy</title>
+      <link>http://192.168.0.78:8080/tags/tubebuddy/</link>
+      <pubDate>Tue, 06 Jun 2017 13:21:15 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/tubebuddy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uždarbis</title>
+      <link>http://192.168.0.78:8080/tags/u%C5%BEdarbis/</link>
+      <pubDate>Tue, 06 Jun 2017 13:21:15 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/u%C5%BEdarbis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>X</title>
+      <link>http://192.168.0.78:8080/tags/x/</link>
+      <pubDate>Tue, 06 Jun 2017 16:14:25 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/x/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Y</title>
+      <link>http://192.168.0.78:8080/tags/y/</link>
+      <pubDate>Tue, 06 Jun 2017 16:14:25 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/y/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Youtube</title>
+      <link>http://192.168.0.78:8080/tags/youtube/</link>
+      <pubDate>Sun, 02 Apr 2017 15:28:10 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

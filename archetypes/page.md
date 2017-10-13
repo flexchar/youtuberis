@@ -1,11 +1,10 @@
 +++
-title               = "Page Title"
-date				= ""
+title 				= "{{ replace .TranslationBaseName "-" " " | title }}"
+date 				= "{{ .Date }}"
 
 url					= ""
 slug                = ""
-disqus_identifier   = "GET-RANDOM -Maximum 9999999999999999"
-
+disqus_identifier   = "{{ now.Unix }}"
 
 draft				= true
 comments 			= false

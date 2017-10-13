@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimizavimas on YouTube Draugas</title>
+    <link>http://192.168.0.78:8080/tags/optimizavimas/</link>
+    <description>Recent content in Optimizavimas on YouTube Draugas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>lt-LT</language>
+    <copyright>&amp;copy; YouTube Draugas 2017</copyright>
+    <lastBuildDate>Tue, 06 Jun 2017 13:21:15 +0300</lastBuildDate>
+    
+	<atom:link href="http://192.168.0.78:8080/tags/optimizavimas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Optimizuok kanalą su TubeBuddy</title>
+      <link>http://192.168.0.78:8080/optimizuok-kanala-su-tubebuddy/</link>
+      <pubDate>Tue, 06 Jun 2017 13:21:15 +0300</pubDate>
+      
+      <guid>http://192.168.0.78:8080/optimizuok-kanala-su-tubebuddy/</guid>
+      <description>An h1 header Paragraphs are separated by a blank line.
+2nd paragraph. Italic, bold, and monospace. Itemized lists look like:
+ this one that one the other one  Note that &amp;mdash; not considering the asterisk &amp;mdash; the actual text content starts at 4-columns in.
+ Block quotes are written like so.
+They can span multiple paragraphs, if you like.
+ Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex.</description>
+    </item>
+    
+  </channel>
+</rss>

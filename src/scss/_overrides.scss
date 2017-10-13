@@ -1,0 +1,26 @@
+/*
+ * Sticky Navbar 
+ */
+
+.navbar {
+	position: fixed; 
+	top: 0; 
+	left: 0;
+	right: 0; 
+	z-index: 1;
+	opacity: .95;
+} 
+//Margin content
+.navbar-space {
+	margin-bottom: $navbar-height;
+}
+
+//Background Color
+body {
+	background-color: $white-bis;
+}
+
+//Remove :hover underlink on tags' links
+a.tag:hover {
+	text-decoration: none;
+}

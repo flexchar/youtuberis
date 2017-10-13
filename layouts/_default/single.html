@@ -1,44 +1,53 @@
-{{ partial "header" . }}
+{{- define "content" -}}
+<article>
 
-	<md-content layout="row" layout-align="center start" flex>
-		<div layout="column" flex layout-wrap class="layout-max-width">
+	<header class="hero is-dark is-bold">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">{{ .Title }}</h1>
+				<h2 class="subtitle">{{ .Params.Subtitle }}</h2>
+			</div>
+		</div>
+	</header>
 
-			<h1>{{ .Title }}</h1>
-			<md-divider></md-divider>
-			{{ .Content }}
+	<section class="section">
+		<div class="container">
+			<div class="content">
+			{{- .Content | replaceRE "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" /></p>" "<figure><img src=\"$1\" alt=\"$2\" title=\"$2\" data-action=\"zoom\"><figcaption>$2</figcaption></figure>" | safeHTML -}}
+			</div>
+		</div>
+	</section>
 
-			<div class="border-top">
-	    		{{- range .Params.tags -}}
-	    		<a href="{{ "/tags" | absURL }}{{ . | relURL }}" style="background-color: rgba(0, 0, 0, 0.03); border-radius: 20px;">{{ . }}</a>
-	    		{{- end -}}
-	    	</div>	
+	<section class="section">
+		<div class="container">
+			<div class="tags">
 
-			{{ partial "widgets/disqus.html" . }}
+    		{{- range .Params.tags -}}
 
-		
-			    <!--<md-card layout="column" flex layout-padding layout-wrap>    	
-			    	<md-card-content>
-			    		<h1>{{ .Title }}</h1>
-			    		<md-divider></md-divider>
-			    		<p>
-			    			{{ .Content }}
-			    		</p>
-			    	</md-card-content>
-			    	<md-chips>
-			    		{{- range .Params.tags -}}
-			    	  	<md-chip>{{.}}</md-chip>
-			    		{{- end -}}
-			    	</md-chips>
-			    	
-			    	<div class="border-top">
-			    		{{- range .Params.tags -}}
-			    		<a href="{{ "/tags" | absURL }}{{ . | relURL }}" style="background-color: rgba(0, 0, 0, 0.03); border-radius: 20px;">{{ . }}</a>
-			    		{{- end -}}
-			    	</div>
-					{{ partial "widgets/disqus.html" . }}
-			    </md-card>-->
+    		<a href="{{ "tags/" | absURL }}{{ . | urlize }}" class="tag is-info">
+    			{{- . -}}
+    		</a>
 
-		</div>	
-	</md-content>
+    		{{- end -}}
+				
 
-{{ partial "footer" . }}
+			</div>
+		</div>
+	</section>
+
+	{{- if .Params.comments -}}
+	<hr>
+
+	<footer class="section">
+		<div class="container">
+			<vue-disqus 
+				shortname="{{ .Site.DisqusShortname }}" 
+				title="{{ .Title }}" 
+				identifier="{{ .Params.disqus_identifier }}"
+				url="{{ .Permalink }}"></vue-disqus>
+		</div>
+	</footer>
+	{{- end }}
+
+</article>
+{{- end -}}
