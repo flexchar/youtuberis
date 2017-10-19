@@ -1,8 +1,24 @@
 import Vue from 'vue';
+
+
 /*
  * Buefy Components
  * import Buefy from 'buefy';
  */
+
+import config, { setOptions } from 'buefy/src/utils/config'
+setOptions(Object.assign(config, {
+	defaultContainerElement: null,
+    defaultIconPack: 'mdi',
+    defaultSnackbarDuration: 3500,
+    defaultToastDuration: 2000,
+    defaultTooltipType: 'is-primary',
+    defaultTooltipAnimated: false,
+    defaultInputAutocomplete: 'on',
+    defaultDateFormatter: null,
+    defaultDateParser: null
+}));
+
 // import { Checkbox } from 'buefy/src/components/checkbox'
 // Vue.component(Checkbox.name, Checkbox)
 import { Dropdown, DropdownItem } from 'buefy/src/components/dropdown';
@@ -39,28 +55,6 @@ Vue.component(Icon.name, Icon);
 // import Toast from 'buefy/src/components/toast'
 // Vue.prototype.$toast = Toast;
 
-// import config, { setOptions } from 'buefy/src/utils/config'
-// console.log("setOptions", setOptions);
-// setOptions(Object.assign(config, {
-// 	defaultContainerElement: null,
-//     defaultIconPack: 'mdi',
-//     defaultSnackbarDuration: 3500,
-//     defaultToastDuration: 2000,
-//     defaultTooltipType: 'is-primary',
-//     defaultTooltipAnimated: false,
-//     defaultInputAutocomplete: 'on',
-//     defaultDateFormatter: null,
-//     defaultDateParser: null
-// }));
-
-
-import { zoom } from "@nishanths/zoom.js";
- 
-// var imgElem = new Image();
-// imgElem.src = "tree.png";
-// document.body.appendChild(imgElem);
- 
-// zoom.setup(imgElem);
 
 
 //Disqus Comments
@@ -70,8 +64,9 @@ var app = new Vue({
 	el: '#app',
 	delimiters: ['{[', ']}'],
 	data: {
+		isMenuActive: false,
 		scrollPosition: 0,
-		show: true
+		visible: false
 	},
 
 	methods: {

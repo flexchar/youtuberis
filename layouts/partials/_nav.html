@@ -1,39 +1,39 @@
-<nav class="navbar" :class="{'has-shadow': scrollPosition}" role="navigation" aria-label="main navigation">
+<nav class="navbar" :class="{'has-shadow': scrollPosition}" role="navigation" aria-label="Puslapio navigacija">
 	<div class="container">
 		
 			<div class="navbar-brand">
 				<a class="navbar-item" href="{{ .Site.BaseURL }}">
-					<img src="/img/temp-logo.png" alt="{{ .Site.Params.Slogan }}">
+					<img src="/img/header-logo.png" alt="{{ .Site.Params.Slogan }}">
 				</a>
 
-				<button class="button navbar-burger">
+				<div class="navbar-burger" @click="isMenuActive = !isMenuActive" :class="{'is-active':isMenuActive}">
 					<span></span>
 					<span></span>
 					<span></span>
-				</button>
+				</div>
 			</div>
-			<div class="navbar-menu">
+			<div class="navbar-menu" :class="{'is-active':isMenuActive}">
 				<div class="navbar-start">
 
-					<b-dropdown hoverable>
-						<a class="navbar-item" slot="trigger">
-							<span>Kategorijos</span>
-							<b-icon icon="arrow_drop_down"></b-icon>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">
+							Kategorijos
 						</a>
-						
-						{{ range $name, $cats := .Site.Taxonomies.categories }}
-						<b-dropdown-item has-link>
-							<a href="{{ "categories/" | absLangURL }}{{ $name | urlize | lower}}">
+
+						<div class="navbar-dropdown">
+							{{ range $name, $cats := .Site.Taxonomies.categories }}
+							<a class="navbar-item"
+							href="{{ "categories/" | absLangURL }}{{ $name | urlize | lower}}">
 								{{ if eq $name "duk" }}
 									{{- "Dažniausiai užduodami klausimai" -}}
 								{{ else }}
 									{{-  title $name -}}
 								{{ end }}
 							</a>
-						</b-dropdown-item>
-						{{ end }}
-							
-					</b-dropdown>
+							{{ end }}
+						</div>
+
+					</div>
 
 				</div>
 				<div class="navbar-end">

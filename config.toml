@@ -4,6 +4,7 @@ title = "YouTube Draugas"
 copyright = "&copy; YouTube Draugas 2017"
 disqusShortname = "demo"
 disableHugoGeneratorInject = true
+publishDir = "docs"
 
 [params]
 	sloganImageUrl = "/img/skeleton/sidenav-bg.jpg"
