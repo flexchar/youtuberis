@@ -1,21 +1,20 @@
-baseurl = "https://example.com"
-languageCode = "lt-LT"
-title = "YouTube Draugas"
-copyright = "&copy; YouTube Draugas 2017"
-disqusShortname = "demo"
-disableHugoGeneratorInject = true
-publishDir = "docs"
-
-[params]
-	sloganImageUrl = "/img/skeleton/sidenav-bg.jpg"
-	slogan = "Atrask daugiau, tapk draugu!"
-	author = "Lukas"
-	description = "YouTube pasaulio naujienos, patarimai, pagalba ir ištekliai. Dažniausiai užduodami klausimai."
-
+# Site Domain URL
+baseurl 					= "https://example.com"
+# Site Data
+title 						= "YouTube Draugas"
+copyright 					= "&copy; 2017 YouTube Draugas | Lukas Vanagas"
+# Site Render Folder
+publishDir 					= "docs"
+# Language code for RSS Feed
+languageCode 				= "lt-LT"
+# Disqus Comments Shortname
+disqusShortname 			= "demo"
+# Disable Hugo Generator meta tag in head
+disableHugoGeneratorInject 	= true
 
 [taxonomies]
-	category = "categories"
-	tag = "tags"
+	kategorija 	= "kategorijos"
+	tema 		= "temos"
 
 [permalinks]
 	post = "/:slug/"
@@ -23,28 +22,28 @@ publishDir = "docs"
 	duk  = "/duk/:slug/"
 
 [blackfriday]
-	plainIDAnchors = true
+	plainIDAnchors 	= true
 	hrefTargetBlank = true
-	angledQuotes = false
-	latexDashes = true
-	extensions = ['github_flavored_markdown']
+	angledQuotes 	= false
+	latexDashes 	= true
+	extensions 		= ['github_flavored_markdown']
 
 menu = ["main"]
 
 [[menu.main]]
-		name = "Resources"
-		pre = "book"
-		weight = 10
-		url = "#"
+		name 	= "Ištekliai"
+		pre 	= "book"
+		weight 	= 10
+		url 	= "#"
 
 [[menu.main]]
-		name = "Placeholder"
-		pre = "book"
-		weight = 14
-		url = "#"
+		name 	= "Placeholder"
+		pre 	= "book"
+		weight 	= 14
+		url 	= "#"
 
 [[menu.main]]
-		name = "LandingPage"
-		pre = "book"
-		weight = 16
-		url = "#"
+		name 	= "LandingPage"
+		pre 	= "book"
+		weight 	= 16
+		url 	= "#"

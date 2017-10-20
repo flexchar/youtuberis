@@ -2,9 +2,9 @@
 date = "2017-06-06T13:21:15+03:00"
 title = "Optimizuok kanalą su TubeBuddy"
 subtitle = "Atrask kaip patobulinti esamą situaciją vos keliais klavišų paspaudimais"
-categories = ["patarimai"]
+kategorijos = ["patarimai"]
 comments = false
-tags = ["tubebuddy", "uždarbis", "analizė", "optimizavimas"]
+temos = ["tubebuddy", "uždarbis", "analizė", "optimizavimas"]
 url = ""
 draft = false
 slug = "Optimizuok kanala su TubeBuddy"

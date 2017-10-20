@@ -1,8 +1,8 @@
 +++
 date = "2017-03-27T16:09:59+03:00"
 
-categories = ['naujienos']
-tags = ['youtube', 'politika', 'reklama', 'negatyvas', 'nepykanta']
+kategorijos = ['naujienos']
+temos = ['youtube', 'politika', 'reklama', 'negatyvas', 'nepykanta']
 
 draft = false
 comments = true

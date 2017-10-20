@@ -21,9 +21,9 @@
 						</a>
 
 						<div class="navbar-dropdown">
-							{{ range $name, $cats := .Site.Taxonomies.categories }}
+							{{ range $name, $cats := .Site.Taxonomies.kategorijos }}
 							<a class="navbar-item"
-							href="{{ "categories/" | absLangURL }}{{ $name | urlize | lower}}">
+							href="{{ "kategorijos/" | absLangURL }}{{ $name | urlize | lower}}">
 								{{ if eq $name "duk" }}
 									{{- "Dažniausiai užduodami klausimai" -}}
 								{{ else }}
