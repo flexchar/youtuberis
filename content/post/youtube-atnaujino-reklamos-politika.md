@@ -5,7 +5,7 @@ kategorijos = ['naujienos']
 temos = ['youtube', 'politika', 'reklama', 'negatyvas', 'nepykanta']
 
 draft = false
-comments = true
+comments = false
 
 title = "YouTube atnaujino reklamos politika: pagalba kūrėjams ir reklamuotojams"
 

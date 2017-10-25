@@ -1,5 +1,7 @@
 #Node Modules installed by Yarn
 /node_modules
+#Static files, handled by Mix
+/static*
 
 #Sublime Files
 **sublime-**
