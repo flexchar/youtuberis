@@ -8,35 +8,20 @@
 	left: 0;
 	right: 0; 
 	z-index: 1;
-	opacity: .95;
+	opacity: .9;
 	transition: box-shadow 0.5s ease-out;
-} 
-// Animmation
-// .navbar-menu {
-// 	animation: fadeIn .3s;
-// }
-
-// @keyframes fadeIn {
-//     from { opacity: 0; }
-//       to { opacity: 1; }
-// }
-
+}
 //Margin content
 .navbar-space {
 	margin-bottom: $navbar-height;
 }
 
-//Background Color
-body {
-	background-color: $white-bis;
+
+html {
+	overflow-y: initial;
 }
 
 //Remove :hover underlink on tags' links
 a.tag:hover {
 	text-decoration: none;
-}
-
-//Borderless mobile nav btn
-.navbar-burger {
-	// border: none;
 }
