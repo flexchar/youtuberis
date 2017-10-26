@@ -31,12 +31,12 @@ body {
 // Flex fill
 html, body, #app {
 	height: 100%;
+	display: flex;
+	// flex-direction: column;
+	flex-flow: column;
 }
 
 #app {
-	display: flex;
-	flex-direction: column;
-	flex-flow: column;
 
 	>.is-flex-fullheight {
 		display: flex;
@@ -49,3 +49,8 @@ html, body, #app {
 	}
 }
 
+//Anchor offsetting
+.is-anchor-link {
+	margin-top: -4rem;
+	padding-top: 4rem;
+}
