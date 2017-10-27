@@ -41,6 +41,8 @@ mix.webpackConfig({
 mix.js('src/js/script.js', 'static/scripts.js')
 	.sass('src/scss/app.scss', 'static/styles.css');
 
+//Copy docs
+mix.copyDirectory('src/docs', 'static/docs');
 
 //Set dest path
 mix.setPublicPath('static');
