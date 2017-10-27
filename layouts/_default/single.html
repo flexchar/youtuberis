@@ -13,7 +13,7 @@
 	<section class="section">
 		<div class="container">
 			<div class="content">
-			{{- .Content | replaceRE "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" /></p>" "<figure><img src=\"$1\" alt=\"$2\" title=\"$2\" data-action=\"zoom\"><figcaption>$2</figcaption></figure>" | safeHTML -}}
+			{{- .Content | replaceRE "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" /></p>" "<figure><img src=\"$1\" alt=\"$2\" title=\"$2\" data-action=\"zoom\"><figcaption>$2</figcaption></figure>" | replaceRE "<h2 id=\"([^\"]+)\">([^\"]+)</h2>" "<h2 id=\"$1\" class=\"is-anchor-link\"><a href=\"#$1\">$2</a></h2>" | replaceRE "\" target=\"_blank\">" "\" target=\"_blank\" rel=\"noopener\">" | safeHTML -}}
 			</div>
 		</div>
 	</section>

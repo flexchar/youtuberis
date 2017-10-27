@@ -1,5 +1,5 @@
 // Anchor Script (add anchor links to posts)
-import './anchor';
+// import './anchor';
 // Buefy Library
 import './buefy';
 // VueJS Framework
