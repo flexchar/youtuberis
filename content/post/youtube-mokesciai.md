@@ -49,9 +49,9 @@ Toliau apžvelgsime, kokie mokesčiai taikomi ir kada bei kiek reikia mokėti.
 |	:---:	|	:---:	|	:---:	|
 |	GPM | 5% nuo AP	| 5% nuo AP	|
 |	VSD | 28.5% nuo pusės (½) | 28.5% nuo pusės (½)	|
-|	PSD | 9% nuo pusės (1/2) AP | 9% nuo pusės (1/2) AP + 27 Eur kas mėnesį	|
+|	PSD | 9% nuo pusės (½) AP | 9% nuo pusės (½) AP + 27 Eur kas mėnesį	|
 
-> Pagrindinis skirtumas tai, kad draudžiamieji ir apdraustieji privalomuoju sveikatos draudimu pagal Sveikatos draudimo įstatymo 6 straipsnio 4 dalį (skaityti) kas mėnesį PSD įmokų po 27 Eur gali nemokėti.
+> Pagrindinis skirtumas tai, kad draudžiamieji ir **apdraustieji** privalomuoju sveikatos draudimu pagal Sveikatos draudimo įstatymo 6 straipsnio 4 dalį [(skaityti)][law] kas mėnesį PSD įmokų po **27 Eur gali nemokėti.**
 
 **Papildomi mokesčiai:** privaloma registruotis [PVM mokėtoju][PVM], jeigu per paskutiniuosius 12 mėnesių gautas atlygis viršijo 45 000 eurų ribą. Tuomet reikės mokėti 21% PVM nuo pajamų.
 
@@ -91,3 +91,4 @@ Dokumento (žurnalo) pavyzdys atsiuntimui – [atsisiųsti iš čia][zurnalas].
 [PVM]: https://www.vmi.lt/cms/mokesciu-moketoju-iregistravimas-pvm-moketoju-registre "PVM mokėtojų įregistravimas"
 [zurnalas]: /docs/idv-zurnalas.doc "Individualios veiklos pajamų žurnalas"
 [uzdarbis]: https://uzdarbis.lt/t342474/mokesciai-nuo-youtube-pajamu/ "Tema uždarbis.lt forume"
+[law]: https://www.e-tar.lt/portal/lt/legalAct/465568e06aef11e7827cd63159af616c "Sveikatos draudimo įstatymo 6 straipsnio naujausia peržiūra"
