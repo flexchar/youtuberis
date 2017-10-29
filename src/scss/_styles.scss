@@ -53,3 +53,54 @@ html, body, #app {
 	margin-top: -4rem;
 	padding-top: 4rem;
 }
+
+/*
+ *  ------------------------
+ *	Footnotes number styling
+ *  ------------------------
+ */
+[rel="footnote"] {
+    display: inline-block;
+
+    background-color: $white;
+    border-radius: 50%;
+    height: 1.1rem;
+    width: 1.1rem; 
+    font-weight: bold;
+
+    text-align: center;
+	line-height: normal;
+    vertical-align: middle;
+
+    color: $blue;
+    border: 1px solid $blue;
+    margin: .2rem;
+}
+
+.footnote-return > sup {
+    display: inline-block;
+	
+	// background-color: $white;
+	color: $black;
+    border-radius: 25%;
+
+    text-align: center;
+    width: 2.6rem;
+}
+
+.footnote-ref:before { //Offset
+	content: '';
+	display: inline-block;
+	position: relative;
+	height: 6rem;
+	margin-top: -6rem;
+}
+
+.footnotes { //Offset
+	>ol {
+		>li {
+			margin-top: -4rem;
+			padding-top: 4rem;
+		}
+	}
+}
