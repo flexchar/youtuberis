@@ -1,20 +1,24 @@
 //Material Icons
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+
 /* 
  * 	Bulma Components (customized)
  * 	http://bulma.io/documentation/overview/modular/
  * 	@import 'node_modules/bulma/bulma';
  */
-@import 'bulma.sass';
+@import 'bulma';
 // @import 'node_modules/bulma/bulma';
+
+
 /* 
  * 	Buefy Components (customized)
  * 	https://buefy.github.io/#/documentation/customization
  * 	@import 'node_modules/buefy/src/scss/buefy';
  */
-@import 'buefy.scss';
+@import 'buefy';
 // @import 'node_modules/buefy/src/scss/buefy';
+
 
 //Helpers
 @import '_helpers';
