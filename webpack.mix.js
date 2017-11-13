@@ -39,7 +39,8 @@ mix.webpackConfig({
 
 //Process JS and SASS
 mix.js('src/js/script.js', 'static/scripts.js')
-	.sass('src/scss/app.scss', 'static/styles.css');
+    .sass('src/scss/app.scss', 'static/styles.css')
+	.sass('src/scss/mini.scss', '../layouts/partials/inlineCSS.html');
 
 //Copy docs
 mix.copyDirectory('src/docs', 'static/docs');
