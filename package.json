@@ -5,10 +5,11 @@
  "license": "UNLISENCED",
  "private": true,
  "scripts": {
-  "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+  "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
   "develop": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js | hugo serve -D --noHTTPCache=true -b 192.168.0.78 --bind 192.168.0.78",
   "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
   "hugo": "hugo serve -D --noHTTPCache=true -b 192.168.0.78 --bind 192.168.0.78",
+  "hu": "hugo serve -D --disableLiveReload -b 192.168.0.78 --bind 192.168.0.78",
   "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
   "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
  },
@@ -22,7 +23,6 @@
  "dependencies": {
   "buefy": "^0.5.4",
   "bulma": "^0.6.0",
-  "vue": "^2.5.2",
-  "vue-disqus": "^2.0.3"
+  "vue": "^2.5.2"
  }
 }

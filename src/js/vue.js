@@ -1,10 +1,10 @@
 import Vue from 'vue';
 //Disqus Comments
-Vue.component('VueDisqus', require('vue-disqus/VueDisqus.vue'));
+Vue.component('VueDisqus', require('./components/VueDisqus.vue'));
 
 var app = new Vue({
 	el: '#app',
-	delimiters: ['{[', ']}'],
+	delimiters: ['${', '}'],
 	data: {
 		isMenuActive: false,
 		scrollPosition: 0,

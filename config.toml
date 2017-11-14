@@ -12,6 +12,8 @@ disqusShortname 			= "demo"
 # Disable Hugo Generator meta tag in head
 disableHugoGeneratorInject 	= true
 
+[params]
+	disqusPublicKey			= "Wkz5FMpf1QxScQY4UIExLxTWo64z61Sf5EJtFLVi2QINZuLo0GwOzmzez0q3kKDv"
 [taxonomies]
 	kategorija 	= "kategorijos"
 	tema 		= "temos"

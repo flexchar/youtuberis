@@ -8,6 +8,20 @@
 				<h2 class="subtitle">{{ .Params.Subtitle }}</h2>
 			</div>
 		</div>
+
+		<div class="hero-foot" style="padding: 0 24px 1.5rem">
+			<div class="container">
+				<div class="tags">
+
+	    		{{- range .Params.temos -}}
+	    		<a href="{{ "temos/" | absURL }}{{ . | urlize }}" class="tag is-link">
+	    			{{- . -}}
+	    		</a>
+	    		{{- end -}}
+
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<section class="section">
@@ -18,33 +32,15 @@
 		</div>
 	</section>
 
-	<section class="section">
-		<div class="container">
-			<div class="tags">
-
-    		{{- range .Params.temos -}}
-
-    		<a href="{{ "temos/" | absURL }}{{ . | urlize }}" class="tag is-info">
-    			{{- . -}}
-    		</a>
-
-    		{{- end -}}
-				
-
-			</div>
-		</div>
-	</section>
-
 	{{- if .Params.comments -}}
-	<hr>
-
-	<footer class="section">
+	<footer class="section" style="padding-top: 0">
 		<div class="container">
 			<vue-disqus 
 				shortname="{{ .Site.DisqusShortname }}" 
 				title="{{ .Title }}" 
 				identifier="{{ .Params.disqus_identifier }}"
-				url="{{ .Permalink }}"></vue-disqus>
+				url="{{ .Permalink }}"
+				api_key="{{ .Site.Params.disqusPublicKey }}"></vue-disqus>
 		</div>
 	</footer>
 	{{- end }}

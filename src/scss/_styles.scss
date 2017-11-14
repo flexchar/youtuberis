@@ -1,16 +1,27 @@
+
+/*
+ *  ---------------------------------
+ *	Overall UX
+ *  ---------------------------------
+ */
+
 ::selection {
 	// color: $blue;
 	// background: $grey-lightest;
 	background: $blue;
 	color: $white;
 }
-
-// Smooth scroll for site
 body {
 	scroll-behavior: smooth;
 }
 
-// Add Hashtags for h2 linky headers
+
+
+/*
+ *  ---------------------------------
+ *	Add Hashtags for h2 linky headers
+ *  ---------------------------------
+ */
 .content > h2 > a::before {
 	content: "#";
 	margin-left: -1em;
@@ -19,7 +30,7 @@ body {
 }
 @media (max-width: $desktop) {
 	.content > h2 > a::before {
-		margin-left: -18.5px;
+		margin-left: -.8em;
 	}
 }
 
@@ -28,7 +39,12 @@ body {
 }
 
 
-// Flex fill
+
+/*
+ *  ---------------------------------
+ *	Flex fill
+ *  ---------------------------------
+ */
 html, body, #app {
 	height: 100vh;
 }
@@ -48,11 +64,19 @@ html, body, #app {
 	}
 }
 
-//Anchor offsetting
+
+
+/*
+ *  ---------------------------------
+ *	Anchor offsetting
+ *  ---------------------------------
+ */
 .is-anchor-link {
-	margin-top: -4rem;
+	margin-top: -2.8572rem !important;
 	padding-top: 4rem;
 }
+
+
 
 /*
  *  ------------------------
@@ -103,4 +127,15 @@ html, body, #app {
 			padding-top: 4rem;
 		}
 	}
+}
+
+
+
+/*
+ *  ------------------------
+ *	Container spacing
+ *  ------------------------
+ */
+.container {
+	padding: 0 0.5rem;
 }
