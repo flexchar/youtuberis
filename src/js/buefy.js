@@ -4,18 +4,18 @@ import Vue from 'vue';
  * import Buefy from 'buefy';
  */
 
-import config, { setOptions } from 'buefy/src/utils/config'
-setOptions(Object.assign(config, {
-	defaultContainerElement: null,
-    defaultIconPack: 'mdi',
-    defaultSnackbarDuration: 3500,
-    defaultToastDuration: 2000,
-    defaultTooltipType: 'is-primary',
-    defaultTooltipAnimated: false,
-    defaultInputAutocomplete: 'on',
-    defaultDateFormatter: null,
-    defaultDateParser: null
-}));
+// import config, { setOptions } from 'buefy/src/utils/config'
+// setOptions(Object.assign(config, {
+// 	defaultContainerElement: null,
+//     defaultIconPack: 'mdi',
+//     defaultSnackbarDuration: 3500,
+//     defaultToastDuration: 2000,
+//     defaultTooltipType: 'is-primary',
+//     defaultTooltipAnimated: false,
+//     defaultInputAutocomplete: 'on',
+//     defaultDateFormatter: null,
+//     defaultDateParser: null
+// }));
 
 // import { Checkbox } from 'buefy/src/components/checkbox'
 // Vue.component(Checkbox.name, Checkbox)
@@ -30,8 +30,8 @@ setOptions(Object.assign(config, {
 // import Collapse from 'buefy/src/components/Collapse'
 // import Datepicker from 'buefy/src/components/datepicker'
 // import Field from 'buefy/src/components/field'
-import Icon from 'buefy/src/components/icon';
-Vue.component(Icon.name, Icon);
+// import Icon from 'buefy/src/components/icon';
+// Vue.component(Icon.name, Icon);
 // import Input from 'buefy/src/components/input'
 // import Message from 'buefy/src/components/message'
 // import Notification from 'buefy/src/components/notification'
