@@ -84,7 +84,7 @@ Dokumento (žurnalo) pavyzdys atsiuntimui – [atsisiųsti iš čia][zurnalas].
 
 Ši informacija *neturi* teisės akto galios ir **paremta** kompetentingos valstybės institucijos nuomonę mokesčių įstatymų ar kitų teisės aktų reglamentuojamais klausimais.  
 
-**Štai ir viskas!** Dar **turi klausimų?** O gal nori pasidalinti savo patirtimi? Drąsiai **keliauk į** apačion ir išnaudok tą **komentarų skilty!**
+**Štai ir viskas!** Dar **turi klausimų?** O gal nori pasidalinti savo patirtimi? Drąsiai **klausk** apačioje **komentarų skilty!**
 
 
 [EVRK]: https://osp.stat.gov.lt/static/EVRK2/EVRK2red_lt_RIGHT.htm#63.11 "Ekonominės veiklos rūšių klasifikatorius"
