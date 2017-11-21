@@ -13,11 +13,11 @@ kategorijos         = ["duk"]
 temos      	        = ["uzdarbis", "adsense", "youtube"]
 +++
 
-Ką tik pradėjai dalintis turiniu YouTube kanale ir įjungei moneticaziją, bet AdSense rodo tik nulius, kai tuo pat metu YouTube jau atsidaro pirmieji centai?
+Ką tik pradėjai dalintis turiniu YouTube kanale ir įjungei monetizaciją, bet AdSense rodo tik nulius, kai tuo pat metu YouTube jau atsiranda pirmieji centai?
 
 <!--more-->
 
-O taip! Tai situacija, į kurią turbūt kiekvienas iš mūsų patekom ir nerimaudami, kodėl gi AdSense dar nerodo mano uždarbio, naršėme interneto platybes, tačiau, gera žinia, **nerimauti čia neverta**.
+O taip! Tai situacija, į kurią turbūt kiekvienas iš mūsų patekom ir nerimaudami, kodėl gi AdSense dar nerodo mano pinigėlių, naršėme interneto platybes, tačiau, gera žinia yra tai, kad **nerimauti** čia **neverta**.
 
 Nors YouTube Analytics sistema preliminarias pajamas rodo jau po dviejų dienų, **Google AdSense** pajamas už einamąjį mėnesį susumuoja ir pateikia **iki sekančio mėnesio 15 dienos**.
 
