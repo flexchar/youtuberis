@@ -1,12 +1,12 @@
 +++
-title 				= "10+ ypač patogių YouTube sparčiųjų klavišų"
+title 				= "Virš 10 ypač patogių YouTube sparčiųjų klavišų"
 date 				= "2017-11-26T09:30:32+01:00"
 
 url					= ""
 slug                = "youtube-spartieji-klavisai-shortcuts"
 disqus_identifier   = "1511685032"
 
-draft				= true
+draft				= false
 comments 			= true
 
 kategorijos         = ["patarimai"]
@@ -19,7 +19,7 @@ Pagal populiarumą YouTube kaip svetainė stovi TOP3, tačiau savo srityje tai y
 
 PASTEBĖJIMAS: visi klavišai dirba QWERTY klaviatūros dalyje. NumPad veikia 50 / 50.
 
-## Leistuvo valdymas
+## Geriausieji arba leistuvo valdymas
 
 Mano mėgstamiausi spartieji klavišai. Su jais ne tik sutaupysi daug laiko, bet ir kai kada išnaudosi funkcionalumą, kurio nepasiūlo valdymas su pelyte. 
 
