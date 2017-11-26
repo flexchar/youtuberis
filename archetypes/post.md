@@ -3,7 +3,7 @@ title 				= "{{ replace .TranslationBaseName "-" " " | title }}"
 date 				= "{{ .Date }}"
 
 url					= ""
-slug                = ""
+slug                = "{{ .File.BaseFileName }}"
 disqus_identifier   = "{{ now.Unix }}"
 
 draft				= true
