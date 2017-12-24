@@ -20,7 +20,7 @@ disableHugoGeneratorInject 	= true
 
 [permalinks]
 	post = "/:slug/"
-	# page = "/:slug/"
+	page = "/:slug/"
 	duk  = "/duk/:slug/"
 
 [blackfriday]
@@ -33,19 +33,19 @@ disableHugoGeneratorInject 	= true
 menu = ["main"]
 
 [[menu.main]]
-		name 	= "Ištekliai"
-		pre 	= "book"
+		name 	= "Žaidimų monetizacija"
+		pre 	= ""
 		weight 	= 10
-		url 	= "#"
+		url 	= "/zaidimu-monetizacijos-informacija/"
 
 [[menu.main]]
-		name 	= "Placeholder"
-		pre 	= "book"
+		name 	= "Muzika"
+		pre 	= ""
+		weight 	= 12
+		url 	= "/muzika/"
+
+[[menu.main]]
+		name 	= "Medija"
+		pre 	= ""
 		weight 	= 14
-		url 	= "#"
-
-[[menu.main]]
-		name 	= "LandingPage"
-		pre 	= "book"
-		weight 	= 16
-		url 	= "#"
+		url 	= "/juosta/"

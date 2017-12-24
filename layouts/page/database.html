@@ -1,0 +1,22 @@
+{{ define "content" }}
+
+  <section class="hero is-medium is-bold {{- if .Params.headerClass }} {{ .Params.headerClass }}{{ end }}">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          {{ .Title }}
+        </h1>
+        <h2 class="subtitle">
+          {{ .Params.subtitle }}
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+      <section class="container">
+        <database url="{{ .Params.database }}" {{- if .Params.columns }} :columns="{{ .Params.columns }}" {{ end }}></database>      
+      </section>
+  </section>
+
+{{ end }}

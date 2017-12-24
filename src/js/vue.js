@@ -1,6 +1,4 @@
 import Vue from 'vue';
-//Disqus Comments
-Vue.component('VueDisqus', require('./components/VueDisqus.vue'));
 
 var app = new Vue({
 	el: '#app',
@@ -24,4 +22,9 @@ var app = new Vue({
 	mounted() {
 		window.addEventListener('scroll', this.updateScroll);
 	},
+	components: {
+		VueDisqus: require('./components/VueDisqus.vue'),
+		Database: require('./components/Database.vue')
+	}
 });
+
