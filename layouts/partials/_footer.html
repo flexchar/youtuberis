@@ -1,11 +1,8 @@
 <footer class="footer" style="padding: 1rem">
 	<div class="container">
 		<div class="content has-text-left">
-			<p>Sukurta su 
-				<span class="icon is-danger">
-					<i class="mdi">favorite</i>
-				</span>
-				<span style="float: right;">&copy; Lukas Vanagas</span>
+			<p>{{ .Site.Params.copyrightL | safeHTML }}
+				<span style="float: right;">{{ .Site.Params.copyrightR | safeHTML }}</span>
 			</p>
 		</div>
 	</div>	

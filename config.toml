@@ -2,7 +2,6 @@
 baseurl 					= "https://example.com"
 # Site Data
 title 						= "YouTube Draugas"
-copyright 					= "&copy; 2017 YouTube Draugas | Lukas Vanagas"
 # Site Render Folder
 publishDir 					= "docs"
 # Language code for RSS Feed
@@ -14,6 +13,8 @@ disableHugoGeneratorInject 	= true
 
 [params]
 	disqusPublicKey			= "Wkz5FMpf1QxScQY4UIExLxTWo64z61Sf5EJtFLVi2QINZuLo0GwOzmzez0q3kKDv"
+	copyrightL				= "Sukurta su <b-icon icon=\"heart\" size=\"is-small\"></b-icon>"
+	copyrightR				= "&copy; 2018 YouTube Draugas | Lukas Vanagas"
 [taxonomies]
 	kategorija 	= "kategorijos"
 	tema 		= "temos"
