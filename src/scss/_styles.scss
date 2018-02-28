@@ -130,7 +130,6 @@ html, body, #app {
 }
 
 
-
 /*
  *  ------------------------
  *	Container spacing
@@ -152,4 +151,92 @@ html, body, #app {
     border-width: 1px 1px 2px 1px;
     border-style: solid;
     border-radius: 5px;
+}
+
+/*
+ *  ------------------------
+ *	Front page header image
+ *  ------------------------
+ */
+
+#front_section {
+	position: relative;
+
+	&:before {
+		content: '';
+	 	position: absolute;
+	 	background: blue url('/img/index_bg.jpg');
+	 	top: 0;
+	 	left: 0;
+	 	width: 100%;
+	 	height: 100%;
+	 	opacity: .15;
+
+		background-position: center;	
+	 	background-size: cover;
+ 		background-repeat: no-repeat;
+ 		background-attachment: fixed;
+	}
+}
+
+/*
+ *  ------------------------
+ *	Front page articles
+ *  ------------------------
+ */
+
+.front-article-box {
+	display: block;
+	height: 250px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .05);
+}
+
+.front-article-overlay {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+
+.front-article-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 1rem;
+
+
+	&:hover > .front-article-title {
+		transform: scale(1.1);
+	}
+	&:hover > .front-article-time {
+		transform: scale(.9);
+	}
+}
+
+.front-article-title,.front-article-time {
+	transition: all .2s ease-in-out;
+
+}
+
+.front-article-title {
+
+}
+
+.front-article-time {
+	display: block;
+	color: rgba(0, 0, 0, .9);
+
 }

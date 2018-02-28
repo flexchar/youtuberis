@@ -1,48 +1,76 @@
 {{ define "content" }}  
-<br>
-<br>
-<br>
 
-      
-<md-content layout-margin layout="column" flex>
-	<div layout="row" layout-wrap>	
-		{{ range where .Data.Pages "Section" "in" (slice "post" "duk") }}
-			<article flex-gt-md="33" flex-gt-sm="50" flex style="min-width: 250px">	
-				<md-card style="min-height: 300px">
-					<md-card-header>
-						<md-card-header-text class="md-subhead"> 
-							<span class="md-subhead">{{ index $.Site.Data.men (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }} </span>
-						</md-card-header-text>
-					</md-card-header>
-					<!--
-					{{ if isset .Params "image" }}
-					<img ng-src="{{ .Image }}" class="md-card-image" alt="">
-					{{end}}-->
-					<md-card-title>
-						<md-card-title-text>
-							<span class="md-headline"><a href="{{ .Permalink }}" style="color: #000;">{{ .Title }}</a>{{ if .Draft }} (::Draft){{ end }}</span>				
-						</md-card-title-text>
-					</md-card-title>
-					<md-card-content>
-						<p>{{ .Summary | plainify | safeHTML }}</p>
-					</md-card-content>
-					<md-card-actions layout="row" layout-align="start center">
-						{{ if .Truncated }}
-						<md-button href="{{ .Permalink }}">Skaityti toliau</md-button>
-						{{ end }}
-						<md-card-icon-actions>
-							<md-button class="md-icon-button" aria-label="toggle">
-								<md-icon>play circle outline</md-icon>
-							</md-button>
-						</md-card-icon-actions>
-					</md-card-actions>
-					<md-card-footer>
-
-					</md-card-footer>
-				</md-card>
-			</article>	  	
-		{{ end }}
+<section class="hero is-medium is-dark" id="front_section">
+	<div class="hero-body">
+		<div class="container">
+			<div class="title is-1">
+				YouTube... atraskime kartu!
+			</div>
+			<br>
+			<div class="subtitle is-4">
+				Labas! Taip tau, januoli ar panele, besislepianti už mėlynojo ekrano! <br> Aš <strong>Lukas</strong> - žmogus, užklydęs į YouTube pasaulį ir... ten užstrigęs.
+			</div>
+			<br>
+			<!-- <a href="#content" class="button is-large is-warning is-outlined" style="text-transform: uppercase;">DAUGIAU!</a> -->
+		</div>
 	</div>
-</md-content>
+</section>
+
+
+<section class="section">
+	<div id="content" style="margin-top: -50px; padding-top: 50px"></div>
+	<div class="container">
+
+		<div class="title">Naujausi straipsniai</div>
+
+		<div class="columns">
+						
+			{{ range first 3 (where .Data.Pages "Section" "in" (slice "post" "duk")) }}
+			<article class="column is-4">
+				<a href="{{ .Permalink }}" class="front-article-box box">
+					<span class="front-article-overlay"></span>
+					<span class="front-article-info">
+						<time class="front-article-time" datetime="{{ .Date }}">
+							{{ index $.Site.Data.men (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
+						</time>
+						<strong class="front-article-title has-text-primary title is-4">{{ .Title }}</strong>
+					</span>
+				</a>
+			</article>
+			{{ end }}
+
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="title">Skaičiukai</div>
+		<div class="subtitle">
+			Trputis iš asmeninės statistikos...
+		</div>
+		<div class="level">
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">konsultacjos</p>
+					<p class="title">50+</p>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">žinutės</p>
+					<p class="title">1000+</p>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">dar kažkas</p>
+					<p class="title">15+</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+      
 
 {{ end }}
