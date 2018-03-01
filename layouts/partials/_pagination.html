@@ -1,0 +1,83 @@
+{{- if or (.HasPrev) (.HasNext) -}}
+<nav class="pagination is-centered" role="navigation" aria-label="Puslapio Navigacija">
+ 
+ 	<!-- Previous button. -->
+	{{- if .HasPrev -}}
+	<a 	href="{{ .Prev.URL }}" 
+		class="pagination-previous" 
+		aria-label="Ankstesnis">
+		Ankstesnis
+	</a>
+	{{- else -}}
+	<a class="pagination-previous" disabled aria-label="Šis yra pirmasis puslapis" title="Šis yra pirmasis puslapis">Ankstesnis</a>
+	{{- end -}}
+
+ 	<!-- Next button. -->
+	{{- if .HasNext -}}
+	<a 	href="{{ .Next.URL }}" 
+		class="pagination-next" 
+		aria-label="Sekantis">
+		Sekantis
+	</a>
+	{{- else -}}
+	<a class="pagination-next" disabled aria-label="Šis yra paskutinis puslapis" title="Šis yra paskutinis puslapis">Sekantis</a>
+	{{- end -}}
+
+ 	<!-- Page number buttons. -->
+	<ul class="pagination-list">
+
+
+ 		<!-- First page. -->
+		{{- if .HasPrev -}}
+		<li>
+			<a href="{{ (index .Pagers 0).URL }}" class="pagination-link" aria-label="Atverti pirmąjį">1</a>
+		</li>
+		{{- if gt .PageNumber 3 -}}
+		<li>
+			<span class="pagination-ellipsis">&hellip;</span>
+		</li>
+		{{- end -}}
+		{{- end -}}
+
+
+ 		<!-- Previous page. -->
+		{{- if and (.HasPrev) (gt .PageNumber 2) -}}
+		<li>
+			<a href="{{ (index .Pagers (sub .PageNumber 2) ).URL }}" class="pagination-link" aria-label="Atverti {{ (index .Pagers (sub .PageNumber 2) ).PageNumber }}">
+				{{ (index .Pagers (sub .PageNumber 2) ).PageNumber }}
+			</a>
+		</li>
+		{{- end -}}
+
+ 		<!-- Current page. -->
+		<li>
+			<a href="{{ .URL }}" class="pagination-link is-current" aria-label="Atverti {{ .PageNumber }}">
+				{{ .PageNumber }}
+			</a>
+		</li>
+
+ 		<!-- Next page. -->
+		{{- if and (.HasNext) (gt (sub .TotalPages .PageNumber) 1) -}}
+		<li>
+			<a href="{{ (index .Pagers .PageNumber ).URL }}" class="pagination-link" aria-label="Atverti {{ (index .Pagers .PageNumber ).PageNumber }}">
+				{{ (index .Pagers .PageNumber ).PageNumber }}
+			</a>
+		</li>
+		{{- end -}}
+
+
+ 		<!-- Last page. -->
+		{{- if (.HasNext) -}}
+		{{- if gt (sub .TotalPages .PageNumber) 2 -}}
+		<li>
+			<span class="pagination-ellipsis">&hellip;</span>
+		</li>
+		{{- end -}}
+		<li>
+			<a href="{{ (index .Pagers (sub .TotalPages 1) ).URL }}" class="pagination-link" aria-label="Atverti paskutinį">{{ .TotalPages }}</a>
+		</li>
+		{{- end -}}
+
+	</ul>
+</nav>
+{{- end -}}
