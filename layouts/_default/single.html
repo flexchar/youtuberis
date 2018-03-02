@@ -1,7 +1,7 @@
 {{- define "content" -}}
 <article>
 
-	<header class="hero is-dark is-bold">
+	<header class="hero is-primary is-bold is-medium">
 		<div class="hero-body">
 			<div class="container">
 				<h1 class="title">{{ .Title }}</h1>
@@ -13,11 +13,11 @@
 			<div class="container">
 				<div class="tags">
 
-	    		{{- range .Params.temos -}}
-	    		<a href="{{ "temos/" | absURL }}{{ . | urlize }}" class="tag is-link">
-	    			{{- . -}}
-	    		</a>
-	    		{{- end -}}
+		    		{{- range .Params.temos -}}
+		    		<a href="{{ "temos/" | absURL }}{{ . | urlize }}" class="tag is-light has-text-weight-bold">
+		    			{{- . -}}
+		    		</a>
+		    		{{- end -}}
 
 				</div>
 			</div>
@@ -25,7 +25,7 @@
 	</header>
 
 	<section class="section">
-		<div class="container">
+		<div class="container has-narrow-content">
 			<div class="content">
 			{{- .Content | replaceRE "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" title=\"([^\"]+)\" /></p>" "<figure><img src=\"$1\" alt=\"$2\" title=\"$2\" data-action=\"zoom\"><figcaption>$2</figcaption></figure>" | replaceRE "<h2 id=\"([^\"]+)\">([^\"]+)</h2>" "<h2 id=\"$1\" class=\"is-anchor-link\"><a href=\"#$1\">$2</a></h2>" | replaceRE "\" target=\"_blank\">" "\" target=\"_blank\" rel=\"noopener\">" | replaceRE "<sup>\\[return\\]</sup>" "<sup>[grįžti]</sup>" | safeHTML -}}
 			</div>
