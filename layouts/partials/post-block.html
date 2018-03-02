@@ -1,0 +1,23 @@
+				<div class="tile is-4 is-parent">
+					<article class="tile is-child box">
+						<header>
+							<a href="{{ .Permalink }}">
+								<p class="title"> {{ .Title }} {{ if .Draft }} (::Draft){{ end }}
+									<span class="tag is-rounded is-pulledright">
+										<time class="has-text-weight-light" datetime="{{ .Date }}">
+											{{ index $.Site.Data.men (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
+										</time>
+									</span>
+								</p>
+							</a>
+						</header>
+						<section>
+							{{ truncate 250 (.Summary | plainify) }}
+							<!-- {{ if .Truncated }} <a href="{{.Permalink}}" class="has-text-dark">Tęsti dabar</a> {{ end }} -->
+						</section>
+						<!-- Read later roadmap feature snippet -->
+						<!-- <footer class="buttons is-right">
+							<button class="button is-primary" style="margin-bottom: -.5em;">Išsaugoti</button>
+						</footer> -->
+					</article>
+				</div>
