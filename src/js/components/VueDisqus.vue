@@ -2,7 +2,7 @@
   <div id="disqus_thread" v-if="visibleComments"></div>
   <button v-else="visibleComments" v-on:click="loadComments()" class="button is-dark is-outlined" style="width: 15rem;height: 3rem;">
     <span class="icon">
-      <i class="material-icons">chat_bubble_outline</i>
+      <i class="mdi mdi-message-outline"></i>
     </span>
     <span style="text-transform: uppercase;">Komentarai: {{ commentsCount }}</span>
   </button>
