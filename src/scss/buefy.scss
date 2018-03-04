@@ -4,15 +4,38 @@
  * 	@import 'node_modules/buefy/src/scss/buefy';
  */
 
+/* 
+ * ---------------
+ *  CONFIGURATION
+ * ---------------
+ */
+
+// @import "node_modules/buefy/src/scss/utils/_all";
 @import "node_modules/buefy/src/scss/utils/_functions";
 
-// @import "node_modules/buefy/src/scss/utils/_variables";
-$speed-slow: 250ms !default
-$speed-slower: 450ms !default
+@import "node_modules/buefy/src/scss/utils/_variables";
+$speed-slow: 350ms !default;
+$speed-slower: 550ms !default;
+
+// $primary: #7957d5 !default;
+// $primary-invert: $white !default;
+
+// $info: #167df0;
+
+// $link: $primary !default;
+// $link-invert: $primary-invert !default;
+// $link-visited: $grey !default;
+// $link-focus-border: $primary !default;
 
 @import "node_modules/buefy/src/scss/utils/_helpers";
 @import "node_modules/buefy/src/scss/utils/_animations";
 
+
+/* 
+ * ------------
+ *  COMPONENTS
+ * ------------
+ */
 
 // @import "node_modules/buefy/src/scss/components/_autocomplete";
 @import "node_modules/buefy/src/scss/components/_checkbox";
@@ -21,17 +44,20 @@ $speed-slower: 450ms !default
 // @import "node_modules/buefy/src/scss/components/_dialog";
 @import "node_modules/buefy/src/scss/components/_dropdown";
 // @import "node_modules/buefy/src/scss/components/_form";
-@import "node_modules/buefy/src/scss/components/_icon";
+// @import "node_modules/buefy/src/scss/components/_icon";
 @import "node_modules/buefy/src/scss/components/_loading";
 // @import "node_modules/buefy/src/scss/components/_message";
 // @import "node_modules/buefy/src/scss/components/_modal";
-// @import "node_modules/buefy/src/scss/components/_notices";
-// @import "node_modules/buefy/src/scss/components/_pagination";
+@import "node_modules/buefy/src/scss/components/_notices";
+@import "node_modules/buefy/src/scss/components/_pagination";
 // @import "node_modules/buefy/src/scss/components/_panel";
 // @import "node_modules/buefy/src/scss/components/_radio";
 // @import "node_modules/buefy/src/scss/components/_select";
 @import "node_modules/buefy/src/scss/components/_switch";
 @import "node_modules/buefy/src/scss/components/_table";
 // @import "node_modules/buefy/src/scss/components/_tabs";
+@import "node_modules/buefy/src/scss/components/_tag";
+@import "node_modules/buefy/src/scss/components/_taginput";
+@import "node_modules/buefy/src/scss/components/_timepicker";
 // @import "node_modules/buefy/src/scss/components/_tooltip";
 // @import "node_modules/buefy/src/scss/components/_upload";
