@@ -9,7 +9,7 @@
  * 	http://bulma.io/documentation/overview/modular/
  * 	@import 'node_modules/bulma/bulma';
  */
-@import 'bulma';
+@import './bulma';
 // @import 'node_modules/bulma/bulma';
 
 
@@ -18,15 +18,15 @@
  * 	https://buefy.github.io/#/documentation/customization
  * 	@import 'node_modules/buefy/src/scss/buefy';
  */
-@import 'buefy';
+@import './buefy';
 // @import 'node_modules/buefy/src/scss/buefy';
 
 
 //Helpers
-@import '_helpers';
+@import './_helpers';
 
 //Styling
-@import '_styles';
+@import './_styles';
 
 //Overrides
-@import '_overrides';
+@import './_overrides';
