@@ -1,7 +1,6 @@
 /*
  * Sticky Navbar 
  */
-
 .navbar {
 	position: fixed; 
 	top: 0; 
@@ -11,17 +10,32 @@
 	opacity: .9;
 	transition: box-shadow 0.5s ease-out;
 }
-//Margin content
+
+/*
+ * Add margin to page's content due fixed navbar
+ */
 .navbar-space {
 	margin-bottom: $navbar-height;
 }
 
-
+/*
+ * Reset Vertical scrool
+ */
 html {
 	overflow-y: initial;
 }
 
-//Remove :hover underlink on tags' links
+/*
+ * Remove :hover underlink on tags' links
+ */
 a.tag:hover {
 	text-decoration: none;
+}
+
+/*
+ * Justified text on .content paragraphs and ul elements
+ * Affects single.html template
+ */
+.content > p, ul {
+	text-align: justify;
 }
