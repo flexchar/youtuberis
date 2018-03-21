@@ -4,7 +4,7 @@ date = "2017-03-27T16:09:59+03:00"
 kategorijos = ['naujienos']
 temos = ['youtube', 'politika', 'reklama', 'negatyvas', 'nepykanta']
 
-draft = false
+draft = true
 comments = false
 
 title = "YouTube atnaujino reklamos politika: pagalba kūrėjams ir reklamuotojams"
