@@ -20,9 +20,15 @@ const imageminPngquant = require('imagemin-pngquant');
 //Handle images
 mix.webpackConfig({
     plugins: [
+        // Assets
         new CopyWebpackPlugin([{
             from: 'src/images',
-            to: 'img',
+            to: 'img'
+        }]),
+        // Posts 
+        new CopyWebpackPlugin([{
+            from: 'uploads',
+            to: 'uploads'
         }]),
 		new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
@@ -41,9 +47,6 @@ mix.webpackConfig({
 mix.js('src/js/script.js', 'static/scripts.js')
     .sass('src/scss/app.scss', 'static/styles.css')
 	.sass('src/scss/mini.scss', '../layouts/partials/inlineCSS.html');
-
-//Copy docs
-mix.copyDirectory('src/docs', 'static/docs');
 
 //Set dest path
 mix.setPublicPath('static');
