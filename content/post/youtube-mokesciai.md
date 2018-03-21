@@ -89,6 +89,6 @@ Dokumento (žurnalo) pavyzdys atsiuntimui – [atsisiųsti iš čia][zurnalas].
 
 [EVRK]: https://osp.stat.gov.lt/static/EVRK2/EVRK2red_lt_RIGHT.htm#63.11 "Ekonominės veiklos rūšių klasifikatorius"
 [PVM]: https://www.vmi.lt/cms/mokesciu-moketoju-iregistravimas-pvm-moketoju-registre "PVM mokėtojų įregistravimas"
-[zurnalas]: /docs/idv-zurnalas.doc "Individualios veiklos pajamų žurnalas"
+[zurnalas]: /uploads/docs/idv-zurnalas.doc "Individualios veiklos pajamų žurnalas"
 [uzdarbis]: https://uzdarbis.lt/t342474/mokesciai-nuo-youtube-pajamu/ "Tema uždarbis.lt forume"
 [law]: https://www.e-tar.lt/portal/lt/legalAct/465568e06aef11e7827cd63159af616c "Sveikatos draudimo įstatymo 6 straipsnio naujausia peržiūra"
