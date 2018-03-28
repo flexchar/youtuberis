@@ -1,16 +1,14 @@
 {
  "name": "youtube-blog",
  "version": "0.1.0",
- "main": "",
- "license": "UNLISENCED",
+ "license": "MIT License",
  "private": true,
  "scripts": {
-  "local": "yarn run hugo & yarn run dev",
-  "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "develop": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js | hugo serve -D --noHTTPCache=true -b 192.168.0.78 --bind 192.168.0.78",
+  "netlify": "yarn run prod && hugo",
+  "hugo": "hugo serve -D --noHTTPCache=true --disableFastRender",
+  "hugo-passive": "hugo serve -D --noHTTPCache=true --disableLiveReload --disableFastRender",
   "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "hugo": "hugo serve -D --noHTTPCache=true -b 192.168.0.78 --bind 192.168.0.78",
-  "hugo-passive": "hugo serve -D --disableLiveReload -b 192.168.0.78 --bind 192.168.0.78",
+  "dev":  "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
   "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
   "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
  },
