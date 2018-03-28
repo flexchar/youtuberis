@@ -47,5 +47,8 @@
 			</div>
 	</div>
 </nav>
+{{ $space := .Params.navbarSpace | default true }}
+{{ if $space }}
 <div class="navbar-space"></div>
+{{ end }}
 

@@ -17,6 +17,11 @@
 .navbar-space {
 	margin-bottom: $navbar-height;
 }
+// Class to negate navbar's bottom, 
+// better use navbarSpace = false in front matter
+.is-under {
+	margin-top: -#{$navbar-height};
+}
 
 /*
  * Reset Vertical scrool
