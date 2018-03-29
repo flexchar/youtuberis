@@ -1,11 +1,15 @@
 <template>
   <div id="disqus_thread" v-if="visibleComments"></div>
-  <button v-else="visibleComments" v-on:click="loadComments()" class="button is-dark is-outlined" style="width: 15rem;height: 3rem;">
-    <span class="icon">
-      <i class="mdi mdi-message-outline"></i>
-    </span>
-    <span style="text-transform: uppercase;">Komentarai: {{ commentsCount }}</span>
-  </button>
+  <div v-else="visibleComments"> 
+    <hr> 
+    <button v-on:click="loadComments()" class="button is-link is-outlined" style="width: 15rem;height: 3rem;" :disabled="disabled">
+      <span class="icon">
+        <i class="mdi mdi-message"></i>
+      </span>
+      <span style="text-transform: uppercase;">Komentarai: {{ commentsCount }}</span>
+    </button>
+    <p v-show="disabled">Norint komentuoti reikalingas interneto ryšys.</p>
+  </div>
 </template>
 
 <script>
@@ -27,38 +31,41 @@
       title: {
        type: String,
        required: false
-      },
-      remote_auth_s3: {
-       type: String,
-       required: false
-      },
-      api_key: {
-       type: String,
-       required: true
-      },
-      sso_config: {
-        type: Object,
-        required: false
       }
     },
     data () {
       return {
         visibleComments: false,
-        commentsCount: 0
+        commentsCount: 0,
+        disabled: false,
+        api_key: process.env.MIX_DISQUS_PUBLIC_KEY,
       }
     },
     mounted () {
       if (window.DISQUS) {
-        this.reset(window.DISQUS)
-        return
+        this.reset(window.DISQUS);
+        return;
       }
       // Nice idea, doesn't work | causes, however, duplicate exec if button clicked
       // this.init(10000)
-      // window.addEventListener('load', this.count());
-      this.count();
+      // window.addEventListener('load', this.count(), {passive: true, once: true});
+
+      // Show counter if online
+      if (navigator.onLine) { 
+        this.count();
+      } else {
+          this.disabled = true;
+          this.commentsCount = '?';
+          // On back online allow comments
+          window.addEventListener('online', () => {
+            this.disabled = false;
+            this.count();
+          }, {passive: true, once: true});
+      }
     },
     methods: {
       loadComments () {
+        if (!navigator.onLine) return this.disabled=true;
         this.visibleComments = true;
         this.init();
       },
@@ -72,14 +79,8 @@
             if (self.title){
               this.page.title = self.title;
             }
-            if (self.remote_auth_s3){
-              this.page.remote_auth_s3 = self.remote_auth_s3;
-            }
             if (self.key){
               this.page.api_key = self.key;
-            }
-            if (self.sso_config){
-              this.sso = self.sso_config;
             }
           }
         })
@@ -87,11 +88,13 @@
       count () {
         if (!this.api_key) return;
         setTimeout(() => {
-          var self = this;
-          var url = "https://disqus.com/api/3.0/threads/set.json?api_key="+this.api_key+"&thread=ident:"+this.identifier+"&forum="+this.shortname;
+          let self = this;
+          let url = "https://disqus.com/api/3.0/threads/set.json?api_key="+this.api_key+"&thread=ident:"+this.identifier+"&forum="+this.shortname;
           fetch(url).then(function(res) {
             return res.json();
           }).then(function(res){
+            // If no comments, response array will be empty,
+            if (! res['response'].length) return;
             self.commentsCount = res['response'][0]['posts'];
           }).catch(function(err) {
             console.warn("Error: ", err);
@@ -106,14 +109,8 @@
           if (self.title){
             this.page.title = self.title;
           }
-          if (self.remote_auth_s3){
-            this.page.remote_auth_s3 = self.remote_auth_s3;
-          }
           if (self.api_key){
             this.page.api_key = self.api_key;
-          }
-          if (self.sso_config){
-            this.sso = self.sso_config;
           }
         }
         setTimeout(() => {
@@ -132,5 +129,5 @@
   }
 </script>
 
-<!-- https://github.com/ktquez/vue-disqus -->
-<!-- https://disqus.com/api/docs/threads/set/ -->
+<!-- Inspired by https://github.com/ktquez/vue-disqus -->
+<!-- Based on https://disqus.com/api/docs/threads/set/ -->

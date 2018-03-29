@@ -13,11 +13,11 @@
 			<div class="container">
 				<div class="tags">
 
-		    		{{- range .Params.temos -}}
-		    		<a href="{{ "temos/" | absURL }}{{ . | urlize }}" class="tag is-light has-text-weight-bold">
-		    			{{- . -}}
-		    		</a>
-		    		{{- end -}}
+					{{- range .Params.temos -}}
+					<a href="{{ "temos/" | absURL }}{{ . | urlize }}/" class="tag is-light has-text-weight-bold">
+						{{- . -}}
+					</a>
+					{{- end -}}
 
 				</div>
 			</div>
@@ -39,8 +39,7 @@
 				shortname="{{ .Site.DisqusShortname }}" 
 				title="{{ .Title }}" 
 				identifier="{{ .Params.disqus_identifier }}"
-				url="{{ .Permalink }}"
-				api_key="{{ .Site.Params.disqusPublicKey }}"></vue-disqus>
+				url="{{ .Permalink }}"></vue-disqus>
 		</div>
 	</footer>
 	{{- end }}

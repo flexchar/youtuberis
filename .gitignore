@@ -1,8 +1,14 @@
-#Node Modules installed by Yarn
+# Node Modules
 /node_modules
 
-#Static files, handled by Mix
+# Yarn error file
+yarn-error.log
+
+# Static files, handled by Laravel Mix
 /static
 
-#Sublime Files
+# Sublime Files
 **sublime-**
+
+# Environment Variables
+.env
