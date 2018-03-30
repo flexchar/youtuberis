@@ -1,0 +1,46 @@
+# Netlify deployment settings.
+# 
+# “publish” is the directory to publish (relative to root of your repo),
+# “command” is your build command,
+# (not-in-use) “base” is directory to change to before starting build. if you set base:
+#    that is where we will look for package.json/.nvmrc/etc not repo root!
+
+# See: https://www.netlify.com/docs/netlify-toml-reference/
+# See: https://www.netlify.com/docs/continuous-deployment/#deploy-contexts
+# Variables: https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
+# See: https://www.netlify.com/docs/redirects/
+# See: https://gohugo.io/hosting-and-deployment/hosting-on-netlify/
+
+
+# BUILD
+
+[build]
+	publish = "docs"
+	command = "yarn run deploy -- --baseURL $URL"
+
+[build.production.environment]
+	HUGO_VERSION = "0.37.1"
+	HUGO_ENV = "production"
+
+[context.deploy-preview]
+	command = "yarn run deploy -- --baseURL $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+	HUGO_VERSION = "0.37.1"
+	HUGO_ENV = "production"
+
+# HEADERS
+
+[[headers]]
+	# For all requests
+	for = "/*"
+[headers.values]
+	# Security headers
+	X-Frame-Options = "DENY"
+	X-XSS-Protection = "1; mode=block"
+	Content-Security-Policy = "default-src 'self'; img-src https://*; child-src 'none';"
+	# HTTP/2 Push assets
+	Link = '''
+	</styles.css>; rel=preload; as=stylesheet, \
+	</scripts.js>; rel=preload; as=script, \
+	</sw.js>; rel=preload; as=script'''

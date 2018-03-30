@@ -1,5 +1,5 @@
 # Site Domain URL
-baseurl 					= "https://example.com"
+baseurl 					= "https://youtuberis.lt"
 # Site Data
 title 						= "YouTube Draugas"
 # Site Render Folder
@@ -7,12 +7,11 @@ publishDir 					= "docs"
 # Language code for RSS Feed
 languageCode 				= "lt-LT"
 # Disqus Comments Shortname
-disqusShortname 			= "demo"
+disqusShortname 			= "youtuberis"
 # Disable Hugo Generator meta tag in head
 disableHugoGeneratorInject 	= true
 
 [params]
-	disqusPublicKey			= "Wkz5FMpf1QxScQY4UIExLxTWo64z61Sf5EJtFLVi2QINZuLo0GwOzmzez0q3kKDv"
 	copyrightL				= "Sukurta su <b-icon icon=\"heart\" size=\"is-small\"></b-icon>"
 	copyrightR				= "&copy; 2018 YouTube Draugas | Lukas Vanagas"
 [taxonomies]
