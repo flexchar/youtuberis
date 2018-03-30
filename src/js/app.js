@@ -14,14 +14,51 @@ let app = new Vue({
 		},
 
 		registerServiceWorker() {
-			if ('serviceWorker' in navigator) return;
+			if (! 'serviceWorker' in navigator) return;
+
+			// If loaded offline, shows notification when comes online and offers refresh
+			if (!navigator.onLine) {
+				window.addEventListener('online', () => {
+					notify.snackbar('Atsirado internetas, ar tęsti?', {actionText: 'TAIP'}, () => { 
+						window.location.reload();
+					});
+				}, {passive: true})
+			}
+
+			// Does all the beauty
+			navigator.serviceWorker.register('/sw.js').then( reg => {
+				
+				window.addEventListener('load', () => {
+					// Notifies on successful registration
+					if (reg.installing) {
+						reg.installing.onstatechange = e => {
+							if (reg.active) {
+								if (e.currentTarget.onstatechange) e.currentTarget.onstatechange = null;
+								notify.primary('Svetainė veiks ir be interneto. :)');
+							}
+						};
+					}
+					// Trim Caches
+					if ('active' in reg && reg.active) reg.active.postMessage('trimCaches');
+				}, {passive: true, once: true});
+			}).catch( err => {
+				// notify.danger('SW Klaida.');
+				console.log('Service Worker failed to register. |', err);
+			});
+		},
+
+		userExperience() {
+			// Adds shadow to navbar
+			window.addEventListener('scroll', this.updateScroll, {passive: true});
+			
+			// Shows online/offline notification
+			window.addEventListener('online', () => { notify.toast('Prisijungta.', 'link', 2000, 'top-right'); }, {passive: true});
+			window.addEventListener('offline', () => { notify.toast('Atsijungta.', 'link', 2000, 'top-right'); }, {passive: true});
 		}
 	},
 
 	mounted() {
-		window.addEventListener('scroll', this.updateScroll, {passive: true});
-
-		// Init SW
+		this.userExperience();
 		this.registerServiceWorker();
 	},
 
