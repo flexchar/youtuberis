@@ -12,7 +12,7 @@
   "hot": "cross-env NODE_ENV=development HOT=true webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
   "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
  },
- "devDependencies": {
+ "dependencies": {
   "browser-sync": "^2.23.6",
   "browser-sync-webpack-plugin": "^2.2.2",
   "clean-webpack-plugin": "^0.1.19",
@@ -20,9 +20,7 @@
   "cross-env": "^5.1.3",
   "imagemin-mozjpeg": "^6.0.0",
   "imagemin-webpack-plugin": "^1.6.1",
-  "laravel-mix": "^1.7.0"
- },
- "dependencies": {
+  "laravel-mix": "^1.7.0",
   "buefy": "^0.6.3",
   "bulma": "^0.6.2",
   "vue": "^2.5.13"

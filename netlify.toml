@@ -16,14 +16,14 @@
 
 [build]
 	publish = "docs"
-	command = "yarn run deploy -- --baseURL=$URL"
+	command = "yarn run deploy -b $URL"
 
 [build.production.environment]
 	HUGO_VERSION = "0.37.1"
 	HUGO_ENV = "production"
 
 [context.deploy-preview]
-	command = "yarn run deploy -- --baseURL=$DEPLOY_PRIME_URL"
+	command = "yarn run deploy -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 	HUGO_VERSION = "0.37.1"
