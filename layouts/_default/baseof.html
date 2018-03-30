@@ -5,10 +5,10 @@
 		<!-- Preloader styles -->
 		<style type="text/css">{{ partial "inlineCSS" | safeCSS }}</style>
 		<!-- Async CSS load -->
-		<link rel="preload" href="{{.Site.BaseURL}}styles.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="{{ partial "_mix" "styles.css" }}" as="style" onload="this.rel='stylesheet'">
 		<!-- Fallback for JavaScript disabled browsers -->
 		<noscript>
-			<link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}styles.css">
+			<link rel="stylesheet" type="text/css" href="{{ partial "_mix" "styles.css" }}">
 			<style type="text/css">#loader-wrapper{display: none;}</style>
 		</noscript>
 		<!-- Polyfill for preload based on https://github.com/filamentgroup/loadCSS -->
@@ -34,7 +34,7 @@
 			{{- partial "_footer" . -}}
 		</div>
 		<script>window.addEventListener('DOMContentLoaded',function(){document.body.classList.add('loaded');})</script>
-		<script type="text/javascript" src="{{ .Site.BaseURL }}scripts.js" async></script>
+		<script type="text/javascript" src="{{ partial "_mix" "scripts.js" }}" async></script>
 		{{- block "script" . }}{{ end -}}
 	</body>
 </html>

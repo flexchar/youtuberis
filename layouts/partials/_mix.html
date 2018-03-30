@@ -1,0 +1,31 @@
+<!-- Laravel Mix Manifest file -->
+{{- $manifest := getJSON "/static/mix-manifest.json" -}}
+
+<!-- Requested file available under . | Try to find it, will prepend slash automatically -->
+{{- /* $path := echoParam $manifest . */ -}}
+{{- $path := echoParam $manifest (print "/" .) -}}
+
+
+<!-- If we have the file -->
+{{- if $path -}}
+	
+	<!-- Check if it's hot reloading mode -->
+	{{- if (fileExists "/static/hot") -}}
+
+		<!-- print hot module reload URL  -->
+		{{- print "http://localhost:8080" $path -}}
+
+	{{- else -}}
+
+		<!-- print absolute URL -->
+		{{- $path | absURL -}}
+
+	{{- end -}}
+
+{{- else -}}
+
+	<!-- Else just print smth to draw attention  -->
+	{{- printf "ERROR: FILE '%s' NOT FOUND" . -}}
+	<!-- smth breaking the code -->
+
+{{- end -}}
