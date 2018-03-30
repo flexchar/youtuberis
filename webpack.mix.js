@@ -1,25 +1,36 @@
 let mix = require('laravel-mix');
-//Assets for image compression
+
+// Image compression 
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 
+// Clean Destination
+const Clean = require('clean-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
  |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
- |
  */
+function isHOT() {
+    if (process.env.HOT) return true;
+    return false;
+}
 
 //Handle images
 mix.webpackConfig({
     plugins: [
+        // Clean destination folder
+        new Clean('static', {
+            verbose: true,
+            // These will be taken care by the webpack itself
+            exclude: ['hot', 'mix-manifest.json'],
+            // For testing
+            dry: isHOT(),
+            beforeEmit: true
+        }),
         // Assets
         new CopyWebpackPlugin([{
             from: 'src/images',
@@ -30,6 +41,7 @@ mix.webpackConfig({
             from: 'uploads',
             to: 'uploads'
         }]),
+        // Compress images
 		new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
             plugins: [
@@ -42,10 +54,22 @@ mix.webpackConfig({
     ]
 });
 
+// Browser Sync | Uncomment if wanted
+// mix.browserSync({
+//     // Listen to Hugo server,| yarn run hugo-p
+//     proxy: 'localhost:1313',
+//     // Define NIC IP address to bind to
+//     // host: '',
+//     // Sync Code changes across clients
+//     codeSync: true,
+//     // Open tab in browser, false as WSL doesn't support this
+//     open: false,
+// });
 
 //Process JS and SASS
-mix.js('src/js/script.js', 'static/scripts.js')
-    .sass('src/scss/app.scss', 'static/styles.css')
+mix.js('src/js/script.js', 'scripts.js')
+    .js('src/js/serviceworker.js', 'sw.js')
+    .sass('src/scss/app.scss', 'styles.css')
 	.sass('src/scss/mini.scss', '../layouts/partials/inlineCSS.html');
 
 //Set dest path
