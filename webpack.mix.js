@@ -26,7 +26,7 @@ mix.webpackConfig({
         new Clean('static', {
             verbose: true,
             // These will be taken care by the webpack itself
-            exclude: ['hot', 'mix-manifest.json'],
+            exclude: ['hot', 'mix-manifest.json','manifest.json'],
             // For testing
             dry: isHOT(),
             beforeEmit: true
@@ -71,6 +71,9 @@ mix.js('src/js/script.js', 'scripts.js')
     .js('src/js/serviceworker.js', 'sw.js')
     .sass('src/scss/app.scss', 'styles.css')
 	.sass('src/scss/mini.scss', '../layouts/partials/inlineCSS.html');
+
+// Copy Manifest
+mix.copy('src/manifest.json', 'static/manifest.json');
 
 //Set dest path
 mix.setPublicPath('static');

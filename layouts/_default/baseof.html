@@ -2,6 +2,8 @@
 <html lang="lt">
 	<head>
 		{{- partial "_header" . -}}
+		<!-- Manifest -->
+		<link rel="manifest" href="{{ absURL "/manifest.json" }}">
 		<!-- Preloader styles -->
 		<style type="text/css">{{ partial "inlineCSS" | safeCSS }}</style>
 		<!-- Async CSS load -->

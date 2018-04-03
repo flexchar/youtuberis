@@ -1,0 +1,15 @@
+{
+	"name": "Youtuberis.lt",
+	"short_name": "Youtuberis",
+	"display": "fullscreen",
+	"background_color": "#fafafa",
+	"theme_color": "whitesmoke",
+	"icons": [
+		{
+			"src": 	"/img/logo.svg",
+			"type":	"image/svg+xml",
+			"sizes": "any"
+		}
+	],
+	"start_url": "/?utm_source=homescreen"
+}

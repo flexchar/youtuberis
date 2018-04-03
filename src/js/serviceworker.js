@@ -21,6 +21,7 @@ const dynamicCache = cachePrefix + '::dynamic::' + date;
 const assetsList = [
 	'/styles.css',
 	'/scripts.js',
+	'/manifest.json',
 	'/img/header-logo.png',
 	'/offline/'
 ];
@@ -169,6 +170,11 @@ self.addEventListener('fetch', evt => {
 	if (/\.(?:png|gif|jpg|jpeg|svg)$/.test(url.pathname)) {
 		// Find which cache it belongs
 		return cacheFirst(evt, imagesCache);
+	}
+
+	// For local manifest file
+	if (/.*\/manifest\.json&/.test(url.pathname) && self.location.hostname === url.hostname) {
+		return cacheFirst(evt, assetsCache);
 	}
 
 	// For css, js stale-w-update
