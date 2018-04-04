@@ -54,12 +54,15 @@ let app = new Vue({
 			// Shows online/offline notification
 			window.addEventListener('online', () => { notify.toast('Prisijungta.', 'link', 2000, 'top-right'); }, {passive: true});
 			window.addEventListener('offline', () => { notify.toast('Atsijungta.', 'link', 2000, 'top-right'); }, {passive: true});
+
+			// PNG Fallback for SVG brand image
+			document.getElementById('brand').addEventListener('error', () => {this.src='/img/brand.png'}, {passive: true, once: true});
 		}
 	},
 
 	mounted() {
 		this.userExperience();
-		this.registerServiceWorker();
+		// this.registerServiceWorker();
 	},
 
 	components: {

@@ -1,7 +1,7 @@
 # Site Domain URL
 baseurl 					= "https://youtuberis.lt"
 # Site Data
-title 						= "YouTube Draugas"
+title 						= "Youtuberis"
 # Site Render Folder
 publishDir 					= "docs"
 # Language code for RSS Feed

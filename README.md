@@ -32,6 +32,8 @@ The topic inspired after 3+ years long contribution to Lithuania's largest busin
 
 > **TIP**: Append commands with `&` to run in the background. Or use `Ctrl + Z` to pause and then `bg` to resume in the background. For instance, `yarn run watch &` will automatically execute in the background. So you can run multiple commands within same terminal instance.
 
+> Note that webpack favicon generator may throw a console error `node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs: error while loading shared libraries: libfontconfig.so.1: cannot open shared object file: No such file or directory`. A fix that worked for me was to `apt install libfontconfig`.
+
 
 ### Laravel Mix function
 
@@ -47,10 +49,14 @@ Alternative to Laravel Mix [versioning function](https://laravel.com/docs/5.6/mi
 
 Environment variables can be defined in .env file and **must be prefixed** with `MIX_EXAMPLE`. The variables then are accessible on `process.env.MIX_EXAMPLE` **during** WebPack compiliation. [Source](https://laravel.com/docs/5.6/mix#environment-variables).
 
+### Branding
+
+The [`favicons-webpack-plugin`](https://github.com/jantimon/favicons-webpack-plugin) takes `logo.svg` in and spits out the truck of icons. It also outputs manifest, cache and other files that are not being used. This workflow is definitely a subject for a further optimization and improvement. Thou at least branding is displayed more less nicely. It is expected that plugin author will soon release the new API that should allow for a conditional optimized workflow to take place.
+
 
 ## Local deployment testing
 
-To test deploy locally before pushing you may `yarn run deploy -- --baseURL="/"` and then serve from `./docs` directory by using any web server of choice ((Web Server for Chrome)[https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en] is a good example).
+To test deploy locally before pushing you may `yarn run deploy -- --baseURL="/"` and then serve from `./docs` directory by using any web server of choice ([Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en) is a good example).
 
 
 ## Content Management: 

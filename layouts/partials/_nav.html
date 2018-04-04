@@ -3,7 +3,11 @@
 		
 			<div class="navbar-brand">
 				<a class="navbar-item" href="{{ .Site.BaseURL }}" aria-label="Titulinis">
-					<img src="/img/header-logo.png" alt="{{ .Site.Params.Slogan }}" style="max-height: 1.75rem">
+					<img  
+						src="{{ absURL "/img/brand.svg" }}" 
+						alt="logotipas" 
+						id="brand" 
+						style="height: 1.5rem;">
 				</a>
 
 				<div class="navbar-burger" @click="isMenuActive = !isMenuActive" :class="{'is-active':isMenuActive}">

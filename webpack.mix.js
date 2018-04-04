@@ -1,10 +1,14 @@
 let mix = require('laravel-mix');
 
-// Image compression 
+// Image Management 
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
+
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Clean Destination
 const Clean = require('clean-webpack-plugin');
@@ -14,12 +18,14 @@ const Clean = require('clean-webpack-plugin');
  | Mix Asset Management
  |--------------------------------------------------------------------------
  */
+
+// Returns boolean, true if webpack hot module reload is active
 function isHOT() {
     if (process.env.HOT) return true;
     return false;
 }
 
-//Handle images
+// Parse assets
 mix.webpackConfig({
     plugins: [
         // Clean destination folder
@@ -29,7 +35,24 @@ mix.webpackConfig({
             exclude: ['hot', 'mix-manifest.json','manifest.json'],
             // For testing
             dry: isHOT(),
+            // Clean before other events
             beforeEmit: true
+        }),
+        // Generate favicons
+        // also generates a lot of unwanted content, 
+        // currently I manually have generated head links in partial "_branding.html"
+        new FaviconsWebpackPlugin({
+            logo: './src/images/logo.svg',
+            prefix: 'icons/',
+            // background: '#f5f5f5',
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: true,
+                favicons: true,
+                firefox: true,
+                windows: true
+            }
         }),
         // Assets
         new CopyWebpackPlugin([{
@@ -48,7 +71,9 @@ mix.webpackConfig({
                 imageminMozjpeg({
                     quality: 60,
                 }),
-                imageminPngquant({quality: '60-80'})
+                imageminPngquant({
+                    quality: '60-80'
+                })
             ]
         })
     ]
@@ -66,7 +91,7 @@ mix.webpackConfig({
 //     open: false,
 // });
 
-//Process JS and SASS
+// Process JS and SASS
 mix.js('src/js/script.js', 'scripts.js')
     .js('src/js/serviceworker.js', 'sw.js')
     .sass('src/scss/app.scss', 'styles.css')
@@ -75,7 +100,7 @@ mix.js('src/js/script.js', 'scripts.js')
 // Copy Manifest
 mix.copy('src/manifest.json', 'static/manifest.json');
 
-//Set dest path
+// Set dest path
 mix.setPublicPath('static');
 
 
