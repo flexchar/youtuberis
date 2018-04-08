@@ -6,7 +6,7 @@ yarn-error.log
 
 # Static files, handled by Laravel Mix
 /static
-layouts/partials/inlineCSS.html
+inlineCSS.html
 
 # Site build files, unwanted since Netlify
 /docs
