@@ -1,4 +1,4 @@
-<nav class="navbar" :class="{'has-shadow': scrollPosition}" role="navigation" aria-label="Navigacija">
+<nav class="navbar is-fixed-top" :class="{'has-shadow': scrollPosition}" role="navigation" aria-label="Navigacija">
 	<div class="container">
 		
 			<div class="navbar-brand">
@@ -51,8 +51,3 @@
 			</div>
 	</div>
 </nav>
-{{ $space := .Params.navbarSpace | default true }}
-{{ if $space }}
-<div class="navbar-space"></div>
-{{ end }}
-

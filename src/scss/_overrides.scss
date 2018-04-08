@@ -2,29 +2,15 @@
  * Sticky Navbar 
  */
 .navbar {
-	position: fixed; 
-	top: 0; 
-	left: 0;
-	right: 0; 
-	z-index: 1;
-	opacity: .9;
-	transition: box-shadow 0.5s ease-out;
+	opacity: 0.9;
+	transition: all 0.5s ease-in-out;
+}
+.is-navbar-transparent {
+	background-color: rgba($navbar-background-color, $alpha: 0.1);
 }
 
 /*
- * Add margin to page's content due fixed navbar
- */
-.navbar-space {
-	margin-bottom: $navbar-height;
-}
-// Class to negate navbar's bottom, 
-// better use navbarSpace = false in front matter
-.is-under {
-	margin-top: -#{$navbar-height};
-}
-
-/*
- * Reset Vertical scrool
+ * Reset Vertical scroll
  */
 html {
 	overflow-y: initial;

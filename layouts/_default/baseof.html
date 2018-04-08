@@ -1,5 +1,10 @@
 <!DOCTYPE html>
+{{ $space := .Params.navbarSpace | default true }}
+{{ if $space }}
+<html lang="lt" class="has-navbar-fixed-top">
+{{ else }}	
 <html lang="lt">
+{{ end }}
 	<head>
 		{{- partial "_header" . -}}
 
