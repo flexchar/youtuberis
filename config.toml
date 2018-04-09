@@ -12,8 +12,8 @@ disqusShortname 			= "youtuberis"
 disableHugoGeneratorInject 	= true
 
 [params]
-	copyrightL				= "Sukurta su <b-icon icon=\"heart\" size=\"is-small\"></b-icon>"
-	copyrightR				= "&copy; 2018 YouTube Draugas | Lukas Vanagas"
+	copyrightL				= "Sukurta su 🍌"
+	copyrightR				= "&copy; 2018 Lukas Vanagas"
 [taxonomies]
 	kategorija 	= "kategorijos"
 	tema 		= "temos"
