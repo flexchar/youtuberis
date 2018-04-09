@@ -5,6 +5,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
+const imageminSvgo = require('imagemin-svgo');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
@@ -42,6 +43,7 @@ mix.webpackConfig({
         // also generates a lot of unwanted content, 
         // currently I manually have generated head links in partial "_branding.html"
         new FaviconsWebpackPlugin({
+            persistentCache: true,
             logo: './src/images/logo.svg',
             prefix: 'icons/',
             // background: '#f5f5f5',
@@ -73,7 +75,8 @@ mix.webpackConfig({
                 }),
                 imageminPngquant({
                     quality: '60-80'
-                })
+                }),
+                imageminSvgo()
             ]
         })
     ]
@@ -102,6 +105,14 @@ mix.copy('src/manifest.json', 'static/manifest.json');
 
 // Set dest path
 mix.setPublicPath('static');
+
+// Generate source maps for Chrome debugger
+// if (!mix.inProduction()) {
+//     mix.webpackConfig({
+//         devtool: 'source-map'
+//     })
+//     .sourceMaps()
+// }
 
 
 

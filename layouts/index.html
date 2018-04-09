@@ -1,76 +1,78 @@
-{{ define "content" }}  
+{{ define "content" }}
 
-<section class="hero is-medium is-dark" id="front_section">
-	<div class="hero-body">
-		<div class="container">
-			<div class="title is-1">
-				YouTube... atraskime kartu!
+<section class="hero is-medium">
+	<div class="hero-body" id="indexHeader">
+
+		<div class="container is-desktop">
+			<div class="column is-half">
+				<div class="title is-1 has-text-white">
+					Labas Tau!
+				</div>
+				<div class="subtitle is-4 has-text-white" style="padding-top: 0.5em">
+					Aš,
+					<span class="has-text-weight-semibold">Lukas</span>, jau daugiau kaip keturis metus domiuosi YouTube. O, kad tavo kelias būtų lengvesnis, čia savo žiniomis
+					dalinuosi su
+					<span class="has-text-weight-semibold">tavimi</span>.
+				</div>
 			</div>
-			<br>
-			<div class="subtitle is-4">
-				Labas! Taip tau, januoli ar panele, besislepianti už mėlynojo ekrano! <br> Aš <strong>Lukas</strong> - žmogus, užklydęs į YouTube pasaulį ir... ten užstrigęs.
+			<div class="column">
+				<a href="#articles" class="button is-info has-text-weight-semibold is-uppercase">Naujausi straipsniai</a>
 			</div>
-			<br>
-			<!-- <a href="#content" class="button is-large is-warning is-outlined" style="text-transform: uppercase;">DAUGIAU!</a> -->
 		</div>
+
+		<div class="background">
+			{{ readFile "/src/images/index/Header.svg" | safeHTML }}
+		</div>
+
 	</div>
 </section>
 
-
 <section class="section">
-	<div id="content" style="margin-top: -50px; padding-top: 50px"></div>
 	<div class="container">
+		<div class="title">Temos</div>
 
+		<div class="columns is-variable is-8 is-desktop">
+			<div class="column has-text-centered">
+				<figure class="image-svg">
+					{{ readFile "/src/images/index/verslas.svg" | safeHTML }}
+				</figure>
+				<div class="subtitle">Verslas su YouTube</div>
+			</div>
+			<div class="column has-text-centered">
+				<figure class="image-svg">
+					{{ readFile "/src/images/index/seo.svg" | safeHTML }}
+				</figure>
+				<div class="subtitle">SEO & kiti patarimai</div>
+			</div>
+			<div class="column has-text-centered">
+				<figure class="image-svg">
+					{{ readFile "/src/images/index/naujienos.svg" | safeHTML }}
+				</figure>
+				<div class="subtitle">Media & Naujienos</div>
+			</div>
+		</div>
+		<p>
+			Ir begalę dar... Galbūt montažo patarimų, galbūt programavimo temų, o galbūt ir patarimų keliaujant ir filmuojant.
+		</p>
+		<p>
+			PS. Temas gali siūlyti ir tu! 👌
+		</p>
+	</div>
+</section>
+
+<section class="section" style="padding-top: 5em;" id="articles">
+	<div class="container">
 		<div class="title">Naujausi straipsniai</div>
 
 		<div class="columns">
-						
-			{{ range first 3 (where .Data.Pages "Section" "in" (slice "post" "duk")) }}
-			<article class="column is-4">
-				<a href="{{ .Permalink }}" class="front-article-box box">
-					<span class="front-article-overlay"></span>
-					<span class="front-article-info">
-						<time class="front-article-time" datetime="{{ .Date }}">
-							{{ index $.Site.Data.men (printf "%d" .Date.Month) }} {{ .Date.Day }}, {{ .Date.Year }}
-						</time>
-						<strong class="front-article-title has-text-primary title is-4">{{ .Title }}</strong>
-					</span>
-				</a>
-			</article>
-			{{ end }}
+			{{ range first 3 (where .Data.Pages "Section" "in" (slice "post" "duk")) }} {{ partial "post-block" . }} {{ end }}
+		</div>
 
+		<div class="has-text-centered-mobile has-text-weight-semibold is-uppercase">
+			<a href="{{ absURL "/visi/" }}" class="button" style="padding: 0 5em;">Visi įrašai</a>
 		</div>
 	</div>
 </section>
 
-<section class="section">
-	<div class="container">
-		<div class="title">Skaičiukai</div>
-		<div class="subtitle">
-			Trputis iš asmeninės statistikos...
-		</div>
-		<div class="level">
-			<div class="level-item has-text-centered">
-				<div>
-					<p class="heading">konsultacjos</p>
-					<p class="title">50+</p>
-				</div>
-			</div>
-			<div class="level-item has-text-centered">
-				<div>
-					<p class="heading">žinutės</p>
-					<p class="title">1000+</p>
-				</div>
-			</div>
-			<div class="level-item has-text-centered">
-				<div>
-					<p class="heading">dar kažkas</p>
-					<p class="title">15+</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-      
 
 {{ end }}

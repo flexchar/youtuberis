@@ -1,6 +1,6 @@
-<nav class="navbar is-fixed-top" :class="{'has-shadow': scrollPosition}" role="navigation" aria-label="Navigacija">
+<nav class="navbar is-fixed-top" :class="{'has-shadow': scrollPosition{{if .IsHome }},'is-navbar-transparent': !scrollPosition{{end}}}" role="navigation" aria-label="Navigacija">
 	<div class="container">
-		
+			
 			<div class="navbar-brand">
 				<a class="navbar-item" href="{{ .Site.BaseURL }}" aria-label="Titulinis">
 					<img  
