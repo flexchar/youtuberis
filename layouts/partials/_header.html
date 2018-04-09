@@ -4,6 +4,12 @@
 
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 
-{{ if eq .Section "post" }}
+{{- if eq .Section "post" -}}
 <meta name="description" content="{{ if eq .IsHome false }} | {{ .Summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}">  
-{{end}}
+{{- end -}}
+
+{{- if ne (getenv "HUGO_ENV") "production" -}}
+<meta name="robots" content="noindex, nofollow">
+{{- else -}}
+<meta name="robots" content="index, follow">
+{{- end -}}

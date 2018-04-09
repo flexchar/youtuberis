@@ -10,6 +10,8 @@ languageCode 				= "lt-LT"
 disqusShortname 			= "youtuberis"
 # Disable Hugo Generator meta tag in head
 disableHugoGeneratorInject 	= true
+# Hugo default Robots.txt file generation
+enableRobotsTXT = true
 
 [params]
 	copyrightL				= "Sukurta su 🍌"
