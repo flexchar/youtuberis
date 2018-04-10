@@ -27,7 +27,7 @@
 						<div class="navbar-dropdown">
 							{{ range $name, $cats := .Site.Taxonomies.kategorijos }}
 							<a class="navbar-item"
-							href="{{ "kategorijos/" | absLangURL }}{{ $name | urlize | lower}}/">
+							href="{{ absURL "kategorijos/" }}{{ $name | urlize | lower}}/">
 								{{ if eq $name "duk" }}
 									{{- "Dažniausiai užduodami klausimai" -}}
 								{{ else }}
@@ -44,7 +44,7 @@
 					{{ $currentPage := . }}
 
 					{{ range .Site.Menus.main }}
-						<a class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{.URL}}">{{ .Name }}</a>
+						<a class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ absURL .URL }}">{{ .Name }}</a>
 					{{ end }}
 					
 				</div>
