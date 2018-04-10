@@ -14,6 +14,9 @@ temos      	        = ["youtube", "marketingas"]
 
 subtitle			= "Ar tu kada nors susimąstei kiek sinonimų žodis tu turi?"
 
+images              = [
+    "https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_center,h_700,q_auto:eco,w_1500/v1523378142/markel-hall-559529-unsplash.jpg"
+]
 +++
 
 Įvardis _tu_ gali būti pavartotas tiek įvairiausiomis formomis, tiek įvairiuose konstrukcijose. Štai keletas pavyzdžių **tavo** kūrybai praplėsti!
