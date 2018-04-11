@@ -6,8 +6,8 @@ url					= ""
 slug                = "kaip-uzdirbti-is-youtube"
 disqus_identifier   = "1522959526"
 
-draft				= true
-comments 			= false
+draft				= false
+comments 			= true
 
 kategorijos         = ["straipsniai"]
 temos      	        = ["uzdarbis", "youtube", "internete", "reklama"]
