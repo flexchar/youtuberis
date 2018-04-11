@@ -21,7 +21,7 @@ const Clean = require('clean-webpack-plugin');
  */
 
 // Returns boolean, true if webpack hot module reload is active
-let = isHOT => process.env.HOT ? true : false;
+let isHOT = () => process.env.HOT ? true : false;
 
 // Parse assets
 mix.webpackConfig({
