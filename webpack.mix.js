@@ -21,10 +21,7 @@ const Clean = require('clean-webpack-plugin');
  */
 
 // Returns boolean, true if webpack hot module reload is active
-function isHOT() {
-    if (process.env.HOT) return true;
-    return false;
-}
+let = isHOT => process.env.HOT ? true : false;
 
 // Parse assets
 mix.webpackConfig({
@@ -37,7 +34,7 @@ mix.webpackConfig({
             // For testing
             dry: isHOT(),
             // Clean before other events
-            beforeEmit: true
+            beforeEmit: false
         }),
         // Generate favicons
         // also generates a lot of unwanted content, 

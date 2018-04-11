@@ -55,11 +55,15 @@ The [`favicons-webpack-plugin`](https://github.com/jantimon/favicons-webpack-plu
 
 ### SVG Compression
 
-[SVGO](https://github.com/svg/svgo) tool is used to compress and minify svgs. Excecute `svgo -f . --multipass --disable={collapseGroups,cleanupIDs}` in folder containing svgs. `--disable={collapseGroups,cleanupIDs}` because to preserve clip-path.
+[SVGO](https://github.com/svg/svgo) tool is used to compress and minify svgs. Excecute `svgo -f . --multipass --disable={collapseGroups,cleanupIDs}` in folder containing svgs. `--disable={collapseGroups,cleanupIDs}` to preserve clip-paths when multiple SVGs used in web page.
 
 ## Local deployment testing
 
-To test deploy locally before pushing you may `yarn run deploy -- --baseURL="/"` and then serve from `./docs` directory by using any web server of choice ([Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en) is a good example).
+To test deploy locally before pushing you may `yarn run deploy --baseURL="/"` and then serve from `./docs` directory by using any web server of choice ([Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en) is a good example). Or use ngrok for online testing with SSL support.
+
+## Online testing with ngrok
+
+For live testing `yarn run serve`, then `yarn run hugo-l {replace with ngrok tunnel URL here}`. Browse to ngrok tunnel URL.
 
 ## Content Management
 

@@ -11,4 +11,12 @@ comments 			= true
 
 kategorijos         = ["cat1", "cat2"]
 temos      	        = ["x", "y"]
+
+summary 			= ""
+subtitle 			= ""
+
+images              = [
+    "",
+    "",
+]
 +++

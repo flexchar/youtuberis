@@ -6,11 +6,13 @@
  "scripts": {
   "deploy": "yarn run prod && hugo --cleanDestinationDir",
   "hugo": "hugo serve -D --noHTTPCache=true --disableFastRender",
-  "hugo-p": "hugo serve -D --noHTTPCache=true --disableFastRender --disableLiveReload",
+  "hugo-p": "yarn run hugo --disableLiveReload",
+  "hugo-l": "yarn run hugo-p --appendPort=false -b",
   "watch": "cross-env NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
   "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
   "hot": "cross-env NODE_ENV=development HOT=true webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+  "serve": "ngrok http 1313 --log stderr"
  },
  "dependencies": {
   "browser-sync": "^2.23.6",

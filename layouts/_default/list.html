@@ -15,6 +15,8 @@
 		</div>
 	</section>
 
+	{{ partial "_breadcrumbs" . }}	
+
 	{{ $paginator := .Paginate $posts 9 }}
 
 	<section class="section">

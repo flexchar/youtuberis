@@ -1,5 +1,5 @@
 # Site Domain URL
-baseurl 					= "https://youtuberis.lt"
+baseurl 					= "https://www.youtuberis.lt"
 # Site Data
 title 						= "Youtuberis"
 # Site Render Folder
@@ -11,11 +11,23 @@ disqusShortname 			= "youtuberis"
 # Disable Hugo Generator meta tag in head
 disableHugoGeneratorInject 	= true
 # Hugo default Robots.txt file generation
-enableRobotsTXT = true
+enableRobotsTXT				= true
+# Bind with Git Repo for data reporting
+enableGitInfo				= true
 
 [params]
-	copyrightL				= "Sukurta su 🍌"
-	copyrightR				= "&copy; 2018 Lukas Vanagas"
+	copyrightL	= "Sukurta su 🍌"
+	copyrightR	= "&copy; 2018 Lukas Vanagas"
+	# Branding Logo URLs
+	logoPNG_60	= "/img/brand@60px.png"
+	logoPNG_112	= "/img/brand@112px.png"
+	logoPNG_24	= "/img/brand.png"
+	logoSVG		= "/img/brand.svg"
+	# Date format when generating JSON-LD
+	ISO8601 	= "2006-01-02T15:04:05JST"
+	# Schema information
+	author		= "Lukas Vanagas"
+	
 [taxonomies]
 	kategorija 	= "kategorijos"
 	tema 		= "temos"
@@ -37,17 +49,17 @@ menu = ["main"]
 [[menu.main]]
 		name 	= "Žaidimų monetizacija"
 		pre 	= ""
-		weight 	= 10
+		weight 	= "10"
 		url 	= "/zaidimu-monetizacijos-informacija/"
 
 [[menu.main]]
 		name 	= "Muzika"
 		pre 	= ""
-		weight 	= 12
+		weight 	= "12"
 		url 	= "/muzika/"
 
 [[menu.main]]
 		name 	= "Medija"
 		pre 	= ""
-		weight 	= 14
+		weight 	= "14"
 		url 	= "/juosta/"

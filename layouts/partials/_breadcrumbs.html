@@ -1,0 +1,11 @@
+<!-- Inherits breadcrumb functionality defined in _seo.html partial -->
+{{- $len := (len (split .RelPermalink "/")) -}} 
+<nav class="breadcrumb has-bullet-separator is-centered" aria-label="breadcrumbs">
+    <ol>
+        {{ range $i, $e := ($.Scratch.Get "breadcrumb") }}
+        <li{{ if eq (add $i 2) $len }} class="is-active"{{end}}>
+            <a class="button is-small is-outlined is-link" href="{{ $e.url }}">{{ $e.name }}</a>
+        </li>
+        {{ end }}
+    </ol>
+</nav>

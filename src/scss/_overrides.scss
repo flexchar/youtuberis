@@ -30,3 +30,21 @@ a.tag:hover {
 .content > p, ul {
 	text-align: justify;
 }
+
+/*
+ * Breadcrumbs 
+ */
+ 
+.breadcrumb.has-bullet-separator li + li::before {
+    padding: 0 .5rem;
+}
+.breadcrumb {
+	margin: 1rem 0;
+}
+// Reset bulma styles
+.breadcrumb:not(:last-child) {
+    margin-bottom: initial;
+}
+.breadcrumb li:first-child a {
+    padding-left: .5rem;
+}
