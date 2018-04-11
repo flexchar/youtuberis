@@ -39,6 +39,7 @@ mix.webpackConfig({
         // Generate favicons
         // also generates a lot of unwanted content, 
         // currently I manually have generated head links in partial "_branding.html"
+        // To be improved
         new FaviconsWebpackPlugin({
             persistentCache: true,
             logo: './src/images/logo.svg',
@@ -57,11 +58,6 @@ mix.webpackConfig({
         new CopyWebpackPlugin([{
             from: 'src/images',
             to: 'img'
-        }]),
-        // Posts 
-        new CopyWebpackPlugin([{
-            from: 'uploads',
-            to: 'uploads'
         }]),
         // Compress images
 		new ImageminPlugin({
