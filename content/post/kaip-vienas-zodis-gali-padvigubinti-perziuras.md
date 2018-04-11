@@ -56,7 +56,7 @@ Pirmiausia, tyrime minimas žodis _TU_ nėra vienintelis paraidžiui identiškas
 
 ### Mediana prieš vidurkį
 
-Šis pasirinkimas gan įdomus, gan kontraversiškas. Tyrimo autoriai nusprendė empatizuoti medianas vietoj vidurkių skaičiavimo, nes, kaip patys teigia, vieni vaizdo įrašai buvo žymiai populiaresni nei kiti, ir todėl mediana pateiktų tiksliausia statistika. 
+Šis pasirinkimas gan įdomus, gan kontraversiškas. Tyrimo autoriai nusprendė empatizuoti medianas vietoj vidurkių skaičiavimo, nes, kaip patys teigia, vieni vaizdo įrašai buvo žymiai populiaresni nei kiti, ir todėl mediana pateiktų tiksliausia statistika.
 
 > We decided to emphasize medians in our work rather than averages as we were comparing some videos with very high numbers of views against some with very low numbers, and the median would give us the most accurate understanding.
 
@@ -114,9 +114,9 @@ Visas straipsnis vien apie jų tyrimą, tai bent jau savom išvadom pasidalinsiu
 - Ne mažiau svarbu yra išlaikyti pastovumą ir naudoti _TU_ s ir vėliau (6-10 ir 11-30). Tai grįžta su 174% padidėjimu.
 - Naudos atneša _TU_ ir vėliau, tačiau ji nėra tokia efektyvi.
 
-#### Taigi, kokia ta formulė? 
+### Kokia ta formulė
 
-A + B = X čia neveikia, kiekvieno kelias kitaip vingiuotas, tačiau... 
+A + B = X čia neveikia, kiekvieno kelias kitaip vingiuotas, tačiau...
 
 - Sėkmingiausi vaizdo įrašai turėjo **nuo 4 iki 7 _TU_ pirmosiomis 30s**. Daugiau yra geriau, bet per daug gero dalyko ir nepadės.
 - Bent 2 _TU_ pirmosiomis 5s ir bent 1 6-10 atneša daugiausiai sąveikos.
