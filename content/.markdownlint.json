@@ -1,0 +1,11 @@
+{
+	"default": true,
+	"first-line-h1": {
+		"level": 1,
+		"front_matter_title": "^\\s*title\\s*[:=]"
+	},
+	"first-header-h1": {
+		"level": 2
+	},
+	"line-length": false
+}
