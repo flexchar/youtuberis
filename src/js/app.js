@@ -1,4 +1,3 @@
-
 let app = new Vue({
 	el: '#app',
 	delimiters: ['${', '}'],
@@ -6,7 +5,6 @@ let app = new Vue({
 		isMenuActive: false,
 		scrollPosition: 0
 	},
-
 	methods: {
 		//Tracks scroll position to add shadow on navbar
 		updateScroll() {
@@ -62,7 +60,7 @@ let app = new Vue({
 
 	mounted() {
 		this.userExperience();
-		// this.registerServiceWorker();
+		this.registerServiceWorker();
 	},
 
 	components: {
@@ -70,4 +68,3 @@ let app = new Vue({
 		Database: require('./components/Database.vue')
 	}
 });
-

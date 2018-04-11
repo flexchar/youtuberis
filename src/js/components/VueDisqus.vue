@@ -97,7 +97,7 @@
             if (! res['response'].length) return;
             self.commentsCount = res['response'][0]['posts'];
           }).catch(function(err) {
-            console.warn("Error: ", err);
+            console.log("Disqus: Error fetching comments count", err);
           });
         }, 150)
       },
@@ -121,7 +121,7 @@
           s.async = true
           s.setAttribute('id', 'embed-disqus')
           s.setAttribute('data-timestamp', +new Date())
-          s.src = `//${this.shortname}.disqus.com/embed.js`
+          s.src = `https://${this.shortname}.disqus.com/embed.js`
           ;(d.head || d.body).appendChild(s)
         }, timeout)
       }

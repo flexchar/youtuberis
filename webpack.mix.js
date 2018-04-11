@@ -21,7 +21,8 @@ const Clean = require('clean-webpack-plugin');
  */
 
 // Returns boolean, true if webpack hot module reload is active
-let isHOT = () => process.env.HOT ? true : false;
+// let isHOT = () => process.env.HOT ? true : false;
+// let isDEV = () => process.env.NODE_ENV !== 'production';
 
 // Parse assets
 mix.webpackConfig({
@@ -32,9 +33,9 @@ mix.webpackConfig({
             // These will be taken care by the webpack itself
             exclude: ['hot', 'mix-manifest.json','manifest.json'],
             // For testing
-            dry: isHOT(),
+            dry: !mix.inProduction(),
             // Clean before other events
-            beforeEmit: false
+            beforeEmit: true
         }),
         // Generate favicons
         // also generates a lot of unwanted content, 
@@ -61,6 +62,7 @@ mix.webpackConfig({
         }]),
         // Compress images
 		new ImageminPlugin({
+            disable: !mix.inProduction(),
             test: /\.(jpe?g|png|gif|svg)$/i,
             plugins: [
                 imageminMozjpeg({
@@ -91,7 +93,7 @@ mix.webpackConfig({
 mix.js('src/js/script.js', 'scripts.js')
     .js('src/js/serviceworker.js', 'sw.js')
     .sass('src/scss/app.scss', 'styles.css')
-	.sass('src/scss/mini.scss', '../layouts/partials/inlineCSS.html');
+	.sass('src/scss/mini.scss', 'loader.css');
 
 // Copy Manifest
 mix.copy('src/manifest.json', 'static/manifest.json');
@@ -107,6 +109,9 @@ mix.setPublicPath('static');
 //     .sourceMaps()
 // }
 
+mix.options({
+  processCssUrls: false
+});
 
 
 // Full API

@@ -163,9 +163,3 @@
 		}
     }
 </script>
-
-<style>
-	.field.is-grouped > .control {
-		transition: .6s ease-in-out;
-	}
-</style>

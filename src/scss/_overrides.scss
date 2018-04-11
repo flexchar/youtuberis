@@ -8,6 +8,11 @@
 .is-navbar-transparent {
 	background-color: rgba($navbar-background-color, $alpha: 0);
 }
+// Header brand image
+#brand {
+	height: 1.5rem;
+}
+
 
 /*
  * Reset Vertical scroll
@@ -24,11 +29,19 @@ a.tag:hover {
 }
 
 /*
- * Justified text on .content paragraphs and ul elements
  * Affects single.html template
  */
+// Justified text on .content paragraphs and ul elements
 .content > p, ul {
 	text-align: justify;
+}
+// Add padding to tags in hero
+.tags-space {
+	padding: 0 24px 1.5rem;
+}
+// Remove top padding from comments section
+.comments {
+	padding-top: 0;
 }
 
 /*
@@ -47,4 +60,18 @@ a.tag:hover {
 }
 .breadcrumb li:first-child a {
     padding-left: .5rem;
+}
+
+/*
+ * Footer 
+ */
+ .footer {
+	padding: 2rem;
+}
+
+/*
+ * Animation used in database.vue
+ */
+.field.is-grouped > .control {
+	transition: .6s ease-in-out;
 }
