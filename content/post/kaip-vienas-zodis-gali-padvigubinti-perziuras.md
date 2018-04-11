@@ -50,7 +50,7 @@ Tiesa nors paspaudimai _patinka_ tiesiogiai neįtakoja vaizdo įrašo populiarum
 
 Dalį rezultatų jau atskleidžiau, bet prieš tęsiant norėčiau pasidalinti keliais metodikos ypatumais, kuriuos, mano nuomone, tu turėtum žinoti. Nesakau, kad jie yra blogi ir kad turiu kažką prieš, bet tuo pačiu jų ir neempatizuoju. Leisiu tau pačiam nuspręsti.
 
-### Kas yra _TU
+### Kas yra _TU_
 
 Pirmiausia, tyrime minimas žodis _TU_ nėra vienintelis paraidžiui identiškas tirtas įvardis. Taip pat buvo sekami sinonimai, tokie kaip tau, tavo, tavim, jūs, jums, sau, savo ir panašiai[^1], todėl rezultatuose po įvardžiu _TU_ slypi didesnė įvairovė.
 
