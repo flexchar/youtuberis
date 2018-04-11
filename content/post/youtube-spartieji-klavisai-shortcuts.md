@@ -11,6 +11,11 @@ comments 			= true
 
 kategorijos         = ["patarimai"]
 temos      	        = ["patarimai", "youtube", "spartieji klavisai"]
+
+subtitle            = "Mėgsti produktyvumą ir greitį? Sutaupyk laiko išnaudodamas šiuos YouTube sparčiuosius klavišus"
+images              = [
+    "http://res.cloudinary.com/youtuberis/image/upload/c_fill,g_center,h_1080,q_auto:low,w_2160/v1523446388/thought-catalog-602502-unsplash.jpg"
+]
 +++
 
 Pagal populiarumą YouTube kaip svetainė stovi TOP3, tačiau savo srityje tai yra populiariausia medijos dalinimosi platforma. Tūkstančiai žmonių praleidžia valandas žiūrėdami vieną po kitos rekomenduojamus vaizdelius ar ištikimai sekdami savo sekėjų įkeliamus vaizdo įrašus. Jei esi vienas iš jų, turėtum įvaldyti šiuos ypač parankius YouTube sparčiuosius klavišus (angl. shortcuts.)!
@@ -21,8 +26,7 @@ PASTEBĖJIMAS: visi klavišai dirba QWERTY klaviatūros dalyje. NumPad veikia 50
 
 ## Geriausieji arba leistuvo valdymas
 
-Mano mėgstamiausi spartieji klavišai. Su jais ne tik sutaupysi daug laiko, bet ir kai kada išnaudosi funkcionalumą, kurio nepasiūlo valdymas su pelyte. 
-
+Mano mėgstamiausi spartieji klavišai. Su jais ne tik sutaupysi daug laiko, bet ir kai kada išnaudosi funkcionalumą, kurio nepasiūlo valdymas su pelyte.
 
 |					Klavišai					|						Veiksmas						|
 |						:--						|							--:							|
@@ -52,12 +56,11 @@ Su šiais mygtukais galėsi sau pritaikyti vaizdo įraše rodomus titrus (angl. 
 |	{{< btn "+" >}} (virš QWERTY klaviatūros)	|	Padidinti titrų šriftą								|
 |	{{< btn "-" >}} (virš QWERTY klaviatūros)	|	Sumažinti titrų šriftą								|
 
-
 ## Bendrieji klavišai
 
-Šiais klavišais gali valdyti visą YouTube svetainę. Kadangi jie yra bendro naudojimo, gali veikti priešingai nei tikimasi arba, kitais žodžiais, tiesiog užtruksi ilgiau darydamas tą patį veiksmą nei su pelytę. 
+Šiais klavišais gali valdyti visą YouTube svetainę. Kadangi jie yra bendro naudojimo, gali veikti priešingai nei tikimasi arba, kitais žodžiais, tiesiog užtruksi ilgiau darydamas tą patį veiksmą nei su pelytę.
 
-Beje, **verta atkreipti dėmesį**, kad dauguma jų atliks to elemento veiksmą, kuris yra dėmesio centre (angl. in focus) arba buvo neseniai naudotas. Pavyzdžiui, jeigu ką tik reguliavai garsumą pelytę ir dabar spustelėtum horizontalias rodyklėles, vėl reguliuotum garsumą. 
+Beje, **verta atkreipti dėmesį**, kad dauguma jų atliks to elemento veiksmą, kuris yra dėmesio centre (angl. in focus) arba buvo neseniai naudotas. Pavyzdžiui, jeigu ką tik reguliavai garsumą pelytę ir dabar spustelėtum horizontalias rodyklėles, vėl reguliuotum garsumą.
 
 |					Klavišai					|						Veiksmas						|
 |						:--						|							--:							|
