@@ -20,6 +20,7 @@
   "clean-webpack-plugin": "^0.1.19",
   "copy-webpack-plugin": "^4.5.1",
   "cross-env": "^5.1.4",
+  "cssnano": "^3.10.0",
   "favicons-webpack-plugin": "^0.0.9",
   "imagemin-mozjpeg": "^7.0.0",
   "imagemin-svgo": "^6.0.0",

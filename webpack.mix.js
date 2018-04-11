@@ -106,7 +106,10 @@ mix.setPublicPath('static');
 // }
 
 mix.options({
-    processCssUrls: false
+    processCssUrls: false,
+    postCss: [
+        require('cssnano')()
+    ]
 });
 
 

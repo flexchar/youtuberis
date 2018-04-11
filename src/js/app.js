@@ -32,16 +32,16 @@ let app = new Vue({
 						reg.installing.onstatechange = e => {
 							if (reg.active) {
 								if (e.currentTarget.onstatechange) e.currentTarget.onstatechange = null;
-								notify.primary('Svetainė veiks ir be interneto. :)');
+								notify.primary('Svetainė veiks ir be interneto. 😎');
 							}
 						};
 					}
 					// Trim Caches
-					if ('active' in reg && reg.active) reg.active.postMessage('trimCaches');
+					// if ('active' in reg && reg.active) reg.active.postMessage('trimCaches'); // temp off
 				}, {passive: true, once: true});
 			}).catch( err => {
 				// notify.danger('SW Klaida.');
-				console.log('Service Worker failed to register. |', err);
+				console.log('Service Worker not installed. |', err);
 			});
 		},
 
