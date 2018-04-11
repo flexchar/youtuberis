@@ -20,9 +20,10 @@ const dynamicCache = cachePrefix + '::dynamic::' + date;
 // Correct pathname is important
 const assetsList = [
 	'/styles.css',
+	'/loader.css',
 	'/scripts.js',
 	'/manifest.json',
-	'/img/header-logo.png',
+	'/img/brand.svg',
 	'/offline/'
 ];
 
