@@ -20,10 +20,6 @@ const Clean = require('clean-webpack-plugin');
  |--------------------------------------------------------------------------
  */
 
-// Returns boolean, true if webpack hot module reload is active
-// let isHOT = () => process.env.HOT ? true : false;
-// let isDEV = () => process.env.NODE_ENV !== 'production';
-
 // Parse assets
 mix.webpackConfig({
     plugins: [
@@ -110,7 +106,7 @@ mix.setPublicPath('static');
 // }
 
 mix.options({
-  processCssUrls: false
+    processCssUrls: false
 });
 
 
