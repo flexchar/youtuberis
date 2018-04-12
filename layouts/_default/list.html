@@ -41,7 +41,7 @@
 			<!-- Third row of posts, if posts > 6 -->
 			{{ if gt (len $paginator.Pages) 6 }}
 			<div class="tile is-ancestor">
-			{{ range first 3 (after 3 $paginator.Pages) }}		
+			{{ range first 3 (after 6 $paginator.Pages) }}		
 				{{ partial "post-block" . }}
 			{{ end }}
 			</div>
