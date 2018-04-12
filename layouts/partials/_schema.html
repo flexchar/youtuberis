@@ -1,5 +1,5 @@
 {{- if eq .Section "post" -}}
-<meta name="description" content="{{ if eq .IsHome false }} | {{ .Summary }}{{ else }}{{ .Site.Params.Description }}{{ end }}"> 
+<meta name="description" content="{{- if eq .IsHome false -}}{{- trim (.Summary | plainify) "\n" -}}{{- else -}}{{- .Site.Params.Description -}}{{- end -}}"> 
 {{- end -}} 
 
 <!-- Site wide schemas -->
@@ -23,7 +23,7 @@
 {{- $url := .RelPermalink -}}
 
 {{- $.Scratch.Add "path" .Site.BaseURL -}}
-{{- $.Scratch.Add "breadcrumb" (slice (dict "url" $.Site.BaseURL "name" $.Site.Title "position" 1 )) -}}
+{{- $.Scratch.Add "breadcrumb" (slice (dict "url" ($.Site.BaseURL) "name" $.Site.Title "position" 1 )) -}}
 
 {{- $len := (len (split $url "/")) -}} 
 {{- $title := .Title -}}
