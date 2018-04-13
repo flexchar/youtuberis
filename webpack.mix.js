@@ -106,11 +106,18 @@ mix.setPublicPath('static');
 // }
 
 mix.options({
-    processCssUrls: false,
-    postCss: [
-        require('cssnano')()
-    ]
+    processCssUrls: true
 });
+// Only apply postCSS in production
+if (mix.inProduction()) {
+    mix.options({
+        postCss: [
+            require('cssnano')({
+                zindex: false
+            })
+        ]
+    });
+}
 
 
 // Full API

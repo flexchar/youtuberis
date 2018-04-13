@@ -176,7 +176,7 @@ html, body, #app {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 0;
+	z-index: -1;
 
 	> svg {
 		flex: 0 0 auto;
@@ -185,9 +185,9 @@ html, body, #app {
 	}
 }
 
-#indexHeader > .container {
-	z-index: 1;
-}
+// #indexHeader > .container {
+// 	z-index: 1;
+// }
 // Top padding
 #article, .subtitle-space {
 	padding-top: 0.5em;
