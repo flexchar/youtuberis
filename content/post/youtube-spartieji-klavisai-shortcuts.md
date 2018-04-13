@@ -14,7 +14,7 @@ temos      	        = ["patarimai", "youtube", "spartieji klavisai"]
 
 subtitle            = "Mėgsti produktyvumą ir greitį? Sutaupyk laiko išnaudodamas šiuos YouTube sparčiuosius klavišus"
 images              = [
-    "http://res.cloudinary.com/youtuberis/image/upload/c_fill,g_center,h_1080,q_auto:low,w_2160/v1523446388/thought-catalog-602502-unsplash.jpg"
+    "https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_center,h_1080,q_auto:low,w_2160/v1523446388/thought-catalog-602502-unsplash.jpg"
 ]
 +++
 

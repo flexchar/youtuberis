@@ -27,6 +27,9 @@ enableGitInfo				= true
 	ISO8601 	= "2006-01-02T15:04:05JST"
 	# Schema information
 	author		= "Lukas Vanagas"
+
+	# Description of site
+	Description = "Labas, aš Lukas. Jau keletą metų domiuos YouTube, temomis kaip tai veikia, kaip uždarbiauti. O, kad tavo kelias būtų lengvesnis, čia savo žiniomis dalinuosi su tavimi."
 	
 [taxonomies]
 	kategorija 	= "kategorijos"

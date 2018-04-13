@@ -12,13 +12,13 @@ comments 			= true
 kategorijos         = ["duk"]
 temos      	        = ["uzdarbis", "youtube", "reklamos"]
 
-summary             = "Uždarbis iš YouTube mokamas už reklamas rodomas šalia tavo vaizdo įrašų, taigi tavo darbas yra kurti orginalius filmukas ir juos talpinti savo YouTube kanale."
+description         = "Uždarbis iš YouTube mokamas už reklamas rodomas šalia tavo vaizdo įrašų, taigi tavo darbas yra kurti orginalius filmukas ir juos talpinti savo YouTube kanale."
 +++
 
 ## Koks tavo darbas
 
-Kurti bei dalintis originaliu vaizdo turiniu YouTube platformoje. O tai gali būti bet kas pradedant žaidimo (angl. *gameplay*) filmavimu, *how-to* gidų (angl. *tutorial*) tokių, kaip suinstaliuoti tam tikrą programinę įrangą ar padaryti įmantrų efektą montažo programoje, ar net kaip iškepti šokoladinį pyragą, kūrimu, gali filmuoti save t.y. daryti taip vadinamus *vlogus* [^1], kuriuose pasakotum savo dienos nuotykius, o gal įdomias gyvenimo istorijas, arba atskleisti savo meninius gebėjimus, pavyzdžiui, trumpametražių filmų kūrimu ir t.t. 
-[^1]: vlogas kilęs iš angliško termino *video blog*, apibūdinačio tokią dienoraščio atmaina, kuri pateikiama vaizdo įrašu.
+Kurti bei dalintis originaliu vaizdo turiniu YouTube platformoje. O tai gali būti bet kas pradedant žaidimo (angl. *gameplay*) filmavimu, *how-to* gidų (angl. *tutorial*) tokių, kaip suinstaliuoti tam tikrą programinę įrangą ar padaryti įmantrų efektą montažo programoje, ar net kaip iškepti šokoladinį pyragą, kūrimu, gali filmuoti save t.y. daryti taip vadinamus *vlogus* [^1], kuriuose pasakotum savo dienos nuotykius, o gal įdomias gyvenimo istorijas, arba atskleisti savo meninius gebėjimus, pavyzdžiui, trumpametražių filmų kūrimu ir t.t.
+[^1]: vlogas kilęs iš angliško termino *video blog*, apibūdinačio tokią dienoraščio atmainą, kuri pateikiama vaizdo įrašo formatu.
 
 > Pagrinde tavo tikslas sukurti tokį turinį, kuris sudomintų ir pritrauktų potencialų žiūrovą, nepažeidžiant YouTube turinio gairių ir autorių teisių.
 
@@ -28,6 +28,6 @@ Tau bus mokama už kiekvieną *parodytą reklamą* tavo vaizdo įrašo metu. O p
 
 ### Ko gero nekantrauji sužinoti kiek uždirbsi
 
-Trumpai sakant tiek, kiek peržiūrų su reklamomis bus parodyta. Grubiai sakant tai vienas doleris per tūkstantį peržiūrų. 
+Trumpai atsakant tiek, kiek peržiūrų su reklamomis bus parodyta. Grubiai sakant tai vienas euras per tūkstantį peržiūrų.
 
 > Apibendrinant, tai labai panašu į komercinę televiziją. Pirma tau reikia įdomiu turiniu pritraukti žiūrovus, o tuomet jiems rodai reklamas ir uždarbiauji.

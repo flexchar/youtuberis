@@ -1,6 +1,4 @@
-{{- if eq .Section "post" -}}
-<meta name="description" content="{{- if eq .IsHome false -}}{{- trim (.Summary | plainify) "\n" -}}{{- else -}}{{- .Site.Params.Description -}}{{- end -}}"> 
-{{- end -}} 
+<meta name="description" content="{{- if .IsHome -}}{{- .Site.Params.Description -}}{{- else -}}{{ if .Description }}{{ .Description }}{{ else }}{{- trim (.Summary | plainify) "\n" -}}{{ end }}{{- end -}}"> 
 
 <!-- Site wide schemas -->
 <script type="application/ld+json">

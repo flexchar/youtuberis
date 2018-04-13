@@ -12,7 +12,7 @@ comments 			= true
 kategorijos         = ["duk", "patarimai"]
 temos      	        = ["youtube", "uzdarbis", "mokesciai", "pajamos"]
 
-summary 			= "Nori legaliai užsidirbti iš YouTube, bet nežinai kokius mokesčius reikia mokėti? Puiku! Šiame straipsny tavęs laukia atsakymas."
+description			= "Nori legaliai užsidirbti iš YouTube, bet nežinai kokius mokesčius reikia mokėti? Puiku! Šiame straipsny tavęs laukia atsakymas."
 
 image               = [
     "https://res.cloudinary.com/youtuberis/image/upload/c_scale,h_1080,q_auto/v1523443835/rawpixel-com-557125-unsplash.jpg"
