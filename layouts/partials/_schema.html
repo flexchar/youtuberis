@@ -28,10 +28,7 @@
 {{- range $index, $entry := split $url "/" -}}
 
 	{{- $.Scratch.Add "path" ($entry) -}}
-	<!-- Don't add slash to baseURL -->
-	{{- if $index -}}	
-		{{- $.Scratch.Add "path" "/" -}}
-	{{- end -}}
+	{{- $.Scratch.Add "path" "/" -}}
 	
 	{{- if ne $entry "" -}}
 	
