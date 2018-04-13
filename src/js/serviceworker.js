@@ -5,7 +5,7 @@
  * --------------------------------------
  */
 
-const date = '2018-03-20';
+const date = '2018-04-12';
 
 const cachePrefix = 'Youtuberis';
 
@@ -24,12 +24,12 @@ const assetsList = [
 	'/scripts.js',
 	'/manifest.json',
 	'/img/brand.svg',
-	'/offline/'
+	'/offline/',
+	'/'
 ];
 
 // List of new articles for example
 const wantedList = [
-	'/',
 	'/kaip-vienas-zodis-gali-padvigubinti-youtube-perziuras/'
 ];
 
@@ -183,14 +183,14 @@ self.addEventListener('fetch', evt => {
 		// Do NOT cache service worker
 		if (/.*sw.js/.test(url.pathname)) return;
 		// Check for appropriate cache
-		if (isAsset(url)) return staleRevalidate(evt, assetsCache);
+		if (isAsset(url)) return cacheFirst(evt, assetsCache);
 		return staleRevalidate(evt);
 	}
 
 	// For HTML requests stale-w-update
 	if (request.headers.get('Accept').indexOf('text/html') !== -1) {
 		// Check for appropriate cache
-		if (isAsset(url)) return staleRevalidate(evt, assetsCache);
+		if (isAsset(url)) return cacheFirst(evt, assetsCache);
 		return staleRevalidate(evt);
 	}
 
