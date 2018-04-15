@@ -9,7 +9,7 @@
 <head>
 	{{- partial "_seo" . -}}
 
-	<link rel="preload" href="{{ partial "_mix" "loader.css" }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="stylesheet" type="text/css" href="{{ partial "_mix" "loader.css" }}">
 	<link rel="preload" href="{{ partial "_mix" "styles.css" }}" as="style" onload="this.onload=null;this.rel='stylesheet';document.body.classList.add('loaded');">
 	<link rel="preload" href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
@@ -33,9 +33,8 @@
 		{{- partial "_nav" . -}} 
 		
 		{{- block "content" . -}} {{- end -}} 
-		
-		{{- partial "_footer" . -}}
 	</div>
+	{{- partial "_footer" . -}}
 	<script type="text/javascript" src="{{ partial "_mix" "scripts.js" }}" defer></script>
 </body>
 
