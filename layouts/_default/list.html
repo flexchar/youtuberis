@@ -1,54 +1,54 @@
-{{ define "content" }}
+{{- define "content" -}}
 
-	{{ $posts := .Data.Pages }}
+	{{- $posts := .Data.Pages -}}
 
 	<section class="hero is-light is-bold">
 		<div class="hero-body">
 			<div class="container">
 				<h1 class="title">
-					{{ .Title }}
+					{{- .Title -}}
 				</h1>
 				<span class="tag is-primary">
-					Įrašai: {{ len $posts}}
+					Įrašai: {{ len $posts -}}
 				</span>
 			</div>
 		</div>
 	</section>
 
-	{{ partial "_breadcrumbs" . }}	
+	{{- /* partial "_breadcrumbs" . */ -}}	
 
-	{{ $paginator := .Paginate $posts 9 }}
+	{{- $paginator := .Paginate $posts 9 -}}
 
 	<section class="section">
 		<div class="container is-fullhd">
 
 			<!-- First row of posts -->
 			<div class="tile is-ancestor">
-			{{ range first 3 $paginator.Pages }}		
-				{{ partial "post-block" . }}
-			{{ end }}
+			{{- range first 3 $paginator.Pages -}}		
+				{{- partial "post-block" . -}}
+			{{- end -}}
 			</div>
 
 			<!-- Second row of posts, if posts > 3 -->
-			{{ if gt (len $paginator.Pages) 3 }}
+			{{- if gt (len $paginator.Pages) 3 -}}
 			<div class="tile is-ancestor">
-			{{ range first 3 (after 3 $paginator.Pages) }}		
-				{{ partial "post-block" . }}
-			{{ end }}
+			{{- range first 3 (after 3 $paginator.Pages) -}}		
+				{{- partial "post-block" . -}}
+			{{- end -}}
 			</div>
-			{{ end }}
+			{{- end -}}
 
 			<!-- Third row of posts, if posts > 6 -->
-			{{ if gt (len $paginator.Pages) 6 }}
+			{{- if gt (len $paginator.Pages) 6 -}}
 			<div class="tile is-ancestor">
-			{{ range first 3 (after 6 $paginator.Pages) }}		
-				{{ partial "post-block" . }}
-			{{ end }}
+			{{- range first 3 (after 6 $paginator.Pages) -}}		
+				{{- partial "post-block" . -}}
+			{{- end -}}
 			</div>
-			{{ end }}
+			{{- end -}}
 
-			{{ partial "_pagination" $paginator }}
+			{{- partial "_pagination" $paginator -}}
 		</div>
 	</section>
 
-{{ end }}
+{{- end -}}

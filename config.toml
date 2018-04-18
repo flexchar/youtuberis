@@ -33,7 +33,7 @@ enableGitInfo				= true
 	
 [taxonomies]
 	kategorija 	= "kategorijos"
-	tema 		= "temos"
+	# tema 		= "temos"
 
 [permalinks]
 	post = "/:slug/"
