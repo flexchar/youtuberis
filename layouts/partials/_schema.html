@@ -60,7 +60,7 @@
 
 
 <!-- Schema for posts -->
-{{- if eq .Section "post" -}}
+{{- if and (eq .Section "post") (.IsPage) -}}
 <script type="application/ld+json">
 	{
 		"@context": "http://schema.org",
@@ -98,7 +98,7 @@
 {{- end -}}
 
 <!-- Schema for pages -->
-{{- if eq .Section "page" -}}
+{{- if and (eq .Section "page") (.IsPage) -}}
 <script type="application/ld+json">
 	{
 		"@context": "http://schema.org",
