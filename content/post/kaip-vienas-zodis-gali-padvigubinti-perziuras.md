@@ -1,9 +1,9 @@
 +++
-title 				= "Kaip vienas žodis gali padvigubinti YouTube peržiūras"
+title 				= "Kaip vienas žodis gali padidinti YouTube peržiūras"
 date 				= "2018-03-08T12:33:13+01:00"
 
 url					= ""
-slug                = "kaip-vienas-zodis-gali-padvigubinti-youtube-perziuras"
+slug                = "kaip-vienas-zodis-gali-padidinti-youtube-perziuras"
 disqus_identifier   = "1521113593"
 
 draft				= false
@@ -18,9 +18,13 @@ images              = [
     "https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_faces:center,h_1080,q_auto,w_2160/v1523443989/lucas-lenzi-573687-unsplash.jpg",
     "https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south,h_1080,q_auto,w_2160/v1523443991/jamie-street-564923-unsplash.jpg"
 ]
+
+aliases             = [
+    "kaip-vienas-zodis-gali-padvigubinti-youtube-perziuras"
+]
 +++
 
-Ar tu žinojai, jog jau dabar tiesiog dažniau pavartodamas žodį **_TU_** gali padvigubinti savo YouTube vaizdelių peržiūras ir atsaką iš žiūrovo? Susipažink su tyrimo rezultatais ir pritaikyk juos savo kūryboje jau dabar.
+Tyrimas atskleidė, kad pavartodamas žodį **_TU_** tu gali padidinti savo YouTube vaizdelių peržiūras ir patinka paspaudimų bei komentarus. Susipažink su šio tyrimo rezultatais ir pritaikyk juos savo kūryboje jau dabar.
 
 <!--more-->
 
