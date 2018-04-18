@@ -16,9 +16,9 @@ headerClass			= "is-warning"
 navbarSpace			= false
 +++
 
-Man [įrenginiui, į kurį dabar žiūri] nepavyko prisijungti prie interneto, todėl negaliu parodyti norimo puslapio...
+Nepavyko prisijungti prie interneto, todėl negaliu parodyti norimo puslapio... 😞
 
 <br>
 
 Kai tik atsiras ryšys, bandysiu dar kartą!
-Arba gali atidaryti [titulinį](/).
+Arba gali naršyti [titulinį](/).
