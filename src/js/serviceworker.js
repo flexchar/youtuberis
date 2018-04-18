@@ -30,7 +30,7 @@ const assetsList = [
 
 // List of new articles for example
 const wantedList = [
-	'/kaip-vienas-zodis-gali-padvigubinti-youtube-perziuras/'
+	'/kaip-vienas-zodis-gali-padidinti-youtube-perziuras/'
 ];
 
 // SVG fallback for images
