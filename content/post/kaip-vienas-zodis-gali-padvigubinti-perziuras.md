@@ -24,7 +24,7 @@ aliases             = [
 ]
 +++
 
-Tyrimas atskleidė, kad pavartodamas žodį **_TU_** tu gali padidinti savo YouTube vaizdelių peržiūras ir patinka paspaudimų bei komentarus. Susipažink su šio tyrimo rezultatais ir pritaikyk juos savo kūryboje jau dabar.
+Tyrimas atskleidė, kad pavartodamas žodį **_TU_** tu gali padidinti savo YouTube vaizdelių peržiūras ir patinka paspaudimus bei komentarus net keletą kartų. Susipažink su šio tyrimo rezultatais ir pritaikyk juos savo kūryboje jau dabar.
 
 <!--more-->
 
