@@ -1,9 +1,9 @@
 +++
-title 				= "Išnaudok tą komentarų skiltį"
+title 				= "Išnaudok YouTube komentarų skiltį"
 date 				= "2018-04-20T20:22:10+02:00"
 
 url					= ""
-slug                = "isnaudok-komentaru-skilti"
+slug                = "isnaudok-youtube-komentaru-skilti"
 disqus_identifier   = "1524248530"
 
 draft				= false
