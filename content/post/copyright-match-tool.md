@@ -22,7 +22,7 @@ images              = [
 ]
 +++
 
-YouTube pristatė naują įrankį leidžianti aptikti kitus tavo vaizdo įrašo įkėlimus platformoje. Šiuo metu įrankis yra prieinamas mažai auditorijai ir laikui bėgant bus paleistas platesniai kanalų savininkų auditorijai.
+YouTube pristatė naują įrankį leidžianti aptikti kitus tavo vaizdo įrašo įkėlimus platformoje. Šiuo metu įrankis yra prieinamas mažai auditorijai ir laikui bėgant bus paleistas platesnei kanalų savininkų auditorijai.
 
 <!--MORE-->
 
@@ -34,15 +34,15 @@ Po to, kai tu įkelsi savo vaizdo įrašą, YouTube skenuos visus naujesnius įk
 
 > Svarbu, kad tu būtum pirmas, kuris **viešai** paskelbia vaizdo įrašą, nes taip (pagal pirmąjį viešą įkėlimą) YouTube nustato, kam priklauso vaizdo įrašas ir kas turėtų matyti aptikimus.
 
-Aptikus panašų ar identišką vaizdo įrašą, informacija bus pateikta aptimikimų sąrašę. Jeigu tu turi prieigą prie šios funkcijos, tuomet [kanalo studijoje][creator_studio] kairėje meniu juostoje bus matomas _Copyright_ mygtukas, kur ir galėsi peržvelgti visa informacija.
+Aptikus panašų ar identišką vaizdo įrašą, informacija bus pateikta aptikimų sąraše. Jeigu tu turi prieigą prie šios funkcijos, tuomet [kanalo studijoje][creator_studio] kairėje meniu juostoje bus matomas _Copyright_ mygtukas, kur ir galėsi peržvelgti visa informacija.
 
 {{% figure src="https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_center,q_auto:eco/v1525715437/copyright-match-tool_2.png" title="Copyright Match Tool aptikimų sąrašas" alt="Copyright Match Tool aptikimų sąrašo pavyzdys" %}}
 
 ## Funkcijos
 
-Skirtukyje _Matches_ galėsi stebėti visus aptikimus - vaizdo įrašo pavadinimas, data, peržiūrų skaičius, kanalas, kiek procentų tavo turinio rasta tame vaizdo įrašę. O juos valdyti pateikiama keletas funkcijų - aptikimus galima archyvuoti (t.y. tiesiog ignoruoti), galima pranešti YouTube apie intelektualių teisių pažeidimą arba išsiųsti privačią žinutę kanalo savininkui.
+Skirtuke _Matches_ galėsi stebėti visus aptikimus - vaizdo įrašo pavadinimas, data, peržiūrų skaičius, kanalas, kiek procentų tavo turinio rasta tame vaizdo įrašę. O juos valdyti pateikiama keletas funkcijų - aptikimus galima archyvuoti (t.y. tiesiog ignoruoti), galima pranešti YouTube apie intelektualių teisių pažeidimą arba išsiųsti privačią žinutę kanalo savininkui.
 
-{{% figure src="https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south_east,h_640,w_960/v1525715437/copyright-match-tool_3.png" title="Copyright Match įrankio funckijos" alt="Copyright Match įrankio funckijos" %}}
+{{% figure src="https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south_east,h_640,w_960/v1525715437/copyright-match-tool_3.png" title="Copyright Match įrankio funkcijos" alt="Copyright Match įrankio funkcijos" %}}
 
 > Atmink: vaizdo įrašo aptikimas nebūtinai reiškia, kad tavo teisės yra pažeistos, todėl prieš pranešdamas YouTube įsitikink ar tikrai potencialus vaizdo įrašas pažeidžia tavo teises.
 
