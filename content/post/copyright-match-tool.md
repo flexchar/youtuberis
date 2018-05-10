@@ -50,6 +50,9 @@ Skirtukyje _Matches_ galėsi stebėti visus aptikimus - vaizdo įrašo pavadinim
 
 {{% youtube "5-2R-IZITZ8" %}}
 
+Detaliau [šiame][help_article] YouTube pagalbos centro įraše.
+
 Mano nuomone, pagaliau žingsnis gerinant platformą iš turinio kūrėjų perspektyvos. Ypač dabar, kai dauguma Youtuberių vis dar laukia monetizacijos patvirtinimo, kai kanalai terminuojami ir kai atrodo, kad YouTube rūpinasi vien savo sėdyne, šis įrankis iš ties maloniai stebina ir atnešta bent šiek tiek vilties, kad tu, turinio kūrėjas, dar nesi užmirštas.
 
 [creator_studio]: http://youtube.com/creator
+[help_article]: https://support.google.com/youtube/answer/7648743?hl=lt
