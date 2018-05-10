@@ -6,7 +6,7 @@ url					= ""
 slug                = "copyright-match-tool"
 disqus_identifier   = "1525713435"
 
-draft				= true
+draft				= false
 comments 			= true
 
 kategorijos         = ["naujienos"]
