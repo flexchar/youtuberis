@@ -1,13 +1,13 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
-// Image Management 
+// Image Management
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 const imageminSvgo = require('imagemin-svgo');
 
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -22,55 +22,57 @@ const Clean = require('clean-webpack-plugin');
 
 // Parse assets
 mix.webpackConfig({
-    plugins: [
-        // Clean destination folder
-        new Clean('static', {
-            verbose: true,
-            // These will be taken care by the webpack itself
-            exclude: ['hot', 'mix-manifest.json','manifest.json'],
-            // For testing
-            dry: !mix.inProduction(),
-            // Clean before other events
-            beforeEmit: true
-        }),
-        // Generate favicons
-        // also generates a lot of unwanted content, 
-        // currently I manually have generated head links in partial "_branding.html"
-        // To be improved
-        new FaviconsWebpackPlugin({
-            persistentCache: true,
-            logo: './src/images/logo.svg',
-            prefix: 'icons/',
-            // background: '#f5f5f5',
-            icons: {
-                android: true,
-                appleIcon: true,
-                appleStartup: true,
-                favicons: true,
-                firefox: true,
-                windows: true
-            }
-        }),
-        // Assets
-        new CopyWebpackPlugin([{
-            from: 'src/images',
-            to: 'img'
-        }]),
-        // Compress images
+	plugins: [
+		// Clean destination folder
+		new Clean('static', {
+			verbose: true,
+			// These will be taken care by the webpack itself
+			exclude: ['hot', 'mix-manifest.json', 'manifest.json'],
+			// For testing
+			dry: !mix.inProduction(),
+			// Clean before other events
+			beforeEmit: true
+		}),
+		// Generate favicons
+		// also generates a lot of unwanted content,
+		// currently I manually have generated head links in partial "_branding.html"
+		// To be improved
+		new FaviconsWebpackPlugin({
+			persistentCache: true,
+			logo: './src/images/logo.svg',
+			prefix: 'icons/',
+			// background: '#f5f5f5',
+			icons: {
+				android: true,
+				appleIcon: true,
+				appleStartup: true,
+				favicons: true,
+				firefox: true,
+				windows: true
+			}
+		}),
+		// Assets
+		new CopyWebpackPlugin([
+			{
+				from: 'src/images',
+				to: 'img'
+			}
+		]),
+		// Compress images
 		new ImageminPlugin({
-            disable: !mix.inProduction(),
-            test: /\.(jpe?g|png|gif|svg)$/i,
-            plugins: [
-                imageminMozjpeg({
-                    quality: 60,
-                }),
-                imageminPngquant({
-                    quality: '60-80'
-                }),
-                imageminSvgo()
-            ]
-        })
-    ]
+			disable: !mix.inProduction(),
+			test: /\.(jpe?g|png|gif|svg)$/i,
+			plugins: [
+				imageminMozjpeg({
+					quality: 60
+				}),
+				imageminPngquant({
+					quality: '60-80'
+				}),
+				imageminSvgo()
+			]
+		})
+	]
 });
 
 // Browser Sync | Uncomment if wanted
@@ -86,10 +88,21 @@ mix.webpackConfig({
 // });
 
 // Process JS and SASS
-mix.js('src/js/script.js', 'scripts.js')
-    .js('src/js/serviceworker.js', 'sw.js')
-    .sass('src/scss/app.scss', 'styles.css')
+mix
+	.js('src/js/script.js', 'scripts.js')
+	.sass('src/scss/app.scss', 'styles.css')
 	.sass('src/scss/mini.scss', 'loader.css');
+
+/* 
+ * Copy Service Worker
+ *
+ * won't transpile as 
+ * • no significant performance gain
+ * • features are supported as if SW itself is
+ * • no need for webpack code
+ */
+// mix.copy('src/js/serviceworker.js', 'static/sw.js');
+mix.babel('src/js/serviceworker.js', 'static/sw.js');
 
 // Copy Manifest
 mix.copy('src/manifest.json', 'static/manifest.json');
@@ -106,19 +119,18 @@ mix.setPublicPath('static');
 // }
 
 mix.options({
-    processCssUrls: true
+	processCssUrls: true
 });
 // Only apply postCSS in production
 if (mix.inProduction()) {
-    mix.options({
-        postCss: [
-            require('cssnano')({
-                zindex: false
-            })
-        ]
-    });
+	mix.options({
+		postCss: [
+			require('cssnano')({
+				zindex: false
+			})
+		]
+	});
 }
-
 
 // Full API
 // mix.js(src, output);

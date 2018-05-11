@@ -1,4 +1,4 @@
-let app = new Vue({
+const app = new Vue({
 	el: '#app',
 	delimiters: ['${', '}'],
 	data: {
@@ -6,7 +6,7 @@ let app = new Vue({
 		scrollPosition: 0
 	},
 	methods: {
-		//Tracks scroll position to add shadow on navbar
+		// Tracks scroll position to add shadow on navbar
 		updateScroll() {
 			this.scrollPosition = window.scrollY;
 		},
@@ -37,7 +37,7 @@ let app = new Vue({
 						};
 					}
 					// Trim Caches
-					// if ('active' in reg && reg.active) reg.active.postMessage('trimCaches'); // temp off
+					if ('active' in reg && reg.active) reg.active.postMessage('trimCaches');
 				}, {passive: true, once: true});
 			}).catch( err => {
 				// notify.danger('SW Klaida.');

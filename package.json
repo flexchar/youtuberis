@@ -1,31 +1,35 @@
 {
- "name": "youtube-blog",
- "version": "0.1.0",
- "license": "MIT License",
- "private": true,
- "scripts": {
-  "deploy": "yarn run prod && hugo --cleanDestinationDir",
-  "hugo": "hugo serve -D --noHTTPCache=true --disableFastRender",
-  "hugo-p": "yarn run hugo --disableLiveReload",
-  "hugo-l": "yarn run hugo-p --appendPort=false -b",
-  "watch": "cross-env NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "hot": "cross-env NODE_ENV=development HOT=true webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-  "serve": "ngrok http 1313 --log stderr"
- },
- "dependencies": {
-  "buefy": "^0.6.5",
-  "bulma": "^0.6.2",
-  "clean-webpack-plugin": "^0.1.19",
-  "copy-webpack-plugin": "^4.5.1",
-  "cross-env": "^5.1.4",
-  "cssnano": "^3.10.0",
-  "favicons-webpack-plugin": "^0.0.9",
-  "imagemin-mozjpeg": "^7.0.0",
-  "imagemin-svgo": "^6.0.0",
-  "imagemin-webpack-plugin": "^2.1.1",
-  "laravel-mix": "^2.1.11",
-  "vue": "^2.5.16"
- }
+	"name": "youtube-blog",
+	"version": "0.1.0",
+	"license": "MIT License",
+	"private": true,
+	"scripts": {
+		"deploy": "yarn run prod && hugo --cleanDestinationDir",
+		"hugo": "hugo serve -D --noHTTPCache=true --disableFastRender",
+		"hugo-p": "yarn run hugo --disableLiveReload",
+		"hugo-l": "yarn run hugo-p --appendPort=false -b",
+		"watch":
+			"cross-env NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"dev":
+			"cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"hot":
+			"cross-env NODE_ENV=development HOT=true webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"prod":
+			"cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"serve": "ngrok http 1313 --log stderr"
+	},
+	"dependencies": {
+		"buefy": "^0.6.5",
+		"bulma": "^0.6.2",
+		"clean-webpack-plugin": "^0.1.19",
+		"copy-webpack-plugin": "^4.5.1",
+		"cross-env": "^5.1.4",
+		"cssnano": "^3.10.0",
+		"favicons-webpack-plugin": "^0.0.9",
+		"imagemin-mozjpeg": "^7.0.0",
+		"imagemin-svgo": "^6.0.0",
+		"imagemin-webpack-plugin": "^2.1.1",
+		"laravel-mix": "^2.1.11",
+		"vue": "^2.5.16"
+	}
 }
