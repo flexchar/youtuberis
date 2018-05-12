@@ -1,5 +1,5 @@
 +++
-title 				= "Copyright Match Tool: galimybė aptikti savo filumukų kopijas"
+title 				= "Copyright Match Tool: galimybė aptikti savo filmukų kopijas"
 date 				= "2018-05-07T19:17:15+02:00"
 
 url					= ""
