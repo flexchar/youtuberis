@@ -23,7 +23,7 @@ images              = [
 
 Jau metai, kai YouTube įžengė į demonetizacijos laikotarpį. O prasidėjo viskas nuo taip vadinamos _adpokalipsės_, kai didieji prekiniai ženklai išsigando, kad Google rodo jų reklamas šalia _negerų_ vaizdo įrašų ir taip gadina jų _brendą_. Suprantama, Google nenorėdama prarasti pajamų pradėjo demonetizuoti kanalus, diegti įvairiausius filtrus ir didinti reikalavimus, peržiūrėti vaizdo įrašus.
 
-<!--MORE--> 
+<!--MORE-->
 
 ## YPP Atnaujinimai
 
@@ -35,7 +35,7 @@ Sausio 16-ja (2018) YouTube atnaujino savo partnerių programą (trump. YPP) pra
 
 Grįžkime prie temos. Minėti pakeitimai įsigaliojo vasario pabaigoje. YouTube pradžioje tikėjosi peržiūrėti visus kanalus per porą mėnesių, po to iki [Balandžio pabaigos][end_of_april]. Deja, pažadai primena politika, iki rinkimų daug ir gražių, o kai laikas ištesėti - nieko.
 
-Balandžio 20 dieną (va, koks ironiškas sutapimas mąstant kaip _taikliai_ jų Ad Bot'as demonetizuoja) išgirdome naują pažadą - tikisi peržiūrėti iki [Birželio galo][end_of_june]. Praktiškai mėnuo nuo dabar. 
+Balandžio 20 dieną (va, koks ironiškas sutapimas mąstant kaip _taikliai_ jų Ad Bot'as demonetizuoja) išgirdome naują pažadą - tikisi peržiūrėti iki [Birželio galo][end_of_june]. Praktiškai mėnuo nuo dabar.
 
 Taip pat buvo atskleista, kad kanalai su daugiau peržiūrų bus peržiūrėti greičiau nei kuklesni konkurentai.
 > We're currently reviewing **channels** with the **most views first**, as the potential revenue is likely higher for those channels.
@@ -52,5 +52,5 @@ Beje, plačiau gali rasti šioje [/r/youtube temoje][reddit]. Bei diskutuodamas 
 
 [end_of_april]: https://twitter.com/TeamYouTube/status/968877931069091840
 [delay_in_april]: https://twitter.com/TeamYouTube/status/981515531617558531
-[end_of_june]: https://productforums.google.com/forum/#!topic/youtube/ulNylqaITRs 
+[end_of_june]: https://productforums.google.com/forum/#!topic/youtube/ulNylqaITRs
 [reddit]: https://www.reddit.com/r/youtube/comments/7xkcll/psa_the_ad_bot_update_and_reposted/
