@@ -5,7 +5,7 @@
 			v-model="search"
 			placeholder="Ieškok..."
 			type="search"
-			icon="magnify"
+			icon="search"
 			:expanded="isSearching"
 			@focus="searchField(true)"
 			@blur="searchField(false)">
@@ -44,14 +44,10 @@
 
 	        <template slot="empty">
 	            <section class="section">
-	                <div class="content has-text-grey has-text-centered">
-	                    <p>
-	                        <b-icon
-	                            icon="emoticon-tongue"
-	                            size="is-large">
-	                        </b-icon>
-	                    </p>
-	                    <p>Tuštoka...</p>
+	                <div class="content">
+	                    <p class="has-text-centered">
+							Tuštoka...
+						</p>
 	                </div>
 	            </section>
 	        </template>
@@ -88,7 +84,7 @@
             }
         },
         mounted() {
-        	this.fetchData();
+			this.fetchData();
         },
         methods: {
         	fetchData() {		
@@ -151,7 +147,7 @@
 			linkify: function(text) {
 			    var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
 			    return text.replace(urlRegex, function(url) {
-			        return '<a href="' + url + '" target="_blank" rel="noopener">\n<span class="icon has-text-primary">\n<i class="mdi mdi-open-in-new"></i>\n</span>\n</a>';
+			        return '<a href="' + url + '" target="_blank" rel="noopener">\n<span class="icon has-text-primary">\n<i class="fa-open_in_new"></i>\n</span>\n</a>';
 			        return url;
 			    });
 			},

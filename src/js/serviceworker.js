@@ -164,12 +164,15 @@ self.addEventListener('fetch', evt => {
 		return;
 	}
 
-	// For fonts CacheFirst
+	// For Material Design Icons CacheFirst
 	if (/.*materialdesignicons\.com/.test(url.host)) {
 		// console.log('[fetch] exec cacheFirst on materialdesignicons');
 		return cacheFirst(evt);
 	}
-
+	// For fonts CacheFirst
+	if (/\.(?:eot|ttf|woff)$/.test(url.pathname)) {
+		return cacheFirst(evt);
+	}
 	// For images CacheFirst
 	if (/\.(?:png|gif|jpg|jpeg|svg)$/.test(url.pathname)) {
 		// Find which cache it belongs

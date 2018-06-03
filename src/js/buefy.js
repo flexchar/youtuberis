@@ -14,7 +14,7 @@
 import config, { setOptions } from 'buefy/src/utils/config'
 setOptions(Object.assign(config, {
     // defaultContainerElement: null,
-    // defaultIconPack: 'mdi',
+    defaultIconPack: null,
     // defaultDialogConfirmText: null,
     // defaultDialogCancelText: null,
     // defaultSnackbarDuration: 3500,

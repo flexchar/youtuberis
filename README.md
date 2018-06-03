@@ -55,7 +55,11 @@ The [`favicons-webpack-plugin`](https://github.com/jantimon/favicons-webpack-plu
 
 ### SVG Compression
 
-[SVGO](https://github.com/svg/svgo) tool is used to compress and minify svgs. Excecute `svgo -f . --multipass --disable={collapseGroups,cleanupIDs}` in folder containing svgs. `--disable={collapseGroups,cleanupIDs}` to preserve clip-paths when multiple SVGs used in web page.
+[SVGO](https://github.com/svg/svgo) tool is used to compress and minify svgs. Execute `svgo -f . --multipass --disable={collapseGroups,cleanupIDs}` in folder containing svgs. `--disable={collapseGroups,cleanupIDs}` to preserve clip-paths when multiple SVGs used in web page.
+
+### Icons
+
+Icons are being integrated with [Icomoon](https://icomoon.io/app/). The list of desired icons is made and then downloaded. The contents of downloaded .zip: `./fonts/*` goes into `./src/fonts/` directory, `style.css` is copied to `./src/scss/icons.scss` file. In order to work with Buefy integrated icons, strings that match `icon-` has to be replaced with `fa-`. Buefy currently does not support other icon packs than FA and MDI.
 
 ## Local deployment testing
 
