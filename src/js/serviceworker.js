@@ -5,7 +5,7 @@
  * --------------------------------------
  */
 
-const date = '2018-05-24';
+const date = '3/6-18';
 
 const cachePrefix = 'Youtuberis';
 
