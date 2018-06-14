@@ -5,7 +5,7 @@
  * --------------------------------------
  */
 
-const date = '3/6-18';
+const date = '14/6-18';
 
 const cachePrefix = 'Youtuberis';
 
@@ -20,20 +20,20 @@ const dynamicCache = `${cachePrefix}::dynamic::${date}`;
 // has to be cached before installation completes
 // Correct pathname is important
 const assetsList = [
-	'/styles.css',
-	// '/loader.css',
-	'/scripts.js',
-	'/manifest.json',
-	'/img/brand.svg',
-	'/offline/',
-	'/'
+  '/styles.css',
+  // '/loader.css',
+  '/scripts.js',
+  '/manifest.json',
+  '/img/brand.svg',
+  '/offline/',
+  '/'
 ];
 
 // Optional assets,
 // List of new articles for example
 const wantedList = [
-	'/kaip-vienas-zodis-gali-padidinti-youtube-perziuras/',
-	'/copyright-match-tool/'
+  '/kaip-vienas-zodis-gali-padidinti-youtube-perziuras/',
+  '/copyright-match-tool/'
 ];
 
 // SVG fallback for images
@@ -66,54 +66,54 @@ const offlineFigure = `
 // Add assets to cache
 // incl. cookies for Netlify split feature to work
 function precache(cacheName, assetsToCache) {
-	caches
-		.open(cacheName)
-		.then(cache =>
-			cache.addAll(
-				assetsToCache.map(
-					entry => new Request(entry, { credentials: 'include' })
-				)
-			)
-		);
+  caches
+    .open(cacheName)
+    .then(cache =>
+      cache.addAll(
+        assetsToCache.map(
+          entry => new Request(entry, { credentials: 'include' })
+        )
+      )
+    );
 }
 
 // Prevent caches from blowing user's device
 function trimCaches(name, size) {
-	caches.open(name).then(cache =>
-		cache.keys().then(keys => {
-			if (keys.length <= size) return;
-			cache.delete(keys[0]).then(trimCaches(name, size));
-		})
-	);
+  caches.open(name).then(cache =>
+    cache.keys().then(keys => {
+      if (keys.length <= size) return;
+      cache.delete(keys[0]).then(trimCaches(name, size));
+    })
+  );
 }
 
 // Remove old caches
 function cleanCaches() {
-	return caches.keys().then(keys => {
-		keys.forEach(key => {
-			const keyParts = key.split('::');
-			// Skip if not ours
-			if (keyParts[0] !== cachePrefix) return;
+  return caches.keys().then(keys => {
+    keys.forEach(key => {
+      const keyParts = key.split('::');
+      // Skip if not ours
+      if (keyParts[0] !== cachePrefix) return;
 
-			if (keyParts[2] !== date) {
-				caches.delete(key);
-			}
-		});
-	});
+      if (keyParts[2] !== date) {
+        caches.delete(key);
+      }
+    });
+  });
 }
 
 // Cache given resource
 function cacheAdd(req, res, cache) {
-	caches.open(cache).then(c => c.put(req, res));
+  caches.open(cache).then(c => c.put(req, res));
 }
 
 // Check if resource belongs to assetCache
 function isAsset(url) {
-	// Look if belongs to primary
-	if (assetsList.indexOf(url.pathname) !== -1) return true;
-	// In case slash at the end is forgotten
-	if (assetsList.indexOf(`${url.pathname}/`) !== -1) return true;
-	return false;
+  // Look if belongs to primary
+  if (assetsList.indexOf(url.pathname) !== -1) return true;
+  // In case slash at the end is forgotten
+  if (assetsList.indexOf(`${url.pathname}/`) !== -1) return true;
+  return false;
 }
 
 /**
@@ -123,88 +123,88 @@ function isAsset(url) {
  */
 
 self.addEventListener('message', evt => {
-	if (evt.data === 'trimCaches') {
-		trimCaches(imagesCache, 30);
-		trimCaches(dynamicCache, 15);
-	}
+  if (evt.data === 'trimCaches') {
+    trimCaches(imagesCache, 30);
+    trimCaches(dynamicCache, 15);
+  }
 });
 
 self.addEventListener('install', evt => {
-	// Skip waiting once installed
-	self.skipWaiting();
-	// Cache mandatory assets
-	evt.waitUntil(precache(assetsCache, assetsList));
-	// Start caching wanted resources
-	precache(dynamicCache, wantedList);
+  // Skip waiting once installed
+  self.skipWaiting();
+  // Cache mandatory assets
+  evt.waitUntil(precache(assetsCache, assetsList));
+  // Start caching wanted resources
+  precache(dynamicCache, wantedList);
 });
 
 self.addEventListener('activate', evt => {
-	// Remove old caches
-	evt.waitUntil(cleanCaches());
-	// Take control over all clients
-	self.clients.claim();
+  // Remove old caches
+  evt.waitUntil(cleanCaches());
+  // Take control over all clients
+  self.clients.claim();
 });
 
 self.addEventListener('fetch', evt => {
-	const request = evt.request;
-	const url = new URL(request.url);
+  const request = evt.request;
+  const url = new URL(request.url);
 
-	// console.log('url.hostname', url.hostname)
-	// console.log('self.location.hostname', self.location.hostname)
-	// console.log('url',url)
+  // console.log('url.hostname', url.hostname)
+  // console.log('self.location.hostname', self.location.hostname)
+  // console.log('url',url)
 
-	// Skip non default requests
-	if (request.method !== 'GET' && request.method !== 'HEAD') {
-		return;
-	}
+  // Skip non default requests
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return;
+  }
 
-	// Ignore Disqus requests
-	if (/.*disqus(cdn)?.com/.test(url.host)) {
-		// console.log('[fetch] skipped on disqus.com');
-		return;
-	}
+  // Ignore Disqus requests
+  if (/.*disqus(cdn)?.com/.test(url.host)) {
+    // console.log('[fetch] skipped on disqus.com');
+    return;
+  }
 
-	// For Material Design Icons CacheFirst
-	if (/.*materialdesignicons\.com/.test(url.host)) {
-		// console.log('[fetch] exec cacheFirst on materialdesignicons');
-		return cacheFirst(evt);
-	}
-	// For fonts CacheFirst
-	if (/\.(?:eot|ttf|woff)$/.test(url.pathname)) {
-		return cacheFirst(evt);
-	}
-	// For images CacheFirst
-	if (/\.(?:png|gif|jpg|jpeg|svg)$/.test(url.pathname)) {
-		// Find which cache it belongs
-		return cacheFirst(evt, imagesCache);
-	}
+  // For Material Design Icons CacheFirst
+  if (/.*materialdesignicons\.com/.test(url.host)) {
+    // console.log('[fetch] exec cacheFirst on materialdesignicons');
+    return cacheFirst(evt);
+  }
+  // For fonts CacheFirst
+  if (/\.(?:eot|ttf|woff)$/.test(url.pathname)) {
+    return cacheFirst(evt);
+  }
+  // For images CacheFirst
+  if (/\.(?:png|gif|jpg|jpeg|svg)$/.test(url.pathname)) {
+    // Find which cache it belongs
+    return cacheFirst(evt, imagesCache);
+  }
 
-	// For local manifest file
-	if (
-		/.*\/manifest\.json&/.test(url.pathname) &&
-		self.location.hostname === url.hostname
-	) {
-		return cacheFirst(evt, assetsCache);
-	}
+  // For local manifest file
+  if (
+    /.*\/manifest\.json&/.test(url.pathname) &&
+    self.location.hostname === url.hostname
+  ) {
+    return cacheFirst(evt, assetsCache);
+  }
 
-	// For css, js stale-w-update
-	if (/\.(?:js|css)$/.test(url.pathname)) {
-		// Do NOT cache service worker
-		if (/.*sw.js/.test(url.pathname)) return;
-		// Check for appropriate cache
-		if (isAsset(url)) return cacheFirst(evt, assetsCache);
-		return staleRevalidate(evt);
-	}
+  // For css, js stale-w-update
+  if (/\.(?:js|css)$/.test(url.pathname)) {
+    // Do NOT cache service worker
+    if (/.*sw.js/.test(url.pathname)) return;
+    // Check for appropriate cache
+    if (isAsset(url)) return cacheFirst(evt, assetsCache);
+    return staleRevalidate(evt);
+  }
 
-	// For HTML requests stale-w-update
-	if (request.headers.get('Accept').indexOf('text/html') !== -1) {
-		// Check for appropriate cache
-		if (isAsset(url)) return cacheFirst(evt, assetsCache);
-		return staleRevalidate(evt);
-	}
+  // For HTML requests stale-w-update
+  if (request.headers.get('Accept').indexOf('text/html') !== -1) {
+    // Check for appropriate cache
+    if (isAsset(url)) return cacheFirst(evt, assetsCache);
+    return staleRevalidate(evt);
+  }
 
-	// For all other
-	return networkFirst(evt);
+  // For all other
+  return networkFirst(evt);
 });
 
 /**
@@ -214,66 +214,66 @@ self.addEventListener('fetch', evt => {
  */
 
 function fallback(evt) {
-	const headers = evt.request.headers.get('Accept');
-	// It's tricky, beacause headers can have both and image, and html
-	// only checking for image would lead image response being returned instead html
-	// only return image if headers does NOT accept html
-	if (headers.indexOf('image') !== -1 && headers.indexOf('text/html') === -1) {
-		return new Response(offlineFigure, {
-			headers: {
-				'Content-Type': 'image/svg+xml',
-				'Cache-Control': 'no-store'
-			}
-		});
-	}
-	// If headers do accept html, go ahead for /offline/ page.
-	if (headers.indexOf('text/html') !== -1) {
-		return caches.match('/offline/').then(res => res);
-	}
-	// This should not happen, but if so- give at least something
-	return new Response('Įvyko kažkas neplanuoto...', {
-		headers: { 'Content-Type': 'text/html' }
-	});
+  const headers = evt.request.headers.get('Accept');
+  // It's tricky, beacause headers can have both and image, and html
+  // only checking for image would lead image response being returned instead html
+  // only return image if headers does NOT accept html
+  if (headers.indexOf('image') !== -1 && headers.indexOf('text/html') === -1) {
+    return new Response(offlineFigure, {
+      headers: {
+        'Content-Type': 'image/svg+xml',
+        'Cache-Control': 'no-store'
+      }
+    });
+  }
+  // If headers do accept html, go ahead for /offline/ page.
+  if (headers.indexOf('text/html') !== -1) {
+    return caches.match('/offline/').then(res => res);
+  }
+  // This should not happen, but if so- give at least something
+  return new Response('Įvyko kažkas neplanuoto...', {
+    headers: { 'Content-Type': 'text/html' }
+  });
 }
 
 // Stale-while-revalidate (fetch from cache, then update cached with one from network) concept implementation
 function staleRevalidate(evt, cache = dynamicCache) {
-	evt.respondWith(
-		// Look in cache first
-		caches.match(evt.request).then(res => {
-			// Start fetch promise for an update or a fallback if not found in cache
-			const fetchHandler = fetch(evt.request)
-				.then(res => {
-					if (res.type === 'basic' && res.status === 200)
-						cacheAdd(evt.request, res.clone(), cache);
-					return res;
-				})
-				.catch(() => fallback(evt));
-			return res || fetchHandler;
-		})
-	);
+  evt.respondWith(
+    // Look in cache first
+    caches.match(evt.request).then(res => {
+      // Start fetch promise for an update or a fallback if not found in cache
+      const fetchHandler = fetch(evt.request)
+        .then(res => {
+          if (res.type === 'basic' && res.status === 200)
+            cacheAdd(evt.request, res.clone(), cache);
+          return res;
+        })
+        .catch(() => fallback(evt));
+      return res || fetchHandler;
+    })
+  );
 }
 
 function cacheFirst(evt, cache = dynamicCache) {
-	evt.respondWith(
-		caches.match(evt.request).then(
-			res =>
-				// If not cached, try to fetch and cache
-				res ||
-				fetch(evt.request)
-					.then(res => {
-						if (res.type === 'basic' && res.status === 200)
-							cacheAdd(evt.request, res.clone(), cache);
-						return res;
-					})
-					.catch(() => fallback(evt))
-		)
-	);
+  evt.respondWith(
+    caches.match(evt.request).then(
+      res =>
+        // If not cached, try to fetch and cache
+        res ||
+        fetch(evt.request)
+          .then(res => {
+            if (res.type === 'basic' && res.status === 200)
+              cacheAdd(evt.request, res.clone(), cache);
+            return res;
+          })
+          .catch(() => fallback(evt))
+    )
+  );
 }
 
 function networkFirst(evt) {
-	// Fetch, check in cache or fallback, won't cache response
-	evt.respondWith(
-		fetch(evt.request).catch(() => caches.match(evt.request) || fallback(evt))
-	);
+  // Fetch, check in cache or fallback, won't cache response
+  evt.respondWith(
+    fetch(evt.request).catch(() => caches.match(evt.request) || fallback(evt))
+  );
 }
