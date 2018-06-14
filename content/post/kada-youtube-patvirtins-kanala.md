@@ -27,7 +27,7 @@ Jau metai, kai YouTube įžengė į demonetizacijos laikotarpį. O prasidėjo vi
 
 ## YPP Atnaujinimai
 
-Sausio 16-ja (2018) YouTube atnaujino savo partnerių programą (trump. YPP) pradėdama reikalauti, kad kanalai norėdami monetizuoti savo turinį turėtų bent **4 000 valandų** peržiūrų per paskutinius **12 mėnesių* bei **1 000 prenumeratorių**. Pateisindami šį pokytį kaip pastangas siekiant apsaugoti platformą nuo, trumpai sakant, šlamšto. Ir kol aš manau, kad tikslas yra sveikintinas, įgyvendinimas, deja, - nelabai...
+Sausio 16-ja (2018) YouTube atnaujino savo partnerių programą (trump. YPP) pradėdama reikalauti, kad kanalai norėdami monetizuoti savo turinį turėtų bent **4 000 valandų** peržiūrų per paskutinius **12 mėnesių** bei **1 000 prenumeratorių**. Pateisindami šį pokytį kaip pastangas siekiant apsaugoti platformą nuo, trumpai sakant, šlamšto. Ir kol aš manau, kad tikslas yra sveikintinas, įgyvendinimas, deja, - nelabai...
 
 > Bėda yra tame, kad YouTube yra tiesiogine to žodžio prasme milžiniška platforma. Sunku įsivaizduoti kiek žmogiškųjų išteklių reikia norint peržiūrėti kiekvieną kanalą/įrašą. O reikalai tampa dar sunkesni, kai į pagalbą pakviečiamas dirbtinis intelektas (dar žinomas kaip Ad Bot'as). Nors pastarasis turi daug potencialo, kol kas jam dar daug kur tobulėti.
 
@@ -44,7 +44,7 @@ Taip pat buvo atskleista, kad kanalai su daugiau peržiūrų bus peržiūrėti g
 
 Tad belieka tikėtis, kad per ateinantį mėnesį ir **tu** išvysi tą širdžiai mielą eilutę
 
-{{% figure src="https://res.cloudinary.com/youtuberis/image/upload/q_auto:eco/v1527185928/channel_approved_monetization.png" title="Congratulations! Your channel has been approved for monetization" %}}
+{{% figure src="https://res.cloudinary.com/youtuberis/image/upload/q_auto:eco/v1527185928/channel_approved_monetization.png" title="Congratulations! Your channel has been approved for monetization" alt="Congratulations! Your channel has been approved for monetization" %}}
 
 O tuo tarpu linkiu sėkmės ir toliau auginant auditoriją!
 
