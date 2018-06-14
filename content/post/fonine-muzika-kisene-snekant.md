@@ -1,22 +1,25 @@
----
-title: Foninė muzika & kišenė balsui
-slug: fonine-muzika-kisene-balsui
-description: ''
-subtitle: 'Arba kaip sureguliuoti foninės muzikos garsą, jog balsas skambėtų aiškiai'
-images:
-  - >-
-    https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south,h_1080,q_auto:good,w_2160/v1528964036/Premiere_Pro_Audio_Timeline.jpg
-  - >-
-    https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south,h_1080,q_auto:eco,w_2160/v1528961588/Parametric_Equalizer_Premiere_Pro.png
-kategorijos:
-  - patarimai
-temos:
-  - montažas
-  - garsas
-draft: false
-comments: true
-disqus_identifier: '1527001017'
----
++++
+title 	       			= "Foninė muzika & kišenė balsui"
+date 		        		= "2018-06-14T08:00:00+02:00"
+
+url				         	= ""
+slug                = "fonine-muzika-kisene-balsui"
+disqus_identifier   = "1527001017"
+
+draft               = false
+comments            = true
+
+kategorijos         = ["patarimai"]
+temos               = ["montažas", "garsas"]
+
+description         = ""
+subtitle            = "Arba kaip sureguliuoti foninės muzikos garsą, jog balsas skambėtų aiškiai"
+
+images              = [
+    "https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south,h_1080,q_auto:good,w_2160/v1528964036/Premiere_Pro_Audio_Timeline.jpg",
+    "https://res.cloudinary.com/youtuberis/image/upload/c_fill,g_south,h_1080,q_auto:eco,w_2160/v1528961588/Parametric_Equalizer_Premiere_Pro.png",
+]
++++
 
 Gera foninė muzika (angl. background music) gali sustiprinti emocinį tavo filmuko efektą. Tačiau atitaikyti muzika kartu su balsu gali tapti tikru iššūkiu. Ką daryti, kai muzika užgožia tavo balsą - patylinti? Bet tada ji vos girdima - tad ką daryti? Atsakymas - kišenę. Taip, šiuo paprastu triuku ir pasidalinsiu su tavimi.
 
