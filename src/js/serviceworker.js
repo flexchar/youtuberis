@@ -33,7 +33,8 @@ const assetsList = [
 // List of new articles for example
 const wantedList = [
   '/kaip-vienas-zodis-gali-padidinti-youtube-perziuras/',
-  '/copyright-match-tool/'
+  '/copyright-match-tool/',
+  '/fonine-muzika-kisene-balsui/'
 ];
 
 // SVG fallback for images
