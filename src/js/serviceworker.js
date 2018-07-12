@@ -5,7 +5,7 @@
  * --------------------------------------
  */
 
-const date = '14/6-18';
+const date = '12/7-18';
 
 const cachePrefix = 'Youtuberis';
 
@@ -31,9 +31,9 @@ const assetsList = [
 // Optional assets,
 // List of new articles for example
 const wantedList = [
-  '/kaip-vienas-zodis-gali-padidinti-youtube-perziuras/',
-  '/copyright-match-tool/',
-  '/fonine-muzika-kisene-balsui/'
+  // '/kaip-vienas-zodis-gali-padidinti-youtube-perziuras/',
+  // '/copyright-match-tool/',
+  // '/fonine-muzika-kisene-balsui/'
 ];
 
 // SVG fallback for images
