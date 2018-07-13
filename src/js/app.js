@@ -13,6 +13,7 @@ const app = new Vue({
 
 		registerServiceWorker() {
 			if (! 'serviceWorker' in navigator) return;
+			if ( window && window.location && window.location.hostname === 'localhost' ) return;
 
 			// If loaded offline, shows notification when comes online and offers refresh
 			if (!navigator.onLine) {
@@ -55,12 +56,32 @@ const app = new Vue({
 
 			// PNG Fallback for SVG brand image
 			document.getElementById('brand').addEventListener('error', () => {this.src='/img/brand.png'}, {passive: true, once: true});
-		}
+		},
+
+		bannerImage() {
+			try {
+				const pageData = JSON.parse(document.getElementById('pageData').innerText);
+				const images = pageData.image;
+				const banner = document.getElementById('bannerImage');
+				Object.assign(banner.style, {
+					background: `url('${images[0]}')`,
+					backgroundBlendMode: 'multiply',
+					backgroundColor: 'rgba(100, 80, 80, 0.8)',
+					backgroundCover: 'cover',
+					backgroundRepeat: 'no-repeat',
+					backgroundPosition: 'center top',
+					backgroundAttachment: 'fixed'
+				});
+			} catch(e) {
+				console.log('Banner image not available.');
+			}
+		}	
 	},
 
 	mounted() {
 		this.userExperience();
 		this.registerServiceWorker();
+		this.bannerImage();
 	},
 
 	components: {

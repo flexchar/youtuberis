@@ -61,7 +61,7 @@
 
 <!-- Schema for posts -->
 {{- if and (eq .Section "post") (.IsPage) -}}
-<script type="application/ld+json">
+<script type="application/ld+json" id="pageData">
 	{
 		"@context": "http://schema.org",
 		"@type": "NewsArticle",
@@ -70,7 +70,7 @@
 			"@id": "{{ .Permalink | absURL }}"
 		},
 		"headline": "{{ .Title }}",
-		"description": "{{- if .IsPage -}}{{- trim (.Summary | plainify) "\n" -}}{{- end -}}",
+		"description": {{- .Summary | plainify | jsonify -}},
 		"image": [ {{- range $index, $entry := .Params.images }}{{ if $index }}, {{ end }}"{{ $entry }}"{{ end -}} ],
 		"datePublished": "{{ .Date.Format $.Site.Params.ISO8601 }}",
 		"dateModified": "{{ .Page.Lastmod.Format $.Site.Params.ISO8601 }}",
@@ -99,7 +99,7 @@
 
 <!-- Schema for pages -->
 {{- if and (eq .Section "page") (.IsPage) -}}
-<script type="application/ld+json">
+<script type="application/ld+json" id="pageData">
 	{
 		"@context": "http://schema.org",
 		"@type": "NewsArticle",
@@ -108,7 +108,7 @@
 			"@id": "{{ .Permalink | absURL }}"
 		},
 		"headline": "{{ .Title }}",
-		"description": "{{- .Params.subtitle -}}",
+		"description": "{{- .Params.subtitle | jsonify -}}",
 		"image": [ {{- range $index, $entry := .Params.images }}{{ if $index }}, {{ end }}"{{ $entry }}"{{ end -}} ],
 		"datePublished": "{{ .Date.Format $.Site.Params.ISO8601 }}",
 		"dateModified": "{{ .Page.Lastmod.Format $.Site.Params.ISO8601 }}",
