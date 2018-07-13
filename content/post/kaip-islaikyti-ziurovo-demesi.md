@@ -6,7 +6,7 @@ url					= ""
 slug                = "kaip-pritraukti-islaikyti-ziurovo-demesi"
 disqus_identifier   = "1530438682"
 
-draft				= true
+draft				= false
 comments 			= true
 
 kategorijos         = ["auditorija", "patarimai"]
@@ -26,7 +26,7 @@ Vienas didesnių iššūkių kuriant ir talpinant filmukus YouTube yra žiūrovo
 
 ## Intro
 
-Pirmoji klaida tai triukšmingas ir be temos intro, kuris ne tik kad nesudomina, bet dar ir skatina praleisti šį įrašą. Intro iš kūrėjo perspektyvos yra brando kūrimo dalis, idealiai turėtų pristatyti arba vardą, arba kanalo turinį, užtrukti iki kelių sekundžių ir būtų patrauklus. Nors ir pats intro / brando kūrimas yra svarbus, ne ką mažiau svarbu yra to įgyvendinamas.
+Pirmoji klaida tai triukšmingas ir be temos intro, kuris ne tik kad nesudomina, bet dar ir skatina praleisti šį įrašą. Intro iš kūrėjo perspektyvos yra brando kūrimo dalis, idealiai turėtų pristatyti arba vardą, arba kanalo turinį, užtrukti iki kelių sekundžių ir būtų patrauklus. Pats intro/brando kūrimas yra svarbus, tačiau ne ką mažiau svarbu yra to įgyvendinamas.
 
 ## Pirmos sekundės
 
@@ -54,15 +54,14 @@ Dažnai prifilmuojame daug medžiagos ir montuodami norime parodyti viską. Real
 
 > Geriausia ateiti pavėlavus, kai veiksmas jau įgauna pagreitį, ir išeiti prieš problemoms prasidedant.
 
-Taip ir montuok. Peržiūrėk, ką turi, ir rodyk, kas įdomiausia. Tačiau ne ką mažiau svarbu kurti ir parodyti istoriją, kratinys nors ir gerų epizodų nebus taip gerai kaip istorija su gerais epizodais.
+Taip ir montuok. Peržiūrėk, ką turi, ir rodyk, kas įdomiausia. Tačiau ne ką mažiau svarbu kurti ir parodyti istoriją, kratinys nors ir gerų epizodų nebus taip gerai, kaip istorija su gerais epizodais.
 
 ## Montuok, o ne karpyk
 
-Ir paskutinį patarimą, kuriuo su tavimi dalinuosi, tai montavimo stilius.
+Ir paskutinis patarimas, kuriuo su tavimi dalinuosi šiame straipsny, tai montavimo stilius.
 
-> **DARYK:** Redaguok video atrinkdamas gerus ir nuoseklius epizodus.
-
-> **VENK:** Sumesti visus video į _timeline_ ir apkarpyti pradžią, pabaigą.
+> - **DARYK:** Redaguok video atrinkdamas gerus ir nuoseklius epizodus.
+> - **VENK:** Sumesti visus video į _timeline_ ir apkarpyti pradžią, pabaigą.
 
 Apkarpydami dažnai pasiduodam palikti dalis, kurios galbūt ir atrodo mums įdomios, bet nėra tokios svarbios žiūrovui. Juk šiais laikais kovojame dėl dėmesio, tad geriausias ginklas yra pateikti pačias įdomiausias dalis ir išlaikyti trumpesnį video (vietoj pusvalandžio, 10-15 min.)
 
