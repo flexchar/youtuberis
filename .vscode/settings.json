@@ -8,5 +8,6 @@
     ".vscode",
     "typings",
     "**/content/post/**"
-  ]
+  ],
+  "editor.formatOnSave": false
 }
