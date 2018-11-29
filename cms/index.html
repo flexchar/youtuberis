@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex,nofollow" />
+	<link href="schema.yml" type="text/yaml" rel="cms-config-url">
+
+	<title>Turinys</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css" />
+
+</head>
+
+<body>
+	<script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+	<script>
+		// window.CMS_CONFIG = {
+		// 	netlifySiteURL: 'https://cms.youtuberis.lt/'
+		// }
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on("init", user => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+						document.location.reload();
+					});
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
