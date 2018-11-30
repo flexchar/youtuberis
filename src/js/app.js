@@ -65,15 +65,9 @@ const app = new Vue({
 				const banner = document.getElementById('bannerImage');
 				Object.assign(banner.style, {
 					background: `url('${images[0]}')`,
-					backgroundBlendMode: 'multiply',
-					backgroundColor: 'rgba(100, 80, 80, 0.8)',
-					backgroundCover: 'cover',
-					backgroundRepeat: 'no-repeat',
-					backgroundPosition: 'center top',
-					backgroundAttachment: 'fixed'
 				});
 			} catch(e) {
-				console.log('Banner image not available.');
+				// console.log('Banner image not available.');
 			}
 		}	
 	},

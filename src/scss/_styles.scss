@@ -305,3 +305,13 @@ article.tile.is-child {
 	}
 	transition: all .6s cubic-bezier(.25, .45, .2, .8);
 }
+
+// Banner image base styling
+#bannerImage {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+	background-attachment: scroll;
+	background-color: rgba(100, 80, 80, 0.8);
+}
