@@ -45,32 +45,33 @@ setOptions(Object.assign(config, {
 
 // import { Checkbox, CheckboxButton } from 'buefy/src/omponents/checkbox'
 // Vue.component(Checkbox.name, Checkbox)
-import { Dropdown, DropdownItem } from 'buefy/src/components/dropdown';
+import {Dropdown} from 'buefy/src/components';
+// import {DropdownItem} from 'buefy/src/components';
 Vue.component(Dropdown.name, Dropdown);
-Vue.component(DropdownItem.name, DropdownItem);
+// Vue.component(DropdownItem.name, DropdownItem);
 // import { Radio, RadioButton } from 'buefy/src/components/radio'
-import { Table, TableColumn } from 'buefy/src/components/table'
+import { Table} from 'buefy/src/components'
 Vue.component(Table.name, Table);
-Vue.component(TableColumn.name, TableColumn);
+// Vue.component(TableColumn.name, TableColumn);
 // import { Tabs, TabItem } from 'buefy/src/components/tabs'
 // import { Tag, Taglist } from 'buefy/src/components/tag'
 // import Autocomplete from 'buefy/src/components/autocomplete'
 // import Collapse from 'buefy/src/components/Collapse'
 // import Datepicker from 'buefy/src/components/datepicker'
-import Field from 'buefy/src/components/field'
+import {Field} from 'buefy/src/components'
 Vue.component(Field.name, Field);
-import Icon from 'buefy/src/components/icon';
+import {Icon} from 'buefy/src/components';
 Vue.component(Icon.name, Icon);
-import Input from 'buefy/src/components/input'
+import {Input} from 'buefy/src/components'
 Vue.component(Input.name, Input);
 // import Message from 'buefy/src/components/message'
 // import Notification from 'buefy/src/components/notification'
-import Pagination from 'buefy/src/components/pagination'
+import {Pagination} from 'buefy/src/components'
 Vue.component(Pagination.name, Pagination);
 // import Panel from 'buefy/src/components/panel'
-import Select from 'buefy/src/components/select'
+import {Select} from 'buefy/src/components'
 Vue.component(Select.name, Select);
-import Switch from 'buefy/src/components/switch'
+import {Switch} from 'buefy/src/components'
 Vue.component(Switch.name, Switch);
 // import Taginput from 'buefy/src/components/taginput'
 // import Timepicker from 'buefy/src/components/timepicker'
@@ -83,7 +84,7 @@ Vue.component(Switch.name, Switch);
 // Vue.prototype.$loading = LoadingProgrammatic
 // import ModalProgrammatic, { Modal } from 'buefy/src/components/modal'
 // Vue.prototype.$modal = ModalProgrammatic
-import Snackbar from 'buefy/src/components/snackbar'
+import {Snackbar} from 'buefy/src/components'
 Vue.prototype.$snackbar = Snackbar
-import Toast from 'buefy/src/components/toast'
+import {Toast} from 'buefy/src/components'
 Vue.prototype.$toast = Toast;
