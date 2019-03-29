@@ -1,5 +1,7 @@
 # Youtuberis.lt
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f596a4ca-c6e7-468b-8dfa-31df0e114db6/deploy-status)](https://app.netlify.com/sites/youtuberis/deploys)
+
 A personal **website** and a blog where I will share my knowledge about YouTube, how to make a channel, optimize videos, earning money, various frequently asked questions, tips, games monetization and music databases and related etc. I will strive to publish at least once a week. However, no guarantees given.
 
 This is also kinda a playground to polish my coding skills, try out and adopt Web 2.0 technologies, new APIs and other lovely stuff out there.
