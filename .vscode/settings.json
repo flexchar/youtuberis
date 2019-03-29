@@ -9,5 +9,13 @@
     "typings",
     "**/content/post/**"
   ],
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "spellright.language": [
+    "lt"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
 }
