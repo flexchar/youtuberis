@@ -17,7 +17,7 @@ enableGitInfo				= true
 
 [params]
 	copyrightL	= "Sukurta su 🍌"
-	copyrightR	= "&copy; 2018 Lukas Vanagas"
+	copyrightR	= "&copy; 2019 Lukas Vanagas"
 	# Branding Logo URLs
 	logoPNG_60	= "/img/brand@60px.png"
 	logoPNG_112	= "/img/brand@112px.png"
