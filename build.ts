@@ -156,15 +156,6 @@ async function copyAssets() {
   await copyFile("src/manifest.json", "static/manifest.json");
   await mkdir("static/img", { recursive: true });
   await cp("src/images", "static/img", { recursive: true });
-  // Hugo's _mix.html partial reads this to resolve asset URLs
-  await Bun.write(
-    "static/mix-manifest.json",
-    JSON.stringify(
-      { "/styles.css": "/styles.css", "/loader.css": "/loader.css", "/scripts.js": "/scripts.js", "/sw.js": "/sw.js" },
-      null,
-      2
-    )
-  );
 }
 
 // ── Orchestration ─────────────────────────────────────────────────────────────

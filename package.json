@@ -8,6 +8,7 @@
     "watch": "bun run build.ts --watch --no-favicons",
     "prod": "NODE_ENV=production bun run build.ts",
     "deploy": "bun run prod && hugo --cleanDestinationDir",
+    "cf:build": "bun install && bun run deploy",
     "hugo": "hugo serve -D --noHTTPCache=true --disableFastRender",
     "hugo-p": "bun run hugo --disableLiveReload",
     "hugo-l": "bun run hugo-p --appendPort=false -b",
