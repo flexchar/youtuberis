@@ -5,7 +5,9 @@
  * --------------------------------------
  */
 
-const date = '30/11-18';
+// Cache version — injected at build time (build.ts) so every deploy busts
+// stale caches via cleanCaches() on activate. Falls back to 'dev' if unset.
+const date = process.env.SW_VERSION || 'dev';
 
 const cachePrefix = 'Youtuberis';
 

@@ -91,22 +91,29 @@ async function buildJS() {
   }
 }
 
+// A fresh value per deploy busts old service-worker caches on activate.
+// Prefer the Cloudflare commit SHA so re-deploys of the same commit reuse caches.
+function swVersion() {
+  const sha = Bun.env.CF_PAGES_COMMIT_SHA;
+  if (sha) return sha.slice(0, 8);
+  return isProd ? String(Date.now()) : "dev";
+}
+
 async function buildSW() {
-  if (isProd) {
-    const result = await Bun.build({
-      entrypoints: ["src/js/serviceworker.js"],
-      outdir: "static",
-      naming: "sw.js",
-      target: "browser",
-      format: "iife",
-      minify: true,
-    });
-    if (!result.success) {
-      for (const log of result.logs) console.error("[sw]", log);
-      throw new Error("SW build failed");
-    }
-  } else {
-    await copyFile("src/js/serviceworker.js", "static/sw.js");
+  const result = await Bun.build({
+    entrypoints: ["src/js/serviceworker.js"],
+    outdir: "static",
+    naming: "sw.js",
+    target: "browser",
+    format: "iife",
+    minify: isProd,
+    define: {
+      "process.env.SW_VERSION": JSON.stringify(swVersion()),
+    },
+  });
+  if (!result.success) {
+    for (const log of result.logs) console.error("[sw]", log);
+    throw new Error("SW build failed");
   }
 }
 

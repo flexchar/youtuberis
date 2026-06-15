@@ -1,6 +1,6 @@
 # Youtuberis.lt
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f596a4ca-c6e7-468b-8dfa-31df0e114db6/deploy-status)](https://app.netlify.com/sites/youtuberis/deploys)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-deployed-F38020?logo=cloudflare&logoColor=white)](https://www.youtuberis.lt)
 
 A personal **website** and a blog where I will share my knowledge about YouTube, how to make a channel, optimize videos, earning money, various frequently asked questions, tips, games monetization and music databases and related etc. I will strive to publish at least once a week. However, no guarantees given.
 
@@ -14,70 +14,131 @@ The topic inspired after 3+ years long contribution to Lithuania's largest busin
 - **[Bulma](https://github.com/jgthms/bulma)** + [Buefy](https://github.com/buefy/buefy). Front-end design and functions.
 - **[VueJS](https://github.com/vuejs/vue)** + **VanillaJS**. Interactivity and progressive enhancements.
 - **Service Worker**. Speed, web requests, offline support.
-- **[Laravel Mix](https://github.com/JeffreyWay/laravel-mix)**, webpack. Hassle-free asset optimization. Deeply integrated to support version hashing, hot module replacement.
-- **[Yarn](https://github.com/yarnpkg/yarn)**. Fast dependencies management.
-- **Netlify**. Atomic deployment and hosting.
+- **[Bun](https://bun.sh)**. Package manager and the asset bundler (see `build.ts`).
+- **[Cloudflare Pages](https://pages.cloudflare.com)**. Atomic deployment and hosting.
 - **GitHub**. Version control, code hosting.
 
 ## Requirements & Install
 
-- Hugo 0.37.1 or above.
-- Yarn (npm should also work). It will install needed dependencies.
+- [Bun](https://bun.sh) (handles dependencies and the asset build).
+- [Hugo extended](https://github.com/gohugoio/hugo) — pinned to `0.128.0` for deploys (see notes below).
 
-> **NOTES:** I **use Windows Linux Substitute**, hence instructions primarily optimized for Linux environments. To access page on remote devices you may need to configure firewall exceptions. BrowserSync can also be helpful, enable by uncommenting it in `webpack.mix.js`
+Run `bun install` to pull in the dependencies.
+
+## Asset build (`build.ts`)
+
+`build.ts` replaces the old Laravel Mix / webpack pipeline. It uses Bun's native
+bundler plus `sass` and `favicons`, and outputs everything Hugo needs into `static/`:
+
+- `src/js/script.js` → `static/scripts.js` (Vue 2 SFCs compiled via an inline plugin)
+- `src/js/serviceworker.js` → `static/sw.js`
+- `src/scss/app.scss` → `static/styles.css`, `src/scss/mini.scss` → `static/loader.css`
+- `src/images/logo.svg` → `static/icons/*` (favicons, production builds only)
+- `src/images/*`, `src/manifest.json`, `src/_headers` copied through to `static/`
+
+| Command | What it does |
+| --- | --- |
+| `bun run build` | Development asset build (skips favicons for speed) |
+| `bun run watch` | Same as `build`, rebuilding on changes under `src/` |
+| `bun run prod` | Production asset build (minified, includes favicons) |
+| `bun run deploy` | `bun run prod` then `hugo --cleanDestinationDir` → outputs to `docs/` |
 
 ## Development
 
-1. Run `yarn` to install dependencies.
-2. Run `yarn run watch` to watch and compile assets. OR `yarn run hot` to enable [Hot Module Replacement](https://github.com/JeffreyWay/laravel-mix/blob/master/docs/hot-module-replacement.md). If running `hot` the first time, it's a good idea to `yarn run dev` to populate other assets such as images/uploads.
-3. Run `yarn run hugo` to watch and serve the site. OR `yarn run hugo-p` to disable Hugo live reload on file changes.
+1. `bun install` to install dependencies.
+2. `bun run watch` to watch and compile assets.
+3. In another terminal, `bun run hugo` to serve the site (or `bun run hugo-p` to
+   disable Hugo live reload).
 
-> **TIP**: Append commands with `&` to run in the background. Or use `Ctrl + Z` to pause and then `bg` to resume in the background. For instance, `yarn run watch &` will automatically execute in the background. So you can run multiple commands within same terminal instance.
+### Asset URLs in templates
 
-Note that webpack favicon generator may throw a console error `node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs: error while loading shared libraries: libfontconfig.so.1: cannot open shared object file: No such file or directory`. A fix that worked for me was to `apt install libfontconfig`.
+Assets are emitted with fixed names, so reference them through the `_mix` partial,
+which resolves the name to an absolute URL. The path must begin **without a slash**:
 
-### Laravel Mix function
-
-Alternative to Laravel Mix [versioning function](https://laravel.com/docs/5.6/mix#versioning-and-cache-busting): `mix('js/bundle.js')` in Hugo is to use `{{ partial "_mix" "js/bundle.js" }}` (ugly but at least works). Please note that path has to begin **without a slash**. See example below.
-
-``` html
+```html
 <!-- Good -->
 <link rel="stylesheet" type="text/css" href="{{ partial "_mix" "styles.css" }}">
 <!-- Bad -->
 <link rel="stylesheet" type="text/css" href="{{ partial "_mix" "/styles.css" }}">
 ```
 
-### Environment Variables
+### Service worker cache busting
 
-Environment variables can be defined in .env file and **must be prefixed** with `MIX_EXAMPLE`. The variables then are accessible on `process.env.MIX_EXAMPLE` **during** WebPack compiliation. [Source](https://laravel.com/docs/5.6/mix#environment-variables).
+`build.ts` injects a cache version into `static/sw.js` (`process.env.SW_VERSION`):
+the Cloudflare commit SHA on deploys, a timestamp for local production builds.
+Every deploy therefore gets a fresh version, and the worker's `cleanCaches()`
+drops the old caches on activate.
 
-### Branding
+### Environment variables
 
-The [`favicons-webpack-plugin`](https://github.com/jantimon/favicons-webpack-plugin) takes `logo.svg` in and spits out the truck of icons. It also outputs manifest, cache and other files that are not being used. This workflow is definitely a subject for a further optimization and improvement. Thou at least branding is displayed more less nicely. It is expected that plugin author will soon release the new API that should allow for a conditional optimized workflow to take place.
+Variables for the asset build go in a `.env` file and **must be prefixed** with
+`MIX_` (kept for backwards compatibility), e.g. `MIX_DISQUS_PUBLIC_KEY`. They are
+inlined into the bundle at build time and read via `process.env.MIX_…`.
 
-### SVG Compression
+### Branding / favicons
 
-[SVGO](https://github.com/svg/svgo) tool is used to compress and minify svgs. Execute `svgo -f . --multipass --disable={collapseGroups,cleanupIDs}` in folder containing svgs. `--disable={collapseGroups,cleanupIDs}` to preserve clip-paths when multiple SVGs used in web page.
+The [`favicons`](https://github.com/itgalaxy/favicons) package takes
+`src/images/logo.svg` and generates the icon set into `static/icons/`. This only
+runs on production builds (`bun run prod`); the dev scripts pass `--no-favicons`.
+
+### SVG compression
+
+[SVGO](https://github.com/svg/svgo) is used to compress and minify SVGs. Run
+`svgo -f . --multipass --disable={collapseGroups,cleanupIDs}` in the folder
+containing the SVGs (`--disable=…` preserves clip-paths when multiple SVGs share a page).
 
 ### Icons
 
-Icons are being integrated with [Icomoon](https://icomoon.io/app/). The list of desired icons is made and then downloaded. The contents of downloaded .zip: `./fonts/*` goes into `./src/fonts/` directory, `style.css` is copied to `./src/scss/icons.scss` file. In order to work with Buefy integrated icons, strings that match `icon-` has to be replaced with `fa-`. Buefy currently does not support other icon packs than FA and MDI.
+Icons are integrated via [Icomoon](https://icomoon.io/app/). Pick the desired
+icons and download them. From the zip: `./fonts/*` goes into `./src/fonts/`, and
+`style.css` is copied to `./src/scss/icons.scss`. To work with Buefy's integrated
+icons, replace strings matching `icon-` with `fa-` (Buefy supports only FA and MDI).
 
-## Local deployment testing
+## Deployment (Cloudflare Pages)
 
-To test deploy locally before pushing you may `yarn run deploy --baseURL="/"` and then serve from `./docs` directory by using any web server of choice ([Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en) is a good example). Or use ngrok for online testing with SSL support.
+Connect the repo to a Cloudflare Pages project with:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `bun run cf:build` |
+| Build output directory | `docs` |
+| Environment variable | `HUGO_VERSION = 0.128.0` |
+
+`bun run cf:build` runs `cf-build.sh`, which installs dependencies, builds the
+assets and runs Hugo. Production (the `master` branch) keeps the canonical domain
+from `config.toml`; preview/branch deploys override the baseURL with Cloudflare's
+`$CF_PAGES_URL` so their links resolve on the `*.pages.dev` domain.
+
+Security/caching headers live in `src/_headers`, which the build copies to
+`static/_headers` and Hugo emits to `docs/_headers` for Cloudflare to apply.
+
+> **Hugo version:** the templates still use a few APIs (`.Site.DisqusShortname`,
+> `.Site.LanguageCode`) that are deprecated and removed in Hugo ≥ 0.140, so the
+> deploy is pinned to `0.128.0`. Modernize those calls before bumping `HUGO_VERSION`.
+
+### Local deployment test
+
+Build and serve `./docs` with any static server:
+
+```sh
+bun run deploy --baseURL="/"   # passes the flag through to hugo
+```
+
+Then serve the `./docs` directory, or use ngrok for online testing with SSL.
 
 ## Online testing with ngrok
 
-For live testing `yarn run serve`, then `yarn run hugo-l {replace with ngrok tunnel URL here}`. Browse to ngrok tunnel URL.
+Run `bun run serve`, then `bun run hugo-l {ngrok tunnel URL here}` and browse to
+the ngrok tunnel URL.
 
-## Content Management
+## Content management
 
-1. Run `hugo new [post|page|duk]/[name-of-the-content-file].md`
-2. Write a great article or make desired edits.
-3. Double check and `git commit` with `-m` as `Content | [Page|Post|DUK] | [New|Edit|Remove] - The title`
-4. Git Push.
+1. `hugo new [post|page|duk]/[name-of-the-content-file].md`
+2. Write a great article or make the desired edits.
+3. Double check and `git commit -m "Content | [Page|Post|DUK] | [New|Edit|Remove] - The title"`
+4. `git push`.
 
-## Copyright & Licence
+## Copyright & licence
 
-Developed by Lukas Vanagas. Code implementation copyright. Licensed under [the BSD 3-Clause](LICENSE.md).
+Developed by Lukas Vanagas. Code implementation copyright. Licensed under
+[the BSD 3-Clause](LICENSE.md).

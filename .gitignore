@@ -17,3 +17,5 @@ inlineCSS.html
 
 # Environment Variables
 .env
+# Hugo build lock
+.hugo_build.lock
