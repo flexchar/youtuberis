@@ -16,24 +16,24 @@
 
 [build]
 	publish = "docs"
-	command = "yarn run deploy -b $URL"
+	command = "bun install && bun run prod && hugo --cleanDestinationDir"
 
-[build.production.environment]
-	HUGO_VERSION = "0.37.1"
+[build.environment]
+	HUGO_VERSION = "0.128.0"
 	HUGO_ENV = "production"
 
 [context.deploy-preview]
-	command = "yarn run deploy -b $DEPLOY_PRIME_URL"
+	command = "bun install && bun run prod && hugo --cleanDestinationDir -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-	HUGO_VERSION = "0.37.1"
+	HUGO_VERSION = "0.128.0"
 	HUGO_ENV = "development"
 
 [context.branch-deploy]
-	command = "yarn run deploy -b $DEPLOY_PRIME_URL"
+	command = "bun install && bun run prod && hugo --cleanDestinationDir -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-	HUGO_VERSION = "0.37.1"
+	HUGO_VERSION = "0.128.0"
 	HUGO_ENV = "development"
 	
 
