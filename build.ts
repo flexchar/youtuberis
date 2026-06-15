@@ -152,6 +152,7 @@ async function buildFavicons() {
 }
 
 async function copyAssets() {
+  await copyFile("src/_headers", "static/_headers");
   await copyFile("src/manifest.json", "static/manifest.json");
   await mkdir("static/img", { recursive: true });
   await cp("src/images", "static/img", { recursive: true });
